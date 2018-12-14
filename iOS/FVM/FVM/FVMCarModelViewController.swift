@@ -11,23 +11,18 @@ open class FVMCarModelViewController : SCNView {
     var scnScene: SCNScene!
     var scnCamera : SCNNode!
     
-    public init() {
+    public func viewDidLoad() {
         //self = (self.view as! SCNView)
-        let cg = CGRect(x: 1, y: 1, width: 1, height: 1)
-        super.init(frame: cg)
         self.backgroundColor = UIColor.darkGray
         self.allowsCameraControl = true
         self.autoenablesDefaultLighting = true
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         self.addGestureRecognizer(tapGesture)
+        setupScene()
     }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    open func setupScene() {
+
+    func setupScene() {
         scnScene = SCNScene()
         self.scene = scnScene
         

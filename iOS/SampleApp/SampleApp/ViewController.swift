@@ -15,19 +15,19 @@
 import UIKit
 import FVM
 
-// TODO: use controller from FVM
 class ViewController: UIViewController {
-  //  @IBOutlet var damageSelector: VehicleDamageSelectorView!
-  
+    @IBOutlet weak var damageSelector: FVMCarModelViewController!
+    
     override func viewDidLoad() {
+        damageSelector.viewDidLoad()
+        damageSelector.drawPyramid()
         super.viewDidLoad()
     }
-    
-  /*  @IBAction func showParts(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Selected parts",
-                                      message: damageSelector.selectedPartsJSON,
-                                      preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        self.present(alert, animated: true)
-    } */
+    @IBAction func showParts(_ sender: UIButton) {
+   //     let alert = UIAlertController(title: "Selected parts",
+   //                                   message: damageSelector.selectedPartsJSON,
+   //                                  preferredStyle: UIAlertController.Style.alert)
+   //    alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+   //     self.present(alert, animated: true)
+    }
 }

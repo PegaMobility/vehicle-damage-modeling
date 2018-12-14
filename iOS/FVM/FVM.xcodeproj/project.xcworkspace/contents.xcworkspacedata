@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:VehicleDamageModeling.xcodeproj">
+      location = "self:FVM.xcodeproj">
    </FileRef>
 </Workspace>

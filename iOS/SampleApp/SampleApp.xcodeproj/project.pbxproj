@@ -7,47 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056E8BAE21C43ED5003EBE53 /* FVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056E8BA721C43E8F003EBE53 /* FVM.framework */; };
+		056E8BAF21C43ED5003EBE53 /* FVM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 056E8BA721C43E8F003EBE53 /* FVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52DB81621BA8EEF00C6CC36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DB81521BA8EEF00C6CC36 /* AppDelegate.swift */; };
 		B52DB81821BA8EEF00C6CC36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DB81721BA8EEF00C6CC36 /* ViewController.swift */; };
 		B52DB81B21BA8EEF00C6CC36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52DB81921BA8EEF00C6CC36 /* Main.storyboard */; };
 		B52DB81D21BA8EF100C6CC36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52DB81C21BA8EF100C6CC36 /* Assets.xcassets */; };
 		B52DB82021BA8EF100C6CC36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52DB81E21BA8EF100C6CC36 /* LaunchScreen.storyboard */; };
-		B52DB83721BA8F8B00C6CC36 /* VehicleDamageModeling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52DB82D21BA8F5A00C6CC36 /* VehicleDamageModeling.framework */; };
-		B52DB83821BA8F8B00C6CC36 /* VehicleDamageModeling.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52DB82D21BA8F5A00C6CC36 /* VehicleDamageModeling.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B52DB82C21BA8F5A00C6CC36 /* PBXContainerItemProxy */ = {
+		056E8BA621C43E8F003EBE53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B52DB82721BA8F5A00C6CC36 /* VehicleDamageModeling.xcodeproj */;
+			containerPortal = 056E8BA121C43E8F003EBE53 /* FVM.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = B52DB7E021BA8E3A00C6CC36;
-			remoteInfo = VehicleDamageModeling;
+			remoteGlobalIDString = 0535F31A21C4389F00CD6C44;
+			remoteInfo = FVM;
 		};
-		B52DB82E21BA8F5A00C6CC36 /* PBXContainerItemProxy */ = {
+		056E8BA821C43E8F003EBE53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B52DB82721BA8F5A00C6CC36 /* VehicleDamageModeling.xcodeproj */;
+			containerPortal = 056E8BA121C43E8F003EBE53 /* FVM.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = B52DB7E921BA8E3A00C6CC36;
-			remoteInfo = VehicleDamageModelingTests;
+			remoteGlobalIDString = 0535F32321C4389F00CD6C44;
+			remoteInfo = FVMTests;
 		};
-		B52DB83921BA8F8B00C6CC36 /* PBXContainerItemProxy */ = {
+		056E8BB021C43ED5003EBE53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B52DB82721BA8F5A00C6CC36 /* VehicleDamageModeling.xcodeproj */;
+			containerPortal = 056E8BA121C43E8F003EBE53 /* FVM.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = B52DB7DF21BA8E3A00C6CC36;
-			remoteInfo = VehicleDamageModeling;
+			remoteGlobalIDString = 0535F31921C4389F00CD6C44;
+			remoteInfo = FVM;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B52DB83B21BA8F8B00C6CC36 /* Embed Frameworks */ = {
+		056E8BB221C43ED5003EBE53 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B52DB83821BA8F8B00C6CC36 /* VehicleDamageModeling.framework in Embed Frameworks */,
+				056E8BAF21C43ED5003EBE53 /* FVM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		056E8BA121C43E8F003EBE53 /* FVM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FVM.xcodeproj; path = ../FVM/FVM.xcodeproj; sourceTree = "<group>"; };
 		B52DB81221BA8EEF00C6CC36 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52DB81521BA8EEF00C6CC36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B52DB81721BA8EEF00C6CC36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		B52DB81C21BA8EF100C6CC36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B52DB81F21BA8EF100C6CC36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B52DB82121BA8EF100C6CC36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B52DB82721BA8F5A00C6CC36 /* VehicleDamageModeling.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VehicleDamageModeling.xcodeproj; path = ../VehicleDamageModeling/VehicleDamageModeling.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,17 +70,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B52DB83721BA8F8B00C6CC36 /* VehicleDamageModeling.framework in Frameworks */,
+				056E8BAE21C43ED5003EBE53 /* FVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		056E8BA221C43E8F003EBE53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				056E8BA721C43E8F003EBE53 /* FVM.framework */,
+				056E8BA921C43E8F003EBE53 /* FVMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B52DB80921BA8EEF00C6CC36 = {
 			isa = PBXGroup;
 			children = (
-				B52DB82721BA8F5A00C6CC36 /* VehicleDamageModeling.xcodeproj */,
+				056E8BA121C43E8F003EBE53 /* FVM.xcodeproj */,
 				B52DB81421BA8EEF00C6CC36 /* SampleApp */,
 				B52DB81321BA8EEF00C6CC36 /* Products */,
 				B52DB83021BA8F6400C6CC36 /* Frameworks */,
@@ -108,15 +117,6 @@
 			path = SampleApp;
 			sourceTree = "<group>";
 		};
-		B52DB82821BA8F5A00C6CC36 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B52DB82D21BA8F5A00C6CC36 /* VehicleDamageModeling.framework */,
-				B52DB82F21BA8F5A00C6CC36 /* VehicleDamageModelingTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B52DB83021BA8F6400C6CC36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,12 +134,12 @@
 				B52DB80E21BA8EEF00C6CC36 /* Sources */,
 				B52DB80F21BA8EEF00C6CC36 /* Frameworks */,
 				B52DB81021BA8EEF00C6CC36 /* Resources */,
-				B52DB83B21BA8F8B00C6CC36 /* Embed Frameworks */,
+				056E8BB221C43ED5003EBE53 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B52DB83A21BA8F8B00C6CC36 /* PBXTargetDependency */,
+				056E8BB121C43ED5003EBE53 /* PBXTargetDependency */,
 			);
 			name = SampleApp;
 			productName = SampleApp;
@@ -174,8 +174,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B52DB82821BA8F5A00C6CC36 /* Products */;
-					ProjectRef = B52DB82721BA8F5A00C6CC36 /* VehicleDamageModeling.xcodeproj */;
+					ProductGroup = 056E8BA221C43E8F003EBE53 /* Products */;
+					ProjectRef = 056E8BA121C43E8F003EBE53 /* FVM.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -186,18 +186,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B52DB82D21BA8F5A00C6CC36 /* VehicleDamageModeling.framework */ = {
+		056E8BA721C43E8F003EBE53 /* FVM.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = VehicleDamageModeling.framework;
-			remoteRef = B52DB82C21BA8F5A00C6CC36 /* PBXContainerItemProxy */;
+			path = FVM.framework;
+			remoteRef = 056E8BA621C43E8F003EBE53 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B52DB82F21BA8F5A00C6CC36 /* VehicleDamageModelingTests.xctest */ = {
+		056E8BA921C43E8F003EBE53 /* FVMTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = VehicleDamageModelingTests.xctest;
-			remoteRef = B52DB82E21BA8F5A00C6CC36 /* PBXContainerItemProxy */;
+			path = FVMTests.xctest;
+			remoteRef = 056E8BA821C43E8F003EBE53 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -228,10 +228,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B52DB83A21BA8F8B00C6CC36 /* PBXTargetDependency */ = {
+		056E8BB121C43ED5003EBE53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = VehicleDamageModeling;
-			targetProxy = B52DB83921BA8F8B00C6CC36 /* PBXContainerItemProxy */;
+			name = FVM;
+			targetProxy = 056E8BB021C43ED5003EBE53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
