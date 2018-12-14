@@ -18,37 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYR-wY-yQg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-8I-8a7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="586"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYR-wY-yQg">
                                 <rect key="frame" x="0.0" y="614" width="375" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="YZN-8k-jTo"/>
+                                </constraints>
                                 <state key="normal" title="Show Selected Parts"/>
                                 <connections>
                                     <action selector="showParts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6k-q6-gMh"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-8I-8a7">
-                                <rect key="frame" x="-31" y="20" width="375" height="586"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVl-Mb-FeG" customClass="View">
-                                        <rect key="frame" x="31" y="-4" width="376" height="595"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </sceneKitView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xGs-8I-8a7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5KP-Oa-vkF"/>
+                            <constraint firstItem="JYR-wY-yQg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dwb-HO-w5H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xGs-8I-8a7" secondAttribute="trailing" id="Gtn-97-2CZ"/>
+                            <constraint firstItem="JYR-wY-yQg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IuJ-M7-1bf"/>
+                            <constraint firstItem="JYR-wY-yQg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JXI-Qh-yl3"/>
+                            <constraint firstItem="JYR-wY-yQg" firstAttribute="top" secondItem="xGs-8I-8a7" secondAttribute="bottom" constant="8" id="bcW-nx-RaW"/>
+                            <constraint firstItem="xGs-8I-8a7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ezT-xM-URn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="damageSelector" destination="xGs-8I-8a7" id="pso-Il-O0o"/>
-                        <outlet property="fvm" destination="WVl-Mb-FeG" id="Fk1-ed-WOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
         </scene>
     </scenes>
 </document>
