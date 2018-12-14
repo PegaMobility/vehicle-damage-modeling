@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         damageSelector.drawPyramid()
         super.viewDidLoad()
     }
+    
     @IBAction func showParts(_ sender: UIButton) {
    //     let alert = UIAlertController(title: "Selected parts",
    //                                   message: damageSelector.selectedPartsJSON,
