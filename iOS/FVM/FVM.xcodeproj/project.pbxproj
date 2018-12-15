@@ -11,7 +11,6 @@
 		0535F32421C4389F00CD6C44 /* FVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535F31A21C4389F00CD6C44 /* FVM.framework */; };
 		0535F32921C4389F00CD6C44 /* FVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535F32821C4389F00CD6C44 /* FVMTests.swift */; };
 		0535F32B21C4389F00CD6C44 /* FVM.h in Headers */ = {isa = PBXBuildFile; fileRef = 0535F31D21C4389F00CD6C44 /* FVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		056E8BB521C440D5003EBE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056E8BB321C440D5003EBE53 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 		0535F32321C4389F00CD6C44 /* FVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0535F32821C4389F00CD6C44 /* FVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVMTests.swift; sourceTree = "<group>"; };
 		0535F32A21C4389F00CD6C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		056E8BB421C440D5003EBE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../../.Trash/vehicle-damage-modeling 1.26.00 PM/iOS v2/VehicleDamage/VehicleDamage/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				051E317421C43E5F0067C7F3 /* FVMCarModelViewController.swift */,
-				056E8BB321C440D5003EBE53 /* Main.storyboard */,
 				0535F31D21C4389F00CD6C44 /* FVM.h */,
 				0535F31E21C4389F00CD6C44 /* Info.plist */,
 			);
@@ -185,7 +182,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056E8BB521C440D5003EBE53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,17 +220,6 @@
 			targetProxy = 0535F32521C4389F00CD6C44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		056E8BB321C440D5003EBE53 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				056E8BB421C440D5003EBE53 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0535F32C21C4389F00CD6C44 /* Debug */ = {

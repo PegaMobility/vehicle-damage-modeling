@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var damageSelector: FVMCarModelViewController!
     
     override func viewDidLoad() {
-        damageSelector.viewDidLoad()
-        damageSelector.drawPyramid()
+        damageSelector.drawSphereGrid(xAmount: 5, yAmount: 10, radius: 0.5)
         super.viewDidLoad()
     }
     

@@ -10,6 +10,7 @@ import SceneKit
 open class FVMCarModelViewController : SCNView {
     var scnScene: SCNScene!
     var scnCamera : SCNNode!
+    var highlightedParts = [SCNNode]()
     
     public func viewDidLoad() {
         //self = (self.view as! SCNView)
@@ -20,6 +21,7 @@ open class FVMCarModelViewController : SCNView {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         self.addGestureRecognizer(tapGesture)
         setupScene()
+        drawSphereGrid(xAmount: 5, yAmount: 5, radius: 0.5)
     }
 
     func setupScene() {
@@ -72,18 +74,32 @@ open class FVMCarModelViewController : SCNView {
         let hitResults = self.hitTest(p, options: [:])
         if hitResults.count > 0 {
             let result = hitResults.first!
-            
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
-            SCNTransaction.completionBlock = {
+            if highlightedParts.contains(result.node) {
                 SCNTransaction.begin()
                 SCNTransaction.animationDuration = 0.5
+                highlightedParts.remove(at: highlightedParts.firstIndex(of: result.node)!)
                 result.node.scale = SCNVector3(x: 1, y: 1, z: 1)
                 SCNTransaction.commit()
+            } else {
+                SCNTransaction.begin()
+                SCNTransaction.animationDuration = 0.5
+                highlightedParts.append(result.node)
+                result.node.scale = SCNVector3(x: 2, y: 2, z: 2)
+                SCNTransaction.commit()
             }
-            result.node.scale = SCNVector3(x: 2, y: 2, z: 2)
+        } else {
+            setHighlightsOff()
+        }
+    }
+    
+    func setHighlightsOff() {
+        for part in highlightedParts {
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 0.5
+            part.scale = SCNVector3(x: 1, y: 1, z: 1)
             SCNTransaction.commit()
         }
+        highlightedParts.removeAll()
     }
     
     func positionCameraAccordingly(xAmount : Int, yAmount : Int, radius : CGFloat) {
@@ -91,6 +107,5 @@ open class FVMCarModelViewController : SCNView {
         let y : Float = Float(yAmount - 1) * Float(radius)
         scnCamera.position = SCNVector3(x: x, y: y, z: 10)
     }
-    
 }
 
