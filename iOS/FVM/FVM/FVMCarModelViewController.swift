@@ -13,7 +13,6 @@ open class FVMCarModelViewController : SCNView {
     var highlightedParts = [SCNNode]()
     
     public func viewDidLoad() {
-        //self = (self.view as! SCNView)
         self.backgroundColor = UIColor.darkGray
         self.allowsCameraControl = true
         self.autoenablesDefaultLighting = true

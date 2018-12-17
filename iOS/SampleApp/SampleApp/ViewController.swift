@@ -18,8 +18,9 @@ import FVM
 class ViewController: UIViewController {
     @IBOutlet weak var damageSelector: FVMCarModelViewController!
     
-    override func viewDidLoad() {
-        damageSelector.drawSphereGrid(xAmount: 5, yAmount: 10, radius: 0.5)
+    override func viewDidLoad(){
+        damageSelector.viewDidLoad()
+    //    damageSelector.drawSphereGrid(xAmount: 5, yAmount: 10, radius: 0.5)
         super.viewDidLoad()
     }
     
