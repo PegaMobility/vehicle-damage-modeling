@@ -1,0 +1,14 @@
+matrix:
+  include:
+  - name: "iOS"
+    language: Swift
+    osx_image: xcode10.1
+    before_script: - cd iOS/VehicleDamageModeling
+    script: - xcodebuild -scheme VehicleDamageModeling -workspace VehicleDamageModeling.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPad Pro (9.7-inch),OS=10.1' build test
+  - name: "Android"
+    language: android
+    android:
+      components:
+      - build-tools-26.0.2
+      - android-26
+      - extra
