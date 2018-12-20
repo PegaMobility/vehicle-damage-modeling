@@ -1,4 +1,4 @@
-// Copyright 2018 Pegasystems Inc.
+// Copyright 2019 Flying Vehicle Monster team
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 
 import UIKit
 import FVM
@@ -25,10 +26,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showParts(_ sender: UIButton) {
-   //     let alert = UIAlertController(title: "Selected parts",
-   //                                   message: damageSelector.selectedPartsJSON,
-   //                                  preferredStyle: UIAlertController.Style.alert)
-   //    alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-   //     self.present(alert, animated: true)
+
     }
 }
