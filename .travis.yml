@@ -19,4 +19,4 @@ matrix:
       - 'android-.+'
       - 'google-.+'
     before_script: cd android
-    script: tools/bin/sdkmanager --licenses && ./gradlew test
+    script: sdkmanager --licenses && ./gradlew test
