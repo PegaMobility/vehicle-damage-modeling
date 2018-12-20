@@ -12,11 +12,13 @@ matrix:
     language: android
     android:
       components:
-      - build-tools-26
-      - android-26
+      - build-tools
+      - android
       - extra
       licenses:
       - 'android-.+'
       - 'google-.+'
-    before_script: cd android
-    script: sdkmanager --licenses && ./gradlew test
+    before_script: 
+    - cd android
+    - yes | sdkmanager "build-tools;28.0.3"
+    script: ./gradlew test
