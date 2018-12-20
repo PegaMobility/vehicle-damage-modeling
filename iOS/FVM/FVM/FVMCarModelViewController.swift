@@ -20,7 +20,7 @@ open class FVMCarModelViewController : SCNView {
     var scnCamera : SCNNode!
     var highlightedParts = [SCNNode]()
     
-    public func viewDidLoad() {
+    public func onStartup() {
         self.backgroundColor = UIColor.darkGray
         self.allowsCameraControl = true
         self.autoenablesDefaultLighting = true
@@ -43,7 +43,7 @@ open class FVMCarModelViewController : SCNView {
         scnScene.rootNode.addChildNode(scnCamera)
     }
     
-    open func drawPyramid() {
+    func drawPyramid() {
         let scnPyramidNode = SCNNode()
         scnPyramidNode.geometry = SCNPyramid(width: 10, height: 15, length: 10)
         scnPyramidNode.geometry?.insertMaterial(SCNMaterial(), at: 1)
@@ -52,7 +52,7 @@ open class FVMCarModelViewController : SCNView {
         scnScene.rootNode.addChildNode(scnPyramidNode)
     }
     
-    open func drawSphereGrid(xAmount : Int, yAmount : Int, radius : CGFloat) {
+    func drawSphereGrid(xAmount : Int, yAmount : Int, radius : CGFloat) {
         var y : Float = 0.0
         for rowNo in 0 ..< yAmount {
             var x : Float = 0.0

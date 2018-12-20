@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		052BF5C121C446E8009AFC40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052BF5C021C446E8009AFC40 /* Main.storyboard */; };
-		056E8BAE21C43ED5003EBE53 /* FVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056E8BA721C43E8F003EBE53 /* FVM.framework */; };
+		056E8BAE21C43ED5003EBE53 /* FVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056E8BA721C43E8F003EBE53 /* FVM.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		056E8BAF21C43ED5003EBE53 /* FVM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 056E8BA721C43E8F003EBE53 /* FVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B52DB81621BA8EEF00C6CC36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DB81521BA8EEF00C6CC36 /* AppDelegate.swift */; };
 		B52DB81821BA8EEF00C6CC36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DB81721BA8EEF00C6CC36 /* ViewController.swift */; };

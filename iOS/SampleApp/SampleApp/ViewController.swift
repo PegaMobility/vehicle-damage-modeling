@@ -20,12 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var damageSelector: FVMCarModelViewController!
     
     override func viewDidLoad(){
-        damageSelector.viewDidLoad()
-    //    damageSelector.drawSphereGrid(xAmount: 5, yAmount: 10, radius: 0.5)
+        damageSelector.onStartup()
         super.viewDidLoad()
-    }
-    
-    @IBAction func showParts(_ sender: UIButton) {
-
     }
 }
