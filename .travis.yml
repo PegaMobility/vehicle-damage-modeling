@@ -15,5 +15,8 @@ matrix:
       - build-tools-26
       - android-26
       - extra
+      licenses:
+      - 'android-.+'
+      - 'google-.+'
     before_script: cd android
     script: ./gradlew test
