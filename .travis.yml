@@ -14,4 +14,4 @@ matrix:
       - android-26
       - extra
     before_script: cd android
-    script: gradlew test
+    script: ./gradlew test
