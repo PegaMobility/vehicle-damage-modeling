@@ -4,10 +4,15 @@ matrix:
     os: osx
     language: swift
     osx_image: xcode10.1
+<<<<<<< HEAD
     before_script: cd iOS/VehicleDamageModeling
     script: xcodebuild -scheme VehicleDamageModeling -sdk iphoneos build
     #enable test after migration to scenekit
     #script: xcodebuild -scheme VehicleDamageModelingTests -sdk iphonesimulator test
+=======
+    before_script: cd iOS/FVM
+    script: xcodebuild -scheme FVMTests -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.1,name=iPhone X' test
+>>>>>>> ios_framework
   - name: "Android"
     language: android
     android:

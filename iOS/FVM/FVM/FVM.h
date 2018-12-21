@@ -1,4 +1,4 @@
-// Copyright 2018 Pegasystems Inc.
+// Copyright 2019 Flying Vehicle Monster team
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,14 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 #import <UIKit/UIKit.h>
 
-//! Project version number for VehicleDamageModeling.
-FOUNDATION_EXPORT double VehicleDamageModelingVersionNumber;
+//! Project version number for FVM.
+FOUNDATION_EXPORT double FVMVersionNumber;
 
-//! Project version string for VehicleDamageModeling.
-FOUNDATION_EXPORT const unsigned char VehicleDamageModelingVersionString[];
+//! Project version string for FVM.
+FOUNDATION_EXPORT const unsigned char FVMVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <VehicleDamageModeling/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <FVM/PublicHeader.h>
 
 

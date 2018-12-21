@@ -1,4 +1,4 @@
-// Copyright 2018 Pegasystems Inc.
+// Copyright 2019 Flying Vehicle Monster team
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,9 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import Foundation
 
-public enum BodyPart:String {
-    case Hood, Mirror, TrunkLid, TailLights, StepBumper, Door,
-         Headlights, Bumpers, Grilles
+import XCTest
+@testable import FVM
+
+class FVMTests: XCTestCase {
+
+    func testExample() {
+        XCTAssert(true)
+    }
+
 }
