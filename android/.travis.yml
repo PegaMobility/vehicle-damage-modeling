@@ -11,3 +11,10 @@ android:
 
     - sys-img-x86-android-26
     - sys-img-armeabi-v7a-android-17
+
+script: ./gradlew test jacocoTestReport
+
+before_install:
+- pip install --user codecov #Install codecov
+
+after_success: bash <(curl -s https://codecov.io/bash) #Run codecov
