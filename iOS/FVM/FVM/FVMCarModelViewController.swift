@@ -19,6 +19,8 @@ public class FVMCarModelViewController : SCNView {
     var scnScene: SCNScene!
     var scnCamera: SCNNode!
 
+    internal let highlightHandler = HighlightHandler()
+    
     let minFOV: CGFloat = 20
     let maxFOV: CGFloat = 60
     
@@ -61,37 +63,21 @@ public class FVMCarModelViewController : SCNView {
     @objc
     internal func handleTapGesture(_ gestureRecognizer: UIGestureRecognizer) {
         let p = gestureRecognizer.location(in: self)
-        let hitResults = self.hitTest(p, options: [:])
+        let hitResults = self.hitTest(p)
         if hitResults.count > 0 {
             let result = hitResults.first!
-            let highlightedNodes = highlightedParts.map { $0.0 }
-            if highlightedNodes.contains(result.node) {
-                SCNTransaction.begin()
-                SCNTransaction.animationDuration = 0.5
-                let hitPartIndex = highlightedNodes.firstIndex(of: result.node)
-                result.node.geometry?.firstMaterial?.diffuse.contents = highlightedParts[hitPartIndex!].material
-                highlightedParts.remove(at: highlightedNodes.firstIndex(of: result.node)!)
-                SCNTransaction.commit()
+            guard let nodeName = result.node.name else {
+                print("Can't highlight part without name")
+                return
+            }
+            if (highlightHandler.isHighlighted(nodeName: nodeName)) {
+                highlightHandler.setHighlightOff(nodeName: nodeName)
             } else {
-                SCNTransaction.begin()
-                SCNTransaction.animationDuration = 0.5
-                highlightedParts.append((node: result.node, material: result.node.geometry?.firstMaterial?.diffuse.contents))
-                result.node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
-                SCNTransaction.commit()
+                highlightHandler.setHighlightOn(node: result.node)
             }
         } else {
-            setHighlightsOff()
+            highlightHandler.setAllHighlightsOff()
         }
-    }
-    
-    private func setHighlightsOff() {
-        for tuple in highlightedParts {
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
-            tuple.node.geometry?.firstMaterial?.diffuse.contents = tuple.material
-            SCNTransaction.commit()
-        }
-        highlightedParts.removeAll()
     }
     
     private func setupGestures(){
