@@ -16,15 +16,9 @@ import UIKit
 import SceneKit
 
 public class FVMCarModelViewController : SCNView {
-    var scnScene: SCNScene!
-    var scnCamera: SCNNode!
-
+    internal var scnScene: SCNScene!
+    internal var scnCamera: SCNNode!
     internal let highlightHandler = HighlightHandler()
-    
-    let minFOV: CGFloat = 20
-    let maxFOV: CGFloat = 60
-    
-    var highlightedParts = [(node: SCNNode, material: Any?)]()
     
     public func onStartup() {
         self.allowsCameraControl = false
@@ -36,31 +30,7 @@ public class FVMCarModelViewController : SCNView {
         setupLights()
     }
     
-    @objc
-    internal func handlePinchGesture(_ gestureRecognizer: UIPinchGestureRecognizer) {
-        switch gestureRecognizer.state {
-        case .changed: fallthrough
-        case .ended:
-            let scale = 2 - gestureRecognizer.scale
-            var currentFOV: CGFloat
-            if #available(iOS 11.0, *) {
-                currentFOV = scnCamera.camera!.fieldOfView
-            } else {
-                currentFOV = CGFloat(scnCamera.camera!.yFov)
-            }
-            if currentFOV * scale < maxFOV && currentFOV * scale > minFOV {
-                if #available(iOS 11.0, *) {
-                    scnCamera.camera!.fieldOfView *= scale
-                } else {
-                    scnCamera.camera!.yFov *= Double(scale)
-                }
-            }
-            gestureRecognizer.scale = 1.0
-        default: break
-        }
-    }
-    
-    private func setupGestures(){
+    private func setupGestures() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
         self.addGestureRecognizer(tapGesture)

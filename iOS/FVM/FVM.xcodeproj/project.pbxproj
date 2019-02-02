@@ -14,6 +14,7 @@
 		BA9E20A621D58B830013E388 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9E20A521D58B830013E388 /* art.scnassets */; };
 		BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F222063F2100574F2C /* HighlightHandler.swift */; };
 		BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F422064B0600574F2C /* TapGestureHandler.swift */; };
+		BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		BA9E20A521D58B830013E388 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BAAD17F222063F2100574F2C /* HighlightHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightHandler.swift; sourceTree = "<group>"; };
 		BAAD17F422064B0600574F2C /* TapGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureHandler.swift; sourceTree = "<group>"; };
+		BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchGestureHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				BA9E20A521D58B830013E388 /* art.scnassets */,
 				BAAD17F222063F2100574F2C /* HighlightHandler.swift */,
 				BAAD17F422064B0600574F2C /* TapGestureHandler.swift */,
+				BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */,
 			);
 			path = FVM;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */,
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
 				BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */,
+				BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
