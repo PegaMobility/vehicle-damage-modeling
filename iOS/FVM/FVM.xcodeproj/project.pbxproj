@@ -13,6 +13,7 @@
 		0535F32B21C4389F00CD6C44 /* FVM.h in Headers */ = {isa = PBXBuildFile; fileRef = 0535F31D21C4389F00CD6C44 /* FVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA9E20A621D58B830013E388 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9E20A521D58B830013E388 /* art.scnassets */; };
 		BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F222063F2100574F2C /* HighlightHandler.swift */; };
+		BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F422064B0600574F2C /* TapGestureHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		0535F32A21C4389F00CD6C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9E20A521D58B830013E388 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BAAD17F222063F2100574F2C /* HighlightHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightHandler.swift; sourceTree = "<group>"; };
+		BAAD17F422064B0600574F2C /* TapGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				0535F31E21C4389F00CD6C44 /* Info.plist */,
 				BA9E20A521D58B830013E388 /* art.scnassets */,
 				BAAD17F222063F2100574F2C /* HighlightHandler.swift */,
+				BAAD17F422064B0600574F2C /* TapGestureHandler.swift */,
 			);
 			path = FVM;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */,
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
 				BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */,
 			);

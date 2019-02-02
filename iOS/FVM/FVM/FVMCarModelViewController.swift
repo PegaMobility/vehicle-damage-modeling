@@ -60,26 +60,6 @@ public class FVMCarModelViewController : SCNView {
         }
     }
     
-    @objc
-    internal func handleTapGesture(_ gestureRecognizer: UIGestureRecognizer) {
-        let p = gestureRecognizer.location(in: self)
-        let hitResults = self.hitTest(p)
-        if hitResults.count > 0 {
-            let result = hitResults.first!
-            guard let nodeName = result.node.name else {
-                print("Can't highlight part without name")
-                return
-            }
-            if (highlightHandler.isHighlighted(nodeName: nodeName)) {
-                highlightHandler.setHighlightOff(nodeName: nodeName)
-            } else {
-                highlightHandler.setHighlightOn(node: result.node)
-            }
-        } else {
-            highlightHandler.setAllHighlightsOff()
-        }
-    }
-    
     private func setupGestures(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
