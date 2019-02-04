@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E317421C43E5F0067C7F3 /* FVMCarModelViewController.swift */; };
 		0535F32421C4389F00CD6C44 /* FVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535F31A21C4389F00CD6C44 /* FVM.framework */; };
-		0535F32921C4389F00CD6C44 /* FVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535F32821C4389F00CD6C44 /* FVMTests.swift */; };
 		0535F32B21C4389F00CD6C44 /* FVM.h in Headers */ = {isa = PBXBuildFile; fileRef = 0535F31D21C4389F00CD6C44 /* FVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1FBE0B220780E400DBFB9E /* MaterialProcessor.swift */; };
+		BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1FBE112208CB0800DBFB9E /* MaterialProcessorTests.swift */; };
 		BA9E20A621D58B830013E388 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9E20A521D58B830013E388 /* art.scnassets */; };
 		BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F222063F2100574F2C /* HighlightHandler.swift */; };
 		BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F422064B0600574F2C /* TapGestureHandler.swift */; };
@@ -33,8 +34,9 @@
 		0535F31D21C4389F00CD6C44 /* FVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FVM.h; sourceTree = "<group>"; };
 		0535F31E21C4389F00CD6C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0535F32321C4389F00CD6C44 /* FVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0535F32821C4389F00CD6C44 /* FVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FVMTests.swift; sourceTree = "<group>"; };
 		0535F32A21C4389F00CD6C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA1FBE0B220780E400DBFB9E /* MaterialProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialProcessor.swift; sourceTree = "<group>"; };
+		BA1FBE112208CB0800DBFB9E /* MaterialProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialProcessorTests.swift; sourceTree = "<group>"; };
 		BA9E20A521D58B830013E388 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BAAD17F222063F2100574F2C /* HighlightHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightHandler.swift; sourceTree = "<group>"; };
 		BAAD17F422064B0600574F2C /* TapGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureHandler.swift; sourceTree = "<group>"; };
@@ -81,13 +83,12 @@
 		0535F31C21C4389F00CD6C44 /* FVM */ = {
 			isa = PBXGroup;
 			children = (
+				BA1FBE0D220780F000DBFB9E /* Highlighting */,
+				BA1FBE0A22077D2800DBFB9E /* GestureHandlers */,
 				051E317421C43E5F0067C7F3 /* FVMCarModelViewController.swift */,
 				0535F31D21C4389F00CD6C44 /* FVM.h */,
 				0535F31E21C4389F00CD6C44 /* Info.plist */,
 				BA9E20A521D58B830013E388 /* art.scnassets */,
-				BAAD17F222063F2100574F2C /* HighlightHandler.swift */,
-				BAAD17F422064B0600574F2C /* TapGestureHandler.swift */,
-				BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */,
 			);
 			path = FVM;
 			sourceTree = "<group>";
@@ -95,10 +96,28 @@
 		0535F32721C4389F00CD6C44 /* FVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				0535F32821C4389F00CD6C44 /* FVMTests.swift */,
 				0535F32A21C4389F00CD6C44 /* Info.plist */,
+				BA1FBE112208CB0800DBFB9E /* MaterialProcessorTests.swift */,
 			);
 			path = FVMTests;
+			sourceTree = "<group>";
+		};
+		BA1FBE0A22077D2800DBFB9E /* GestureHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				BAAD17F422064B0600574F2C /* TapGestureHandler.swift */,
+				BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */,
+			);
+			path = GestureHandlers;
+			sourceTree = "<group>";
+		};
+		BA1FBE0D220780F000DBFB9E /* Highlighting */ = {
+			isa = PBXGroup;
+			children = (
+				BAAD17F222063F2100574F2C /* HighlightHandler.swift */,
+				BA1FBE0B220780E400DBFB9E /* MaterialProcessor.swift */,
+			);
+			path = Highlighting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +233,7 @@
 			files = (
 				BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */,
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
+				BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */,
 				BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */,
 				BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */,
 			);
@@ -223,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0535F32921C4389F00CD6C44 /* FVMTests.swift in Sources */,
+				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
