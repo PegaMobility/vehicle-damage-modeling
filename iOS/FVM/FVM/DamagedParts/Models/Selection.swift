@@ -15,11 +15,11 @@
 
 import Foundation
 
-struct DamagedPart : Decodable {
+struct Selection : Codable {
     
-    public var name: String
+    public var id: String
     
     init(newName: String) {
-        name = newName
+        id = newName
     }
 }

@@ -17,7 +17,7 @@ import Foundation
 
 public class DemagedPartsService {
     
-    private var demagedParts = [DamagedPart]()
+    private var demagedParts = [Selection]()
     private var jsonParser: JsonParser
     
     init(parser: JsonParser) {

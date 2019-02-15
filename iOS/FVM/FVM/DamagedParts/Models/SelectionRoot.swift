@@ -12,16 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 
-class JsonParser<T> {
+struct SelectionRoot: Codable {
+    let selection: [Selection]
     
-    
-    public func parse(jsonData: String){
-        let data = jsonData.data(using: .utf8)
-        let selectionRoot = try? JSONDecoder().decode(SelectionRoot.self, from: data!)
+    init(selectionArray: [Selection]) {
+        selection = selectionArray
     }
-    
-    
 }
