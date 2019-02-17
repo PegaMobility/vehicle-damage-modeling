@@ -15,13 +15,13 @@
 
 import Foundation
 
-public class DemagedPartsService {
+public class DemagedPartsServiceImpl  {
     
     private var demagedParts = [Selection]()
-//    private var jsonParser: JsonParser
-//
-//    init(parser: JsonParser) {
-//        jsonParser = parser
-//    }
+    private var parser: JsonParser<SelectionRoot>
+    
+    init(parser: JsonParser<SelectionRoot>) {
+        self.parser = parser
+    }
     
 }

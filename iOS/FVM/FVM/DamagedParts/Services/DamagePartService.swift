@@ -12,15 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
 
-public class JsonParser <Element: Decodable>  {
-    
-    public func parse(jsonData: String) -> Element?{
-        let data = jsonData.data(using: .utf8)
-        let selectionRoot = try? JSONDecoder().decode(Element.self, from: data!)
-        return selectionRoot
-    }
-    
+protocol DemagePartService {
+    func CreateAndGetCollectionOfDamagedParts(json: String) -> [Selection]
+    func GetCollectionOfDamagedParts() -> [Selection]
+    func CreateCollectionOfDamagedParts(json: String) -> Void
 }
