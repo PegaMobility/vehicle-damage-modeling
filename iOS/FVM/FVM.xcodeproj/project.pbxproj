@@ -18,11 +18,11 @@
 		BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */; };
 		D75D1F2B220ED971009869CF /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D1F2A220ED971009869CF /* Selection.swift */; };
 		D78167932211753C00D69046 /* SelectionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167922211753C00D69046 /* SelectionRoot.swift */; };
-		D78167972216A64C00D69046 /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167962216A64C00D69046 /* JsonParserTests.swift */; };
 		D7D523132219909800175EFD /* DemagedPartsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */; };
 		D7D523142219909800175EFD /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523112219909800175EFD /* Parser.swift */; };
 		D7D523152219909800175EFD /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523122219909800175EFD /* JsonParser.swift */; };
 		D7D52317221990C500175EFD /* DamagePartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D52316221990C500175EFD /* DamagePartService.swift */; };
+		D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231B2219939C00175EFD /* JsonParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +50,11 @@
 		BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchGestureHandler.swift; sourceTree = "<group>"; };
 		D75D1F2A220ED971009869CF /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		D78167922211753C00D69046 /* SelectionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRoot.swift; sourceTree = "<group>"; };
-		D78167962216A64C00D69046 /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 		D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsServiceImpl.swift; sourceTree = "<group>"; };
 		D7D523112219909800175EFD /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		D7D523122219909800175EFD /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		D7D52316221990C500175EFD /* DamagePartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagePartService.swift; sourceTree = "<group>"; };
+		D7D5231B2219939C00175EFD /* JsonParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		0535F32721C4389F00CD6C44 /* FVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				D78167952216A63700D69046 /* DamagedParts */,
+				D7D523192219939C00175EFD /* DamagedParts */,
 				0535F32A21C4389F00CD6C44 /* Info.plist */,
 				BA1FBE112208CB0800DBFB9E /* MaterialProcessorTests.swift */,
 			);
@@ -155,14 +155,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D78167952216A63700D69046 /* DamagedParts */ = {
-			isa = PBXGroup;
-			children = (
-				D78167962216A64C00D69046 /* JsonParserTests.swift */,
-			);
-			path = DamagedParts;
-			sourceTree = SOURCE_ROOT;
-		};
 		D7D5230E2219909800175EFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +171,30 @@
 				D7D523122219909800175EFD /* JsonParser.swift */,
 			);
 			path = Parsers;
+			sourceTree = "<group>";
+		};
+		D7D523192219939C00175EFD /* DamagedParts */ = {
+			isa = PBXGroup;
+			children = (
+				D7D5231A2219939C00175EFD /* Parsers */,
+				D7D5231C2219939C00175EFD /* Services */,
+			);
+			path = DamagedParts;
+			sourceTree = "<group>";
+		};
+		D7D5231A2219939C00175EFD /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				D7D5231B2219939C00175EFD /* JsonParserTests.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		D7D5231C2219939C00175EFD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D78167972216A64C00D69046 /* JsonParserTests.swift in Sources */,
+				D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

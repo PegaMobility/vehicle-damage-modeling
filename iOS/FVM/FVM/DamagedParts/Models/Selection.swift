@@ -15,7 +15,7 @@
 
 import Foundation
 
-struct Selection : Codable {
+public struct Selection : Codable {
     
     public var id: String
     
