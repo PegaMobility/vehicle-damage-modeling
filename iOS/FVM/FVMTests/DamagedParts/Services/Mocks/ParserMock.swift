@@ -17,8 +17,7 @@ import Foundation
 
 class ParserMock <Element: Decodable> : AbstractParser<SelectionRoot> {
     
-    
-    public var simpleIdCalls = 0
+    public var parseCalls = 0
     
     public override func parse(data: Data?) -> SelectionRoot? {
         
@@ -28,9 +27,9 @@ class ParserMock <Element: Decodable> : AbstractParser<SelectionRoot> {
     public override func parse(jsonData: String) -> SelectionRoot?{
         let simpleJson = simpleJsonWithOnePart.0
         let expectedValue = simpleJsonWithOnePart.1[0].id
+        parseCalls+=1
         if jsonData == simpleJson{
             
-            simpleIdCalls = simpleIdCalls + 1
             var arrayWithOneElement = [Selection]()
             arrayWithOneElement.append(Selection(newName: expectedValue))
             return SelectionRoot(selectionArray: arrayWithOneElement)

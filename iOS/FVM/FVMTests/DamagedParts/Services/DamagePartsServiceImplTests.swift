@@ -47,7 +47,24 @@ class DamagePartsServiceImplTests: XCTestCase {
         
         //Assert
         XCTAssertEqual(expected, actual)
+    }
+    
+    func testIfReturnsEmptyArrayWhenNothingWasInovek(){
+        //Act
+        let actual = sut?.GetCollectionOfDamagedParts()
         
+        //Assert
+        XCTAssert(actual?.count == 0)
+    }
+    
+    func testIfParserWasCalledOnce(){
+        //Arrange
+        
+        //Act
+        sut?.CreateCollectionOfDamagedParts(json: "")
+        
+        //Assert
+        XCTAssertEqual(parserMock?.parseCalls, 1)
     }
 
 }
