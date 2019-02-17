@@ -29,15 +29,15 @@ class DamagePartsServiceImplTests: XCTestCase {
     func testIfSelectionArrayHasOneElementWhenOneElementJsonIsPassed() {
         //Arrange
         let simpleJson = """
-{
-   "selection":[
-      {
-         "id":"simpleId"
-      }
-   ]
-}
+        {
+            "selection":[
+                {
+                    "id":"simpleId"
+                }
+            ]
+        }
 
-"""
+        """
         
         //Act
         let result = sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)
@@ -45,5 +45,30 @@ class DamagePartsServiceImplTests: XCTestCase {
         XCTAssert(result?.count == 1)
         
     }
+    
+    func testIfCallsParserOnce() {
+        //Arrange
+        parserMock = ParserMock()
+        let simpleJson = """
+        {
+            "selection":[
+                {
+                    "id":"simpleId"
+                }
+            ]
+        }
+
+        """
+        
+        //Act
+        sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)
+        
+        //Assert
+        var packed =  self.parserMock as! ParserMock
+        
+        XCTAssert(packed.simpleIdCalls == 1)
+    }
+    
+    
 
 }

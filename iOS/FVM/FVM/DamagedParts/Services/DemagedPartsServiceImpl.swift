@@ -25,15 +25,17 @@ public class DemagedPartsServiceImpl : DemagePartsService{
     }
     
     public func CreateAndGetCollectionOfDamagedParts(json: String) -> [Selection] {
-        return [Selection]()
+        CreateCollectionOfDamagedParts(json: json)
+        return GetCollectionOfDamagedParts()
     }
     
     public func GetCollectionOfDamagedParts() -> [Selection] {
-        return [Selection]()
+        return demagedParts
     }
     
     public func CreateCollectionOfDamagedParts(json: String) {
-        
+        let root = parser.parse(jsonData: json)
+        demagedParts = (root?.selection)!
     }
     
 }

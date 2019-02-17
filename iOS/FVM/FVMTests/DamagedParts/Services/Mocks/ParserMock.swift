@@ -17,6 +17,9 @@ import Foundation
 
 class ParserMock : JsonParser<SelectionRoot>{
     
+    
+    public var simpleIdCalls = 0
+    
     public override func parse(data: Data?) -> SelectionRoot? {
         
         return SelectionRoot(selectionArray: [Selection]())
@@ -34,6 +37,8 @@ class ParserMock : JsonParser<SelectionRoot>{
 
 """
         if jsonData == simpleJson{
+            
+            simpleIdCalls = simpleIdCalls + 1
             var arrayWithOneElement = [Selection]()
             arrayWithOneElement.append(Selection(newName: "simpleId"))
             return SelectionRoot(selectionArray: arrayWithOneElement)
