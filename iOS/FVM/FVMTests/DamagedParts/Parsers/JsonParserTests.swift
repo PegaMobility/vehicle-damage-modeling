@@ -25,7 +25,6 @@ class JsonParserTests: XCTestCase {
         
     }
 
-
     func testIfReturnsNillWhenJsonIsInvalid() {
         //Arrange
         sut = JsonParser<SelectionRoot>()

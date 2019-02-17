@@ -23,6 +23,8 @@
 		D7D523152219909800175EFD /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523122219909800175EFD /* JsonParser.swift */; };
 		D7D52317221990C500175EFD /* DamagePartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D52316221990C500175EFD /* DamagePartService.swift */; };
 		D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231B2219939C00175EFD /* JsonParserTests.swift */; };
+		D7D5231F221993E500175EFD /* DamagePartsServiceImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231E221993E500175EFD /* DamagePartsServiceImplTests.swift */; };
+		D7D523222219947800175EFD /* ParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523212219947800175EFD /* ParserMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		D7D523122219909800175EFD /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		D7D52316221990C500175EFD /* DamagePartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagePartService.swift; sourceTree = "<group>"; };
 		D7D5231B2219939C00175EFD /* JsonParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
+		D7D5231E221993E500175EFD /* DamagePartsServiceImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagePartsServiceImplTests.swift; sourceTree = "<group>"; };
+		D7D523212219947800175EFD /* ParserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +197,18 @@
 		D7D5231C2219939C00175EFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D7D523202219946400175EFD /* Mocks */,
+				D7D5231E221993E500175EFD /* DamagePartsServiceImplTests.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D7D523202219946400175EFD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D7D523212219947800175EFD /* ParserMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +342,8 @@
 			files = (
 				D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
+				D7D523222219947800175EFD /* ParserMock.swift in Sources */,
+				D7D5231F221993E500175EFD /* DamagePartsServiceImplTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
