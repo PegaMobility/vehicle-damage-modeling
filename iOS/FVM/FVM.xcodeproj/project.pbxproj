@@ -19,12 +19,13 @@
 		D75D1F2B220ED971009869CF /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D1F2A220ED971009869CF /* Selection.swift */; };
 		D78167932211753C00D69046 /* SelectionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167922211753C00D69046 /* SelectionRoot.swift */; };
 		D7D523132219909800175EFD /* DemagedPartsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */; };
-		D7D523142219909800175EFD /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523112219909800175EFD /* Parser.swift */; };
+		D7D523142219909800175EFD /* AbstractParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523112219909800175EFD /* AbstractParser.swift */; };
 		D7D523152219909800175EFD /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523122219909800175EFD /* JsonParser.swift */; };
 		D7D52317221990C500175EFD /* DamagePartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D52316221990C500175EFD /* DamagePartService.swift */; };
 		D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231B2219939C00175EFD /* JsonParserTests.swift */; };
 		D7D5231F221993E500175EFD /* DamagePartsServiceImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231E221993E500175EFD /* DamagePartsServiceImplTests.swift */; };
 		D7D523222219947800175EFD /* ParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523212219947800175EFD /* ParserMock.swift */; };
+		D7D523242219EABC00175EFD /* StringMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523232219EABC00175EFD /* StringMocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +54,13 @@
 		D75D1F2A220ED971009869CF /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		D78167922211753C00D69046 /* SelectionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRoot.swift; sourceTree = "<group>"; };
 		D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsServiceImpl.swift; sourceTree = "<group>"; };
-		D7D523112219909800175EFD /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		D7D523112219909800175EFD /* AbstractParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractParser.swift; sourceTree = "<group>"; };
 		D7D523122219909800175EFD /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		D7D52316221990C500175EFD /* DamagePartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagePartService.swift; sourceTree = "<group>"; };
 		D7D5231B2219939C00175EFD /* JsonParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 		D7D5231E221993E500175EFD /* DamagePartsServiceImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagePartsServiceImplTests.swift; sourceTree = "<group>"; };
 		D7D523212219947800175EFD /* ParserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
+		D7D523232219EABC00175EFD /* StringMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +173,7 @@
 		D7D523102219909800175EFD /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				D7D523112219909800175EFD /* Parser.swift */,
+				D7D523112219909800175EFD /* AbstractParser.swift */,
 				D7D523122219909800175EFD /* JsonParser.swift */,
 			);
 			path = Parsers;
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D523212219947800175EFD /* ParserMock.swift */,
+				D7D523232219EABC00175EFD /* StringMocks.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -327,7 +330,7 @@
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
 				BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */,
 				D75D1F2B220ED971009869CF /* Selection.swift in Sources */,
-				D7D523142219909800175EFD /* Parser.swift in Sources */,
+				D7D523142219909800175EFD /* AbstractParser.swift in Sources */,
 				D7D523152219909800175EFD /* JsonParser.swift in Sources */,
 				BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */,
 				D7D523132219909800175EFD /* DemagedPartsServiceImpl.swift in Sources */,
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7D523242219EABC00175EFD /* StringMocks.swift in Sources */,
 				D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
 				D7D523222219947800175EFD /* ParserMock.swift in Sources */,

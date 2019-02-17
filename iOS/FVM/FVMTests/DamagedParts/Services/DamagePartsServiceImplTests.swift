@@ -18,7 +18,7 @@ import XCTest
 class DamagePartsServiceImplTests: XCTestCase {
 
     
-    private var parserMock : ParserMock?
+    private var parserMock : ParserMock<SelectionRoot>?
     private var sut: DemagedPartsServiceImpl?
     
     override func setUp() {
@@ -28,16 +28,7 @@ class DamagePartsServiceImplTests: XCTestCase {
 
     func testIfSelectionArrayHasOneElementWhenOneElementJsonIsPassed() {
         //Arrange
-        let simpleJson = """
-        {
-            "selection":[
-                {
-                    "id":"simpleId"
-                }
-            ]
-        }
-
-        """
+        let simpleJson = simpleJsonWithOnePart.0
         
         //Act
         let result = sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)
@@ -46,29 +37,17 @@ class DamagePartsServiceImplTests: XCTestCase {
         
     }
     
-    func testIfCallsParserOnce() {
+    func testIfSelectionArrayRetursProperPart(){
         //Arrange
-        parserMock = ParserMock()
-        let simpleJson = """
-        {
-            "selection":[
-                {
-                    "id":"simpleId"
-                }
-            ]
-        }
-
-        """
+        let simpleJson = simpleJsonWithOnePart.0
+        let expected = simpleJsonWithOnePart.1[0].id
         
         //Act
-        sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)
+        let actual = sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)[0].id
         
         //Assert
-        var packed =  self.parserMock as! ParserMock
+        XCTAssertEqual(expected, actual)
         
-        XCTAssert(packed.simpleIdCalls == 1)
     }
-    
-    
 
 }

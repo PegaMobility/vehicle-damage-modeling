@@ -15,12 +15,12 @@
 
 import Foundation
 
-public class DemagedPartsServiceImpl : DemagePartsService{
+public class DemagedPartsServiceImpl: DemagePartsService{
 
     private var demagedParts = [Selection]()
-    private var parser: JsonParser<SelectionRoot>
+    private var parser: AbstractParser<SelectionRoot>
     
-    init(parser: JsonParser<SelectionRoot>) {
+    init(parser: AbstractParser<SelectionRoot>) {
         self.parser = parser
     }
     
@@ -35,7 +35,7 @@ public class DemagedPartsServiceImpl : DemagePartsService{
     
     public func CreateCollectionOfDamagedParts(json: String) {
         let root = parser.parse(jsonData: json)
-        demagedParts = (root?.selection)!
+        demagedParts = (root?.selection)!;
     }
     
 }

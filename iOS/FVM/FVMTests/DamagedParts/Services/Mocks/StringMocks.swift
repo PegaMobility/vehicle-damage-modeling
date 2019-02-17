@@ -12,20 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 import Foundation
+@testable import FVM
 
-public class JsonParser <Element: Decodable> : AbstractParser<Element> {
-    
-    public override func parse(data: Data?) -> Element? {
-        let selectionRoot = try? JSONDecoder().decode(Element.self, from: data!)
-        return selectionRoot
-    }
-    
-    public override func parse(jsonData: String) -> Element?{
-        let data = jsonData.data(using: .utf8)
-        let selectionRoot = parse(data: data)
-        return selectionRoot
-    }
-    
+fileprivate let oneElementJson = """
+{
+"selection":[
+{
+"id":"simpleId"
 }
+]
+}
+
+"""
+
+fileprivate let expectedSelection = [Selection(newName: "simpleId")]
+fileprivate let expectedRoot = SelectionRoot(selectionArray: expectedSelection)
+public let simpleJsonWithOnePart = (oneElementJson, expectedSelection)

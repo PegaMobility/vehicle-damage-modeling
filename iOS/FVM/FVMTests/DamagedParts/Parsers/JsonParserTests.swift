@@ -40,16 +40,7 @@ class JsonParserTests: XCTestCase {
     func testIfContainsExaclyOneSelectedPart(){
         //Arrange
         sut = JsonParser<SelectionRoot>()
-        let oneElementJson = """
-{
-   "selection":[
-      {
-         "id":"simpleId"
-      }
-   ]
-}
-
-"""
+        let oneElementJson = simpleJsonWithOnePart.0
 
         //Act
         let result = sut.parse(jsonData: oneElementJson)
@@ -65,7 +56,7 @@ class JsonParserTests: XCTestCase {
         
         let oneElementJson = """
 {
-   "selection":[
+    "selection":[
       {
          "id":"simpleId"
       }

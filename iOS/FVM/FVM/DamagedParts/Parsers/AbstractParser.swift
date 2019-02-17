@@ -15,8 +15,7 @@
 import Foundation
 
 
-protocol Parser{
-    associatedtype type
-    func parse(jsonData: String) -> type?
-    func parse(data: Data?) -> type?
+public class AbstractParser <Element: Decodable> {
+    func parse(jsonData: String) -> Element?{fatalError("Abstract class need to be implemented!")}
+    func parse(data: Data?) -> Element?{fatalError("Abstract class need to be implemented!")}
 }

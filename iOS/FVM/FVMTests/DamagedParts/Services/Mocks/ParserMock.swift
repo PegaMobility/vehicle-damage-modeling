@@ -15,7 +15,7 @@
 import Foundation
 @testable import FVM
 
-class ParserMock : JsonParser<SelectionRoot>{
+class ParserMock <Element: Decodable> : AbstractParser<SelectionRoot> {
     
     
     public var simpleIdCalls = 0
@@ -26,21 +26,13 @@ class ParserMock : JsonParser<SelectionRoot>{
     }
     
     public override func parse(jsonData: String) -> SelectionRoot?{
-        let simpleJson = """
-{
-   "selection":[
-      {
-         "id":"simpleId"
-      }
-   ]
-}
-
-"""
+        let simpleJson = simpleJsonWithOnePart.0
+        let expectedValue = simpleJsonWithOnePart.1[0].id
         if jsonData == simpleJson{
             
             simpleIdCalls = simpleIdCalls + 1
             var arrayWithOneElement = [Selection]()
-            arrayWithOneElement.append(Selection(newName: "simpleId"))
+            arrayWithOneElement.append(Selection(newName: expectedValue))
             return SelectionRoot(selectionArray: arrayWithOneElement)
         }
         
