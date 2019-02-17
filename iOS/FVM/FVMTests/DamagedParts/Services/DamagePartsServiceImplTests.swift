@@ -1,10 +1,16 @@
+// Copyright 2019 Flying Vehicle Monster team
 //
-//  DamagePartsServiceImplTests.swift
-//  FVMTests
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
 //
-//  Created by Smykala, Szymon on 17/02/2019.
-//  Copyright © 2019 Czajka, Kamil. All rights reserved.
+// http://www.apache.org/licenses/LICENSE-2.0
 //
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 import XCTest
 @testable import FVM
@@ -12,16 +18,32 @@ import XCTest
 class DamagePartsServiceImplTests: XCTestCase {
 
     
-    private var parserMock = ParserMock();
+    private var parserMock : ParserMock?
     private var sut: DemagedPartsServiceImpl?
     
     override func setUp() {
-        sut = DemagedPartsServiceImpl(parser: parserMock)
+        parserMock = ParserMock()
+        sut = DemagedPartsServiceImpl(parser: parserMock!)
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testIfSelectionArrayHasOneElementWhenOneElementJsonIsPassed() {
+        //Arrange
+        let simpleJson = """
+{
+   "selection":[
+      {
+         "id":"simpleId"
+      }
+   ]
+}
+
+"""
+        
+        //Act
+        let result = sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)
+        //Assert
+        XCTAssert(result?.count == 1)
+        
     }
 
 }

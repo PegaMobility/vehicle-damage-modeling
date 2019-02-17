@@ -11,9 +11,35 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 import Foundation
 @testable import FVM
 
 class ParserMock : JsonParser<SelectionRoot>{
+    
+    public override func parse(data: Data?) -> SelectionRoot? {
+        
+        return SelectionRoot(selectionArray: [Selection]())
+    }
+    
+    public override func parse(jsonData: String) -> SelectionRoot?{
+        let simpleJson = """
+{
+   "selection":[
+      {
+         "id":"simpleId"
+      }
+   ]
+}
+
+"""
+        if jsonData == simpleJson{
+            var arrayWithOneElement = [Selection]()
+            arrayWithOneElement.append(Selection(newName: "simpleId"))
+            return SelectionRoot(selectionArray: arrayWithOneElement)
+        }
+        
+        return SelectionRoot(selectionArray: [Selection]())
+    }
     
 }
