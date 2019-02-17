@@ -18,10 +18,10 @@ import Foundation
 public class DemagedPartsService {
     
     private var demagedParts = [Selection]()
-    private var jsonParser: JsonParser
-    
-    init(parser: JsonParser) {
-        jsonParser = parser
-    }
+//    private var jsonParser: JsonParser
+//
+//    init(parser: JsonParser) {
+//        jsonParser = parser
+//    }
     
 }

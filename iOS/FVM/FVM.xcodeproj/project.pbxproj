@@ -20,6 +20,8 @@
 		D75D1F29220ED959009869CF /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D1F28220ED959009869CF /* JsonParser.swift */; };
 		D75D1F2B220ED971009869CF /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D1F2A220ED971009869CF /* Selection.swift */; };
 		D78167932211753C00D69046 /* SelectionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167922211753C00D69046 /* SelectionRoot.swift */; };
+		D78167972216A64C00D69046 /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167962216A64C00D69046 /* JsonParserTests.swift */; };
+		D78167992216E11B00D69046 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167982216E11A00D69046 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D75D1F28220ED959009869CF /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		D75D1F2A220ED971009869CF /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		D78167922211753C00D69046 /* SelectionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRoot.swift; sourceTree = "<group>"; };
+		D78167962216A64C00D69046 /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
+		D78167982216E11A00D69046 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		0535F32721C4389F00CD6C44 /* FVMTests */ = {
 			isa = PBXGroup;
 			children = (
+				D78167952216A63700D69046 /* DamagedParts */,
 				0535F32A21C4389F00CD6C44 /* Info.plist */,
 				BA1FBE112208CB0800DBFB9E /* MaterialProcessorTests.swift */,
 			);
@@ -135,6 +140,7 @@
 				D78167912211744800D69046 /* Models */,
 				D75D1F26220ED8F0009869CF /* DemagedPartsService.swift */,
 				D75D1F28220ED959009869CF /* JsonParser.swift */,
+				D78167982216E11A00D69046 /* Parser.swift */,
 			);
 			path = DamagedParts;
 			sourceTree = "<group>";
@@ -147,6 +153,14 @@
 			);
 			path = Models;
 			sourceTree = "<group>";
+		};
+		D78167952216A63700D69046 /* DamagedParts */ = {
+			isa = PBXGroup;
+			children = (
+				D78167962216A64C00D69046 /* JsonParserTests.swift */,
+			);
+			path = DamagedParts;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -261,6 +275,7 @@
 			files = (
 				D78167932211753C00D69046 /* SelectionRoot.swift in Sources */,
 				BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */,
+				D78167992216E11B00D69046 /* Parser.swift in Sources */,
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
 				D75D1F27220ED8F0009869CF /* DemagedPartsService.swift in Sources */,
 				BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */,
@@ -275,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78167972216A64C00D69046 /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

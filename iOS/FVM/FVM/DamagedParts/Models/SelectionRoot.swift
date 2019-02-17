@@ -15,7 +15,7 @@
 import Foundation
 
 struct SelectionRoot: Codable {
-    let selection: [Selection]
+    let selection: [Selection]	
     
     init(selectionArray: [Selection]) {
         selection = selectionArray

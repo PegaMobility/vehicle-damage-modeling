@@ -15,13 +15,12 @@
 
 import Foundation
 
-class JsonParser<T> {
+public class JsonParser <Element: Decodable>  {
     
-    
-    public func parse(jsonData: String){
+    public func parse(jsonData: String) -> Element?{
         let data = jsonData.data(using: .utf8)
-        let selectionRoot = try? JSONDecoder().decode(SelectionRoot.self, from: data!)
+        let selectionRoot = try? JSONDecoder().decode(Element.self, from: data!)
+        return selectionRoot
     }
-    
     
 }
