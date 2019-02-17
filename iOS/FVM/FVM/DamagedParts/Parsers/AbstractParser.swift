@@ -14,7 +14,6 @@
 
 import Foundation
 
-
 public class AbstractParser <Element: Decodable> {
     func parse(jsonData: String) -> Element?{fatalError("Abstract class need to be implemented!")}
     func parse(data: Data?) -> Element?{fatalError("Abstract class need to be implemented!")}

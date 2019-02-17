@@ -25,7 +25,7 @@
 		D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231B2219939C00175EFD /* JsonParserTests.swift */; };
 		D7D5231F221993E500175EFD /* DamagePartsServiceImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231E221993E500175EFD /* DamagePartsServiceImplTests.swift */; };
 		D7D523222219947800175EFD /* ParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523212219947800175EFD /* ParserMock.swift */; };
-		D7D523242219EABC00175EFD /* StringMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523232219EABC00175EFD /* StringMocks.swift */; };
+		D7D523242219EABC00175EFD /* ParserResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523232219EABC00175EFD /* ParserResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		D7D5231B2219939C00175EFD /* JsonParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 		D7D5231E221993E500175EFD /* DamagePartsServiceImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagePartsServiceImplTests.swift; sourceTree = "<group>"; };
 		D7D523212219947800175EFD /* ParserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
-		D7D523232219EABC00175EFD /* StringMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMocks.swift; sourceTree = "<group>"; };
+		D7D523232219EABC00175EFD /* ParserResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D523212219947800175EFD /* ParserMock.swift */,
-				D7D523232219EABC00175EFD /* StringMocks.swift */,
+				D7D523232219EABC00175EFD /* ParserResources.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D523242219EABC00175EFD /* StringMocks.swift in Sources */,
+				D7D523242219EABC00175EFD /* ParserResources.swift in Sources */,
 				D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
 				D7D523222219947800175EFD /* ParserMock.swift in Sources */,

@@ -17,13 +17,12 @@ import Foundation
 
 fileprivate let oneElementJson = """
 {
-"selection":[
-{
-"id":"simpleId"
+    "selection":[
+        {
+            "id":"simpleId"
+        }
+    ]
 }
-]
-}
-
 """
 
 fileprivate let expectedSelection = [Selection(newName: "simpleId")]

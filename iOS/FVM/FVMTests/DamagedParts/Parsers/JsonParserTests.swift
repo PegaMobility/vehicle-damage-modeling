@@ -17,60 +17,44 @@ import XCTest
 
 class JsonParserTests: XCTestCase {
 
-    private var sut = JsonParser<SelectionRoot>()
+    private var sut : JsonParser<SelectionRoot>?
     
     override func setUp() {
-        
       sut = JsonParser<SelectionRoot>()
-        
     }
 
     func testIfReturnsNillWhenJsonIsInvalid() {
         //Arrange
-        sut = JsonParser<SelectionRoot>()
-        let simpleJson = "{invalid{"
+        let invalidJson = "{invalid{"
         
         //Act
-        let result = sut.parse(jsonData: simpleJson)
+        let actual = sut!.parse(jsonData: invalidJson)
         
         //Assert
-        XCTAssertNil(result)
+        XCTAssertNil(actual)
     }
     
     func testIfContainsExaclyOneSelectedPart(){
         //Arrange
-        sut = JsonParser<SelectionRoot>()
         let oneElementJson = simpleJsonWithOnePart.0
 
         //Act
-        let result = sut.parse(jsonData: oneElementJson)
+        let actual = sut!.parse(jsonData: oneElementJson)
         
         //Assert
-        XCTAssert(result!.selection.count == 1)
-        
+        XCTAssert(actual!.selection.count == 1)
     }
     
     func testIfPartHasCorrectId(){
         //Arrange
-        sut = JsonParser<SelectionRoot>()
-        
-        let oneElementJson = """
-{
-    "selection":[
-      {
-         "id":"simpleId"
-      }
-   ]
-}
-
-"""
+        let oneElementJson = simpleJsonWithOnePart.0
+        let expected = simpleJsonWithOnePart.1[0].id
         
         //Act
-        let result = sut.parse(jsonData: oneElementJson)
+        let actual = sut!.parse(jsonData: oneElementJson)
         
         //Assert
-        XCTAssert(result!.selection[0].id == "simpleId")
-        
+        XCTAssertEqual(actual!.selection[0].id, expected)
     }
 
 }

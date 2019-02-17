@@ -27,7 +27,7 @@ class ParserMock <Element: Decodable> : AbstractParser<SelectionRoot> {
     public override func parse(jsonData: String) -> SelectionRoot?{
         let simpleJson = simpleJsonWithOnePart.0
         let expectedValue = simpleJsonWithOnePart.1[0].id
-        parseCalls+=1
+        parseCalls += 1
         if jsonData == simpleJson{
             
             var arrayWithOneElement = [Selection]()
