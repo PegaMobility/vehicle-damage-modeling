@@ -14,10 +14,15 @@
 
 import Foundation
 
-public protocol DemagePartsService {
-    func createAndGetCollectionOfDamagedParts(json: String) -> [Selection]
-    func getCollectionOfDamagedParts() -> [Selection]
-    func createCollectionOfDamagedParts(json: String) -> Void
-    func addPart(part: Selection)
-    func removePart(partId: String)
+class DamagedPartsNamesProvider {
+    
+    private var validPartsNames: [String]
+    
+    init(validPartsNames: [String]) {
+        self.validPartsNames = validPartsNames
+    }
+    
+    public func getValidNames() -> [String]{
+        return validPartsNames
+    }
 }

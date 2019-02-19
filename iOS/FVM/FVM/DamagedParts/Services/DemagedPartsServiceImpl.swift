@@ -15,26 +15,39 @@
 import Foundation
 
 public class DemagedPartsServiceImpl: DemagePartsService{
-
-    private var demagedParts = [Selection]()
+ 
+//    private var demagedParts = [Selection]()
     private var parser: AbstractParser<SelectionRoot>
+    private var validator: DemagedPartsValidator
+    private var repository: DemagedPartsRepository
     
-    init(parser: AbstractParser<SelectionRoot>) {
+    init(parser: AbstractParser<SelectionRoot>, validator: DemagedPartsValidator, repository: DemagedPartsRepository) {
         self.parser = parser
+        self.validator = validator
+        self.repository = repository
     }
     
-    public func CreateAndGetCollectionOfDamagedParts(json: String) -> [Selection] {
-        CreateCollectionOfDamagedParts(json: json)
-        return GetCollectionOfDamagedParts()
+    public func createAndGetCollectionOfDamagedParts(json: String) -> [Selection] {
+        createCollectionOfDamagedParts(json: json)
+        return getCollectionOfDamagedParts()
     }
     
-    public func GetCollectionOfDamagedParts() -> [Selection] {
-        return demagedParts
+    public func getCollectionOfDamagedParts() -> [Selection] {
+        return repository.getAll();
     }
     
-    public func CreateCollectionOfDamagedParts(json: String) {
+    public func createCollectionOfDamagedParts(json: String) {
         let root = parser.parse(jsonData: json)
-        demagedParts = (root?.selection)!;
+        repository.clear()
+        repository.add(selections: root?.selection ?? [Selection]())
+    }
+    
+    public func addPart(part: Selection) {
+        repository.add(selection: part)
+    }
+    
+    public func removePart(partId: String) {
+        repository.remove(partId: partId)
     }
     
 }

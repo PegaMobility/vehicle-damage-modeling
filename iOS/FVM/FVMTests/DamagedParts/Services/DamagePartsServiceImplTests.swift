@@ -31,7 +31,8 @@ class DamagePartsServiceImplTests: XCTestCase {
         let simpleJson = simpleJsonWithOnePart.0
         
         //Act
-        let result = sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)
+        let result = sut?.createAndGetCollectionOfDamagedParts(json: simpleJson)
+        
         //Assert
         XCTAssert(result?.count == 1)
     }
@@ -42,7 +43,7 @@ class DamagePartsServiceImplTests: XCTestCase {
         let expected = simpleJsonWithOnePart.1[0].id
         
         //Act
-        let actual = sut?.CreateAndGetCollectionOfDamagedParts(json: simpleJson)[0].id
+        let actual = sut?.createAndGetCollectionOfDamagedParts(json: simpleJson)[0].id
         
         //Assert
         XCTAssertEqual(actual, expected)
@@ -50,7 +51,7 @@ class DamagePartsServiceImplTests: XCTestCase {
     
     func testIfReturnsEmptyArrayWhenNothingWasInvonked(){
         //Act
-        let actual = sut?.GetCollectionOfDamagedParts()
+        let actual = sut?.getCollectionOfDamagedParts()
         
         //Assert
         XCTAssert(actual?.count == 0)
@@ -58,7 +59,7 @@ class DamagePartsServiceImplTests: XCTestCase {
     
     func testIfParserWasCalledOnce(){
         //Act
-        sut?.CreateCollectionOfDamagedParts(json: "")
+        sut?.createCollectionOfDamagedParts(json: "")
         
         //Assert
         XCTAssertEqual(parserMock?.parseCalls, 1)

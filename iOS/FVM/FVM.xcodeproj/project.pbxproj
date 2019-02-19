@@ -16,6 +16,9 @@
 		BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F222063F2100574F2C /* HighlightHandler.swift */; };
 		BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F422064B0600574F2C /* TapGestureHandler.swift */; };
 		BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */; };
+		D74F2B41221C5D790055ACC1 /* DamagedPartsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B40221C5D790055ACC1 /* DamagedPartsRepository.swift */; };
+		D74F2B43221C5D9E0055ACC1 /* DamagedPartsNamesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B42221C5D9E0055ACC1 /* DamagedPartsNamesProvider.swift */; };
+		D74F2B46221C5E2A0055ACC1 /* DemagedPartsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B45221C5E2A0055ACC1 /* DemagedPartsValidator.swift */; };
 		D75D1F2B220ED971009869CF /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D1F2A220ED971009869CF /* Selection.swift */; };
 		D78167932211753C00D69046 /* SelectionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167922211753C00D69046 /* SelectionRoot.swift */; };
 		D7D523132219909800175EFD /* DemagedPartsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */; };
@@ -51,6 +54,9 @@
 		BAAD17F222063F2100574F2C /* HighlightHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightHandler.swift; sourceTree = "<group>"; };
 		BAAD17F422064B0600574F2C /* TapGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureHandler.swift; sourceTree = "<group>"; };
 		BAAD17F622064BD600574F2C /* PinchGestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchGestureHandler.swift; sourceTree = "<group>"; };
+		D74F2B40221C5D790055ACC1 /* DamagedPartsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsRepository.swift; sourceTree = "<group>"; };
+		D74F2B42221C5D9E0055ACC1 /* DamagedPartsNamesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsNamesProvider.swift; sourceTree = "<group>"; };
+		D74F2B45221C5E2A0055ACC1 /* DemagedPartsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemagedPartsValidator.swift; sourceTree = "<group>"; };
 		D75D1F2A220ED971009869CF /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		D78167922211753C00D69046 /* SelectionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRoot.swift; sourceTree = "<group>"; };
 		D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsServiceImpl.swift; sourceTree = "<group>"; };
@@ -142,9 +148,36 @@
 			path = Highlighting;
 			sourceTree = "<group>";
 		};
+		D74F2B3E221C5D660055ACC1 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				D74F2B42221C5D9E0055ACC1 /* DamagedPartsNamesProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		D74F2B3F221C5D670055ACC1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D74F2B40221C5D790055ACC1 /* DamagedPartsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D74F2B44221C5E110055ACC1 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				D74F2B45221C5E2A0055ACC1 /* DemagedPartsValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		D75D1F25220ED8CF009869CF /* DamagedParts */ = {
 			isa = PBXGroup;
 			children = (
+				D74F2B44221C5E110055ACC1 /* Validators */,
+				D74F2B3E221C5D660055ACC1 /* Providers */,
+				D74F2B3F221C5D670055ACC1 /* Repositories */,
 				D7D523102219909800175EFD /* Parsers */,
 				D7D5230E2219909800175EFD /* Services */,
 				D78167912211744800D69046 /* Models */,
@@ -325,11 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74F2B41221C5D790055ACC1 /* DamagedPartsRepository.swift in Sources */,
 				D78167932211753C00D69046 /* SelectionRoot.swift in Sources */,
 				BAAD17F522064B0600574F2C /* TapGestureHandler.swift in Sources */,
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
 				BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */,
 				D75D1F2B220ED971009869CF /* Selection.swift in Sources */,
+				D74F2B43221C5D9E0055ACC1 /* DamagedPartsNamesProvider.swift in Sources */,
+				D74F2B46221C5E2A0055ACC1 /* DemagedPartsValidator.swift in Sources */,
 				D7D523142219909800175EFD /* AbstractParser.swift in Sources */,
 				D7D523152219909800175EFD /* JsonParser.swift in Sources */,
 				BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */,
