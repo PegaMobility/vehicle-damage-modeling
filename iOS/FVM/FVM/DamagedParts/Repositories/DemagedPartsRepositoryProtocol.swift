@@ -14,25 +14,12 @@
 
 import Foundation
 
-class DemagedPartsValidator : Validable {
+public protocol DemagedPartsRepositoryProtocol{
     
-    private var provider: DamagedPartsNamesProvider
-    
-    init(provider: DamagedPartsNamesProvider) {
-        self.provider = provider
-    }
-    
-    public func validate(partsNames: [Selection]) -> [Selection]{
-        
-        var result = [Selection]();
-        let actualNames = provider.getValidNames()
-        
-        for part in partsNames{
-            if (actualNames.contains(part.id)){
-                result.append(part)
-            }
-        }
-        
-        return result
-    }
+    func clear()
+    func add(selection: Selection)
+    func remove(selection: Selection)
+    func add(selections: [Selection])
+    func remove(partId: String)
+    func getAll() -> [Selection]
 }

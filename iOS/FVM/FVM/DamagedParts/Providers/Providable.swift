@@ -14,25 +14,6 @@
 
 import Foundation
 
-class DemagedPartsValidator : Validable {
-    
-    private var provider: DamagedPartsNamesProvider
-    
-    init(provider: DamagedPartsNamesProvider) {
-        self.provider = provider
-    }
-    
-    public func validate(partsNames: [Selection]) -> [Selection]{
-        
-        var result = [Selection]();
-        let actualNames = provider.getValidNames()
-        
-        for part in partsNames{
-            if (actualNames.contains(part.id)){
-                result.append(part)
-            }
-        }
-        
-        return result
-    }
+public protocol Providable {
+    func getValidNames() -> [String]
 }

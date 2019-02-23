@@ -14,14 +14,14 @@
 
 import Foundation
 
-public class JsonParser <Element: Decodable> : AbstractParser<Element> {
+public class JsonParser <Element: Decodable>{
     
-    public override func parse(data: Data?) -> Element? {
+    public func parse(data: Data?) -> Element? {
         let selectionRoot = try? JSONDecoder().decode(Element.self, from: data!)
         return selectionRoot
     }
     
-    public override func parse(jsonData: String) -> Element?{
+    public func parse(jsonData: String) -> Element?{
         let data = jsonData.data(using: .utf8)
         let selectionRoot = parse(data: data)
         return selectionRoot

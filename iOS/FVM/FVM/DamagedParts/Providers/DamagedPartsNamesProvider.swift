@@ -14,7 +14,7 @@
 
 import Foundation
 
-class DamagedPartsNamesProvider {
+class DamagedPartsNamesProvider : Providable {
     
     private var validPartsNames: [String]
     
