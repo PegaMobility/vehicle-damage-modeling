@@ -14,10 +14,13 @@
 
 import Foundation
 
-public protocol DemagedPartsServiceProtocol {
-    func createAndGetCollectionOfDamagedParts(json: String) -> [Selection]
-    func getCollectionOfDamagedParts() -> [Selection]
-    func createCollectionOfDamagedParts(json: String) -> Void
-    func addPart(part: Selection)
-    func removePart(partId: String)
+public class DemagePartsServiceFactory{
+    
+    public static func Create(validPartsNames: [String]) -> DemagedPartsServiceImpl{
+        let parser = JsonParser<SelectionRoot>()
+        let partsNamesProvider = DamagedPartsNamesProvider(validPartsNames: validPartsNames)
+        let validator = DemagedPartsValidator(provider: partsNamesProvider)
+        let repository = DemagedPartsRepository()
+        return DemagedPartsServiceImpl(parser: parser, validator: validator, repository: repository)
+    }
 }

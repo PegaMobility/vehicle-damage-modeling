@@ -14,7 +14,7 @@
 
 import Foundation
 
-public class DemagedPartsServiceImpl: DemagePartsService{
+public class DemagedPartsServiceImpl: DemagedPartsServiceProtocol{
  
     private var parser: JsonParser<SelectionRoot>
     private var validator: DemagedPartsValidator
@@ -32,7 +32,7 @@ public class DemagedPartsServiceImpl: DemagePartsService{
     }
     
     public func getCollectionOfDamagedParts() -> [Selection] {
-        return repository.getAll();
+        return repository.getAll()
     }
     
     public func createCollectionOfDamagedParts(json: String) {
@@ -50,14 +50,6 @@ public class DemagedPartsServiceImpl: DemagePartsService{
     
     public func removePart(partId: String) {
         repository.remove(partId: partId)
-    }
-    
-    public static func Create(validPartsNames: [String]) -> DemagedPartsServiceImpl{
-        let parser = JsonParser<SelectionRoot>()
-        let partsNamesProvider = DamagedPartsNamesProvider(validPartsNames: validPartsNames)
-        let validator = DemagedPartsValidator(provider: partsNamesProvider)
-        let repository = DemagedPartsRepository()
-        return DemagedPartsServiceImpl(parser: parser, validator: validator, repository: repository)
     }
     
 }

@@ -27,6 +27,7 @@
 		D74F2B5A222197A60055ACC1 /* DemagePartsValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B59222197A60055ACC1 /* DemagePartsValidatorTests.swift */; };
 		D74F2B5C222197EA0055ACC1 /* ProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B5B222197EA0055ACC1 /* ProviderMock.swift */; };
 		D74F2B5F22219EBE0055ACC1 /* DemagedParstsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B5E22219EBE0055ACC1 /* DemagedParstsRepositoryTests.swift */; };
+		D74F2B652221AF310055ACC1 /* DemagePartsServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B642221AF310055ACC1 /* DemagePartsServiceFactory.swift */; };
 		D75D1F2B220ED971009869CF /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D1F2A220ED971009869CF /* Selection.swift */; };
 		D78167932211753C00D69046 /* SelectionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167922211753C00D69046 /* SelectionRoot.swift */; };
 		D7D523132219909800175EFD /* DemagedPartsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */; };
@@ -71,6 +72,7 @@
 		D74F2B59222197A60055ACC1 /* DemagePartsValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemagePartsValidatorTests.swift; sourceTree = "<group>"; };
 		D74F2B5B222197EA0055ACC1 /* ProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMock.swift; sourceTree = "<group>"; };
 		D74F2B5E22219EBE0055ACC1 /* DemagedParstsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemagedParstsRepositoryTests.swift; sourceTree = "<group>"; };
+		D74F2B642221AF310055ACC1 /* DemagePartsServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagePartsServiceFactory.swift; sourceTree = "<group>"; };
 		D75D1F2A220ED971009869CF /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		D78167922211753C00D69046 /* SelectionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRoot.swift; sourceTree = "<group>"; };
 		D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsServiceImpl.swift; sourceTree = "<group>"; };
@@ -246,9 +248,18 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		D74F2B602221AEF90055ACC1 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D74F2B642221AF310055ACC1 /* DemagePartsServiceFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		D75D1F25220ED8CF009869CF /* DamagedParts */ = {
 			isa = PBXGroup;
 			children = (
+				D74F2B602221AEF90055ACC1 /* Factories */,
 				D74F2B44221C5E110055ACC1 /* Validators */,
 				D74F2B3E221C5D660055ACC1 /* Providers */,
 				D74F2B3F221C5D670055ACC1 /* Repositories */,
@@ -440,6 +451,7 @@
 				BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */,
 				D75D1F2B220ED971009869CF /* Selection.swift in Sources */,
 				D74F2B43221C5D9E0055ACC1 /* DamagedPartsNamesProvider.swift in Sources */,
+				D74F2B652221AF310055ACC1 /* DemagePartsServiceFactory.swift in Sources */,
 				D74F2B4C222161340055ACC1 /* DemagedPartsRepositoryProtocol.swift in Sources */,
 				D74F2B46221C5E2A0055ACC1 /* DemagedPartsValidator.swift in Sources */,
 				D7D523152219909800175EFD /* JsonParser.swift in Sources */,

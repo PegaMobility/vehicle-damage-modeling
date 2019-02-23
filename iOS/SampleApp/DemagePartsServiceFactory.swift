@@ -13,11 +13,3 @@
 // limitations under the License.
 
 import Foundation
-
-public protocol DemagedPartsServiceProtocol {
-    func createAndGetCollectionOfDamagedParts(json: String) -> [Selection]
-    func getCollectionOfDamagedParts() -> [Selection]
-    func createCollectionOfDamagedParts(json: String) -> Void
-    func addPart(part: Selection)
-    func removePart(partId: String)
-}

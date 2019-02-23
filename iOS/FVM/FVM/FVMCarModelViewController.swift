@@ -19,15 +19,61 @@ public class FVMCarModelViewController : SCNView {
     internal var scnScene: SCNScene!
     internal var scnCamera: SCNNode!
     internal let highlightHandler = HighlightHandler()
+    private var demagePartsService: DemagedPartsServiceImpl?
     
     public func onStartup() {
         self.allowsCameraControl = false
         self.autoenablesDefaultLighting = true
-    
+        
+
+//        var parts = demagePartsService?.getCollectionOfDamagedParts()
+        
+        
         setupGestures()
         setupScene()
         setupCamera()
         setupLights()
+        
+        let oneElementJson = """
+        {
+        "mainScreenText": "text",
+        "selection":[
+        {
+        "id":"Hood"
+        },
+        {
+        "id":"MirrorRight"
+        }
+        ]
+        }
+        """
+        
+        demagePartsService = DemagePartsServiceFactory.Create(validPartsNames: findAllNodesNames())
+        var partsToHightlight = demagePartsService?.createCollectionOfDamagedParts(json: oneElementJson)
+        setupInitialHightlight()  
+    }
+    
+    private func findAllNodesNames() -> [String]{
+        let childNodes = scnScene.rootNode.childNode(withName: "carModel", recursively: false)?.childNodes
+        var result = [String]()
+        
+        for node in childNodes!{
+            result.append(node.name!)
+        }
+        return result
+    }
+    
+    private func setupInitialHightlight(){
+        let initialSelection = demagePartsService?.getCollectionOfDamagedParts()
+        
+        for selection in initialSelection!{
+            setHightlightForSelection(selection: selection)
+        }
+    }
+    
+    private func setHightlightForSelection(selection: Selection){
+        let node = scnScene.rootNode.childNode(withName: selection.id, recursively: true)
+        highlightHandler.setHighlightOn(node: node!)
     }
     
     private func setupGestures() {

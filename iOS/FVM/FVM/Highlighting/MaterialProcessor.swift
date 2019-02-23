@@ -30,7 +30,13 @@ internal class MaterialProcessor {
         setHighlightedMaterial(for: nodeName)
     }
     
-    internal func setHighlightedMaterial(for nodeName: String) {
+    public func highlightNewMaterial(forNode nodeName: String){
+        
+        
+        setHighlightedMaterial(for: nodeName)
+    }
+    
+    private func setHighlightedMaterial(for nodeName: String) {
         guard let node = materialStore[nodeName]?.node else {
             print("Node \(nodeName) not found")
             return
