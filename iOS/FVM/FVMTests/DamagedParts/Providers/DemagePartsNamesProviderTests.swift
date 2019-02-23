@@ -12,9 +12,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import Foundation
+import XCTest
+@testable import FVM
 
-public class AbstractParser <Element: Decodable> {
-    func parse(jsonData: String) -> Element?{fatalError("Abstract class need to be implemented!")}
-    func parse(data: Data?) -> Element?{fatalError("Abstract class need to be implemented!")}
+class DemagePartsNamesProviderTests: XCTestCase {
+    
+    private var sut: DamagedPartsNamesProvider?
+    private let validNames = ["Roof", "Mirror", "ValidName"]
+    
+    override func setUp() {
+        sut = DamagedPartsNamesProvider(validPartsNames: validNames)
+    }
+    
+    func testIfValidNamesHaveCorrectCount(){
+        // Arrange
+        let expected = validNames.count
+        
+        // Act
+        let actual = sut?.getValidNames().count
+        
+        // Assert
+        XCTAssertEqual(expected, actual)
+    }
+
 }

@@ -16,12 +16,11 @@ import Foundation
 
 public class DemagedPartsServiceImpl: DemagePartsService{
  
-//    private var demagedParts = [Selection]()
-    private var parser: AbstractParser<SelectionRoot>
+    private var parser: JsonParser<SelectionRoot>
     private var validator: DemagedPartsValidator
     private var repository: DemagedPartsRepository
     
-    init(parser: AbstractParser<SelectionRoot>, validator: DemagedPartsValidator, repository: DemagedPartsRepository) {
+    init(parser: JsonParser<SelectionRoot>, validator: DemagedPartsValidator, repository: DemagedPartsRepository) {
         self.parser = parser
         self.validator = validator
         self.repository = repository
@@ -38,12 +37,15 @@ public class DemagedPartsServiceImpl: DemagePartsService{
     
     public func createCollectionOfDamagedParts(json: String) {
         let root = parser.parse(jsonData: json)
+        let validated = validator.validate(partsNames: root?.selection ?? [Selection]())
         repository.clear()
-        repository.add(selections: root?.selection ?? [Selection]())
+        repository.add(selections: validated)
     }
     
     public func addPart(part: Selection) {
-        repository.add(selection: part)
+        if validator.validate(part: part) != nil{
+            repository.add(selection: part)
+        }
     }
     
     public func removePart(partId: String) {

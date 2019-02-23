@@ -15,10 +15,10 @@
 import Foundation
 
 class DemagedPartsValidator : Validable {
+
+    private var provider: Providable
     
-    private var provider: DamagedPartsNamesProvider
-    
-    init(provider: DamagedPartsNamesProvider) {
+    init(provider: Providable) {
         self.provider = provider
     }
     
@@ -35,4 +35,12 @@ class DemagedPartsValidator : Validable {
         
         return result
     }
+    
+    func validate(part: Selection) -> Selection? {
+        if provider.getValidNames().contains(part.id){
+            return part
+        }
+        return nil
+    }
+    
 }

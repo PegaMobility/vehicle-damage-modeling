@@ -15,13 +15,13 @@
 import Foundation
 @testable import FVM
 
-class ParserMock <Element: Decodable> : AbstractParser<SelectionRoot> {
+class ParserMock : JsonParser <SelectionRoot> {
     
     public var parseCalls = 0
     
     public override func parse(data: Data?) -> SelectionRoot? {
         
-        return SelectionRoot(selectionArray: [Selection]())
+        return SelectionRoot(selectionArray: [Selection](), text: "")
     }
     
     public override func parse(jsonData: String) -> SelectionRoot?{
@@ -32,10 +32,10 @@ class ParserMock <Element: Decodable> : AbstractParser<SelectionRoot> {
             
             var arrayWithOneElement = [Selection]()
             arrayWithOneElement.append(Selection(newName: expectedValue))
-            return SelectionRoot(selectionArray: arrayWithOneElement)
+            return SelectionRoot(selectionArray: arrayWithOneElement, text: "")
         }
         
-        return SelectionRoot(selectionArray: [Selection]())
+        return SelectionRoot(selectionArray: [Selection](), text: "")
     }
     
 }

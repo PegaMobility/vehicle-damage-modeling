@@ -17,13 +17,13 @@ import XCTest
 
 class DamagePartsServiceImplTests: XCTestCase {
 
-    
-    private var parserMock : ParserMock<SelectionRoot>?
+
+    private var parserMock : ParserMock?
     private var sut: DemagedPartsServiceImpl?
     
     override func setUp() {
         parserMock = ParserMock()
-        sut = DemagedPartsServiceImpl(parser: parserMock!)
+//        sut = DemagedPartsServiceImpl(parser: parserMock!, validator: nil, repository: nil)
     }
 
     func testIfSelectionArrayHasOneElementWhenOneElementJsonIsPassed() {

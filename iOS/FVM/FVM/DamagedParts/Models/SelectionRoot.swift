@@ -15,9 +15,11 @@
 import Foundation
 
 public struct SelectionRoot: Codable {
-    let selection: [Selection]	
+    let selection: [Selection]
+    let mainScreenText: String
     
-    init(selectionArray: [Selection]) {
+    init(selectionArray: [Selection], text: String) {
         selection = selectionArray
+        mainScreenText = text
     }
 }

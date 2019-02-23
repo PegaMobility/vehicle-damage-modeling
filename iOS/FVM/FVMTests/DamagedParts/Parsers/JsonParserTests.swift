@@ -42,7 +42,7 @@ class JsonParserTests: XCTestCase {
         let actual = sut!.parse(jsonData: oneElementJson)
         
         //Assert
-        XCTAssert(actual!.selection.count == 1)
+        XCTAssert(actual?.selection.count == 1)
     }
     
     func testIfPartHasCorrectId(){
@@ -54,7 +54,7 @@ class JsonParserTests: XCTestCase {
         let actual = sut!.parse(jsonData: oneElementJson)
         
         //Assert
-        XCTAssertEqual(actual!.selection[0].id, expected)
+        XCTAssertEqual(actual?.selection[0].id, expected)
     }
 
 }

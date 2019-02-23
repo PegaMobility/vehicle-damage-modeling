@@ -13,8 +13,17 @@
 // limitations under the License.
 
 import Foundation
+@testable import FVM
 
-public protocol Validable {
-    func validate(partsNames: [Selection]) -> [Selection]
-    func validate(part: Selection) -> Selection?
+internal class ProviderMock: Providable{
+    
+    private var validNames: [String]
+    
+    init(names: [String]) {
+        self.validNames = names
+    }
+    
+    func getValidNames() -> [String] {
+        return validNames
+    }
 }

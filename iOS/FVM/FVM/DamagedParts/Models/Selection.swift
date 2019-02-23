@@ -14,7 +14,7 @@
 
 import Foundation
 
-public struct Selection : Codable {
+public struct Selection : Codable, Equatable {
     
     public var id: String
     

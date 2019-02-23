@@ -17,6 +17,7 @@ import Foundation
 
 fileprivate let oneElementJson = """
 {
+    "mainScreenText": "text",
     "selection":[
         {
             "id":"simpleId"
@@ -26,5 +27,5 @@ fileprivate let oneElementJson = """
 """
 
 fileprivate let expectedSelection = [Selection(newName: "simpleId")]
-fileprivate let expectedRoot = SelectionRoot(selectionArray: expectedSelection)
+fileprivate let expectedRoot = SelectionRoot(selectionArray: expectedSelection, text: "")
 public let simpleJsonWithOnePart = (oneElementJson, expectedSelection)
