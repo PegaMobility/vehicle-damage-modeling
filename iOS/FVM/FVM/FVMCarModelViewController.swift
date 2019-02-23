@@ -19,22 +19,9 @@ public class FVMCarModelViewController : SCNView {
     internal var scnScene: SCNScene!
     internal var scnCamera: SCNNode!
     internal let highlightHandler = HighlightHandler()
-    private var demagePartsService: DemagedPartsServiceImpl?
+    private var demagePartsService: DemagedPartsService?
     
-    public func onStartup() {
-        self.allowsCameraControl = false
-        self.autoenablesDefaultLighting = true
-        
-
-//        var parts = demagePartsService?.getCollectionOfDamagedParts()
-        
-        
-        setupGestures()
-        setupScene()
-        setupCamera()
-        setupLights()
-        
-        let oneElementJson = """
+    private let simpleJson = """
         {
         "mainScreenText": "text",
         "selection":[
@@ -47,10 +34,29 @@ public class FVMCarModelViewController : SCNView {
         ]
         }
         """
+    
+ 
+    public func onStartup() {
+        self.allowsCameraControl = false
+        self.autoenablesDefaultLighting = true
         
+        setupGestures()
+        setupScene()
+        setupCamera()
+        setupLights()
+        
+        setupForInitialHightlight()
+    }
+    
+    private func setupForInitialHightlight() {
         demagePartsService = DemagePartsServiceFactory.Create(validPartsNames: findAllNodesNames())
-        var partsToHightlight = demagePartsService?.createCollectionOfDamagedParts(json: oneElementJson)
-        setupInitialHightlight()  
+        demagePartsService?.createCollectionOfDamagedParts(json: simpleJson)
+        
+        let initialSelection = demagePartsService?.getCollectionOfDamagedParts()
+        
+        for selection in initialSelection!{
+            setHightlightForSelection(selection: selection)
+        }
     }
     
     private func findAllNodesNames() -> [String]{
@@ -61,14 +67,6 @@ public class FVMCarModelViewController : SCNView {
             result.append(node.name!)
         }
         return result
-    }
-    
-    private func setupInitialHightlight(){
-        let initialSelection = demagePartsService?.getCollectionOfDamagedParts()
-        
-        for selection in initialSelection!{
-            setHightlightForSelection(selection: selection)
-        }
     }
     
     private func setHightlightForSelection(selection: Selection){

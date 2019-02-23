@@ -14,7 +14,7 @@
 
 import Foundation
 
-public class DemagedPartsServiceImpl: DemagedPartsServiceProtocol{
+public class DemagedPartsService: DemagedPartsServiceProtocol{
  
     private var parser: JsonParser<SelectionRoot>
     private var validator: DemagedPartsValidator

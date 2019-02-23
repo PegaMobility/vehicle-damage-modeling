@@ -21,7 +21,7 @@ class DemagedPartsServiceTests: XCTestCase {
     private var validator: DemagedPartsValidator?
     private var partsNamesProvider: DamagedPartsNamesProvider?
     private var repository: DemagedPartsRepository?
-    private var sut: DemagedPartsServiceImpl?
+    private var sut: DemagedPartsService?
     
     let validPartsNames = ["MirrorRight", "MirrorLeft", "Roof"]
 
@@ -32,7 +32,7 @@ class DemagedPartsServiceTests: XCTestCase {
         repository = DemagedPartsRepository()
         parser = JsonParser<SelectionRoot>()
 
-        sut = DemagedPartsServiceImpl(parser: parser!, validator: validator!, repository: repository!)
+        sut = DemagedPartsService(parser: parser!, validator: validator!, repository: repository!)
     }
     
     func testIfCreatesSelectionArrayProperly(){

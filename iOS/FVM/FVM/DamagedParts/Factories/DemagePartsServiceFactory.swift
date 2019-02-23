@@ -16,11 +16,11 @@ import Foundation
 
 public class DemagePartsServiceFactory{
     
-    public static func Create(validPartsNames: [String]) -> DemagedPartsServiceImpl{
+    public static func Create(validPartsNames: [String]) -> DemagedPartsService{
         let parser = JsonParser<SelectionRoot>()
         let partsNamesProvider = DamagedPartsNamesProvider(validPartsNames: validPartsNames)
         let validator = DemagedPartsValidator(provider: partsNamesProvider)
         let repository = DemagedPartsRepository()
-        return DemagedPartsServiceImpl(parser: parser, validator: validator, repository: repository)
+        return DemagedPartsService(parser: parser, validator: validator, repository: repository)
     }
 }

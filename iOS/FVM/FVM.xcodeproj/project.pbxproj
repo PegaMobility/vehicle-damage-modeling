@@ -30,7 +30,7 @@
 		D74F2B652221AF310055ACC1 /* DemagePartsServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B642221AF310055ACC1 /* DemagePartsServiceFactory.swift */; };
 		D75D1F2B220ED971009869CF /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D1F2A220ED971009869CF /* Selection.swift */; };
 		D78167932211753C00D69046 /* SelectionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78167922211753C00D69046 /* SelectionRoot.swift */; };
-		D7D523132219909800175EFD /* DemagedPartsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */; };
+		D7D523132219909800175EFD /* DemagedPartsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5230F2219909800175EFD /* DemagedPartsService.swift */; };
 		D7D523152219909800175EFD /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D523122219909800175EFD /* JsonParser.swift */; };
 		D7D52317221990C500175EFD /* DamagePartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D52316221990C500175EFD /* DamagePartService.swift */; };
 		D7D5231D2219939C00175EFD /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5231B2219939C00175EFD /* JsonParserTests.swift */; };
@@ -75,7 +75,7 @@
 		D74F2B642221AF310055ACC1 /* DemagePartsServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagePartsServiceFactory.swift; sourceTree = "<group>"; };
 		D75D1F2A220ED971009869CF /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		D78167922211753C00D69046 /* SelectionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRoot.swift; sourceTree = "<group>"; };
-		D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsServiceImpl.swift; sourceTree = "<group>"; };
+		D7D5230F2219909800175EFD /* DemagedPartsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsService.swift; sourceTree = "<group>"; };
 		D7D523122219909800175EFD /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		D7D52316221990C500175EFD /* DamagePartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagePartService.swift; sourceTree = "<group>"; };
 		D7D5231B2219939C00175EFD /* JsonParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		D7D5230E2219909800175EFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D7D5230F2219909800175EFD /* DemagedPartsServiceImpl.swift */,
+				D7D5230F2219909800175EFD /* DemagedPartsService.swift */,
 				D7D52316221990C500175EFD /* DamagePartService.swift */,
 			);
 			path = Services;
@@ -456,7 +456,7 @@
 				D74F2B46221C5E2A0055ACC1 /* DemagedPartsValidator.swift in Sources */,
 				D7D523152219909800175EFD /* JsonParser.swift in Sources */,
 				BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */,
-				D7D523132219909800175EFD /* DemagedPartsServiceImpl.swift in Sources */,
+				D7D523132219909800175EFD /* DemagedPartsService.swift in Sources */,
 				D7D52317221990C500175EFD /* DamagePartService.swift in Sources */,
 				D74F2B4822215F460055ACC1 /* Validable.swift in Sources */,
 				BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */,
