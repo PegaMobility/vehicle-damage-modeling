@@ -14,12 +14,13 @@
 
 import Foundation
 
-public protocol DemagedPartsRepositoryProtocol{
+public class DamagePartsServiceFactory{
     
-    func clear()
-    func add(selection: Selection)
-    func remove(selection: Selection)
-    func add(selections: [Selection])
-    func remove(partId: String)
-    func getAll() -> [Selection]
+    public static func Create(validPartsNames: [String]) -> DamagedPartsService{
+        let parser = JsonParser<SelectionRoot>()
+        let partsNamesProvider = DamagedPartsNamesProvider(validPartsNames: validPartsNames)
+        let validator = DamagedPartsValidator(provider: partsNamesProvider)
+        let repository = DamagedPartsRepository()
+        return DamagedPartsService(parser: parser, validator: validator, repository: repository)
+    }
 }

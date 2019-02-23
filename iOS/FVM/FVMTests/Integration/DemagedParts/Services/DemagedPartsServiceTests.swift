@@ -18,21 +18,21 @@ import XCTest
 class DemagedPartsServiceTests: XCTestCase {
 
     private var parser: JsonParser<SelectionRoot>?
-    private var validator: DemagedPartsValidator?
+    private var validator: DamagedPartsValidator?
     private var partsNamesProvider: DamagedPartsNamesProvider?
-    private var repository: DemagedPartsRepository?
-    private var sut: DemagedPartsService?
+    private var repository: DamagedPartsRepository?
+    private var sut: DamagedPartsService?
     
     let validPartsNames = ["MirrorRight", "MirrorLeft", "Roof"]
 
     override func setUp() {
         
         partsNamesProvider = DamagedPartsNamesProvider(validPartsNames: validPartsNames)
-        validator = DemagedPartsValidator(provider: partsNamesProvider!)
-        repository = DemagedPartsRepository()
+        validator = DamagedPartsValidator(provider: partsNamesProvider!)
+        repository = DamagedPartsRepository()
         parser = JsonParser<SelectionRoot>()
 
-        sut = DemagedPartsService(parser: parser!, validator: validator!, repository: repository!)
+        sut = DamagedPartsService(parser: parser!, validator: validator!, repository: repository!)
     }
     
     func testIfCreatesSelectionArrayProperly(){

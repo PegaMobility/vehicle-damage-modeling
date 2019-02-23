@@ -14,13 +14,13 @@
 
 import Foundation
 
-public class DemagedPartsService: DemagedPartsServiceProtocol{
+public class DamagedPartsService: DemagedPartsServiceProtocol{
  
     private var parser: JsonParser<SelectionRoot>
-    private var validator: DemagedPartsValidator
-    private var repository: DemagedPartsRepository
+    private var validator: DamagedPartsValidator
+    private var repository: DamagedPartsRepository
     
-    init(parser: JsonParser<SelectionRoot>, validator: DemagedPartsValidator, repository: DemagedPartsRepository) {
+    init(parser: JsonParser<SelectionRoot>, validator: DamagedPartsValidator, repository: DamagedPartsRepository) {
         self.parser = parser
         self.validator = validator
         self.repository = repository

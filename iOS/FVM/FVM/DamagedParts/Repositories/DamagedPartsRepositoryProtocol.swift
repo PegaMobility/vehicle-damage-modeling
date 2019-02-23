@@ -14,6 +14,12 @@
 
 import Foundation
 
-public protocol Providable {
-    func getValidNames() -> [String]
+public protocol DamagedPartsRepositoryProtocol{
+    
+    func clear()
+    func add(selection: Selection)
+    func remove(selection: Selection)
+    func add(selections: [Selection])
+    func remove(partId: String)
+    func getAll() -> [Selection]
 }

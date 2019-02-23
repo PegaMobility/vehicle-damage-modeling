@@ -14,11 +14,11 @@
 
 import Foundation
 
-class DemagedPartsValidator : Validable {
+class DamagedPartsValidator : Validable {
 
-    private var provider: Providable
+    private var provider: DamagedPartsNamesProviderProtocol
     
-    init(provider: Providable) {
+    init(provider: DamagedPartsNamesProviderProtocol) {
         self.provider = provider
     }
     

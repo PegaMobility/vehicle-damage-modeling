@@ -17,10 +17,10 @@ import XCTest
 
 class DemagedParstsRepositoryTests: XCTestCase {
 
-    private var sut: DemagedPartsRepository?
+    private var sut: DamagedPartsRepository?
     
     override func setUp() {
-        sut = DemagedPartsRepository();
+        sut = DamagedPartsRepository();
     }
     
     func testIfAddsElementsCorrecly() {

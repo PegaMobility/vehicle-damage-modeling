@@ -17,12 +17,12 @@ import XCTest
 
 class DemagePartsValidatorTests: XCTestCase {
 
-    private var namesProviderMock: Providable?
-    private var sut: DemagedPartsValidator?
+    private var namesProviderMock: DamagedPartsNamesProviderProtocol?
+    private var sut: DamagedPartsValidator?
     
     override func setUp() {
         namesProviderMock = ProviderMock(names: [String]())
-        sut = DemagedPartsValidator(provider: namesProviderMock!)
+        sut = DamagedPartsValidator(provider: namesProviderMock!)
     }
     
     func testIfValidatesCorrectly(){
@@ -31,7 +31,7 @@ class DemagePartsValidatorTests: XCTestCase {
         let selectionToValidate = [Selection(newName: "Mirror"), Selection(newName: "InvalidPart")]
         
         namesProviderMock = ProviderMock(names: validNames)
-        sut = DemagedPartsValidator(provider: namesProviderMock!)
+        sut = DamagedPartsValidator(provider: namesProviderMock!)
     
         let expected = [Selection(newName: "Mirror")]
     

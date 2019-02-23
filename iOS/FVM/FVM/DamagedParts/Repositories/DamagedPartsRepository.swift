@@ -14,7 +14,7 @@
 
 import Foundation
 
-class DemagedPartsRepository : DemagedPartsRepositoryProtocol {
+class DamagedPartsRepository : DamagedPartsRepositoryProtocol {
     
     private var selections = [Selection]()
     

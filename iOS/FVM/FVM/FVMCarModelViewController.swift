@@ -19,7 +19,7 @@ public class FVMCarModelViewController : SCNView {
     internal var scnScene: SCNScene!
     internal var scnCamera: SCNNode!
     internal let highlightHandler = HighlightHandler()
-    private var demagePartsService: DemagedPartsService?
+    private var damagePartsService: DamagedPartsService?
     
     private let simpleJson = """
         {
@@ -49,10 +49,10 @@ public class FVMCarModelViewController : SCNView {
     }
     
     private func setupForInitialHightlight() {
-        demagePartsService = DemagePartsServiceFactory.Create(validPartsNames: findAllNodesNames())
-        demagePartsService?.createCollectionOfDamagedParts(json: simpleJson)
+        damagePartsService = DamagePartsServiceFactory.Create(validPartsNames: findAllNodesNames())
+        damagePartsService?.createCollectionOfDamagedParts(json: simpleJson)
         
-        let initialSelection = demagePartsService?.getCollectionOfDamagedParts()
+        let initialSelection = damagePartsService?.getCollectionOfDamagedParts()
         
         for selection in initialSelection!{
             setHightlightForSelection(selection: selection)
