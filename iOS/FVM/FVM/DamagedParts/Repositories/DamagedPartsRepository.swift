@@ -23,7 +23,9 @@ class DemagedPartsRepository : DemagedPartsRepositoryProtocol {
     }
     
     public func add(selection: Selection){
-        selections.append(selection)
+        if !selections.contains(selection){
+            selections.append(selection)
+        }
     }
     
     public func remove(selection: Selection){
@@ -31,7 +33,9 @@ class DemagedPartsRepository : DemagedPartsRepositoryProtocol {
     }
     
     public func add(selections: [Selection]){
-        self.selections.append(contentsOf: selections)
+        for selection in selections{
+            add(selection: selection)
+        }
     }
     
     public func remove(partId: String){
