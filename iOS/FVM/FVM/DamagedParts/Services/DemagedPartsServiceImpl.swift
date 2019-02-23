@@ -52,4 +52,12 @@ public class DemagedPartsServiceImpl: DemagePartsService{
         repository.remove(partId: partId)
     }
     
+    public static func Create(validPartsNames: [String]) -> DemagedPartsServiceImpl{
+        let parser = JsonParser<SelectionRoot>()
+        let partsNamesProvider = DamagedPartsNamesProvider(validPartsNames: validPartsNames)
+        let validator = DemagedPartsValidator(provider: partsNamesProvider)
+        let repository = DemagedPartsRepository()
+        return DemagedPartsServiceImpl(parser: parser, validator: validator, repository: repository)
+    }
+    
 }
