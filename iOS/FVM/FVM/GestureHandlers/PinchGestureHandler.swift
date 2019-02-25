@@ -12,11 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-fileprivate struct ZoomConstraint {
-    static let minFOV: CGFloat = 20
-    static let maxFOV: CGFloat = 60
-}
-
 extension FVMCarModelViewController {
     @objc
     internal func handlePinchGesture(_ gestureRecognizer: UIPinchGestureRecognizer) {

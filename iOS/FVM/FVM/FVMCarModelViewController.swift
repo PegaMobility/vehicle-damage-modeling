@@ -18,6 +18,7 @@ import SceneKit
 public class FVMCarModelViewController : SCNView {
     internal var scnScene: SCNScene!
     internal var scnCamera: SCNNode!
+    internal var scnCameraOrbit: SCNNode!
     internal let highlightHandler = HighlightHandler()
     private var damagePartsService: DamagedPartsService?
     
@@ -77,10 +78,13 @@ public class FVMCarModelViewController : SCNView {
     private func setupGestures() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
+        var panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+        configurePanGestureRecognizer(&panGesture)
         self.addGestureRecognizer(tapGesture)
         self.addGestureRecognizer(pinchGesture)
+        self.addGestureRecognizer(panGesture)
     }
-    
+        
     private func setupScene() {
         scnScene = SCNScene(named: "art.scnassets/model.scn")
         scnScene.background.contents = "art.scnassets/background.png"
@@ -89,6 +93,19 @@ public class FVMCarModelViewController : SCNView {
     
     private func setupCamera() {
         scnCamera = scnScene.rootNode.childNode(withName: "camera", recursively: false)
+        
+        scnCameraOrbit = SCNNode()
+        scnCameraOrbit.eulerAngles.x = 0.0
+        scnCameraOrbit.eulerAngles.y = -1.1
+        
+        if #available(iOS 11.0, *) {
+            scnCamera.camera!.fieldOfView = ZoomConstraint.maxFOV
+        } else {
+            scnCamera.camera!.yFov = Double(ZoomConstraint.maxFOV)
+        }
+        
+        scnCameraOrbit.addChildNode(scnCamera)
+        scnScene.rootNode.addChildNode(scnCameraOrbit)
     }
     
     private func setupLights() {
