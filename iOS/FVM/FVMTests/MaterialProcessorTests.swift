@@ -19,23 +19,101 @@ import SceneKit
 
 public class MaterialProcessorTests: XCTestCase {
     
-    func test() {
+    func test_highlightNamelessNode_nothingHighlighted() {
+        let invalidNode = setupNode(name: nil, color: UIColor.white)
         let processor = MaterialProcessor()
-        let node = SCNNode()
-        node.geometry = SCNBox()
-        node.name = "Name"
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor.yellow
-        node.geometry?.firstMaterial = material
         
-        processor.highlightNewMaterial(forNode: node)
-        XCTAssertTrue(processor.hasKeyFor(node.name!))
-        XCTAssertEqual(node.geometry?.firstMaterial?.diffuse.contents as! UIColor, UIColor.red)
+        processor.highlightNewMaterial(forNode: invalidNode)
         
-        processor.restoreMaterial(for: node.name!)
-        XCTAssertFalse(processor.hasKeyFor(node.name!))
-        XCTAssertEqual(node.geometry?.firstMaterial?.diffuse.contents as! UIColor, UIColor.yellow)
+        XCTAssertEqual(UIColor.white, invalidNode.geometry?.firstMaterial?.diffuse.contents as! UIColor)
     }
     
+    func test_highlightNodeWithoutMaterial_nothingHighlighted() {
+        let invalidNode = setupNode(name: "Invalid", color: UIColor.white)
+        invalidNode.geometry?.firstMaterial = nil
+        let processor = MaterialProcessor()
+        
+        processor.highlightNewMaterial(forNode: invalidNode)
+        
+        XCTAssertFalse(processor.hasKeyFor("Invalid"))
+    }
     
+    func test_highlightValidNode_materialChangedAndAddedToDictionary() {
+        let validNode = setupNode(name: "Valid", color: UIColor.white)
+        let processor = MaterialProcessor()
+        
+        processor.highlightNewMaterial(forNode: validNode)
+        
+        XCTAssertEqual(UIColor.red, validNode.geometry?.firstMaterial?.diffuse.contents as! UIColor)
+        XCTAssertTrue(processor.hasKeyFor("Valid"))
+    }
+    
+    func test_restoreMaterial_nodesOriginalMaterialRestoredAndNodeDeletedFromDictionary () {
+        let validNode = setupNode(name: "Valid", color: UIColor.white)
+        let processor = MaterialProcessor()
+        processor.highlightNewMaterial(forNode: validNode)
+        
+        processor.restoreMaterial(for: "Valid")
+        
+        XCTAssertEqual(UIColor.white, validNode.geometry?.firstMaterial?.diffuse.contents as! UIColor)
+        XCTAssertFalse(processor.hasKeyFor("Valid"))
+    }
+    
+    func test_restoreMaterialOnNotExistingNode_nothingChanged() {
+        let validNode = setupNode(name: "Valid", color: UIColor.white)
+        let processor = MaterialProcessor()
+        processor.highlightNewMaterial(forNode: validNode)
+        
+        processor.restoreMaterial(for: "Invalid")
+        
+        XCTAssertEqual(UIColor.red, validNode.geometry?.firstMaterial?.diffuse.contents as! UIColor)
+        XCTAssertTrue(processor.hasKeyFor("Valid"))
+    }
+    
+    func test_restoreAll_restoresAllNodesMaterialsAndClearsDictionary() {
+        let firstValidNode = setupNode(name: "Valid1", color: UIColor.white)
+        let secondValidNode = setupNode(name: "Valid2", color: UIColor.black)
+        let thirdValidNode = setupNode(name: "Valid3", color: UIColor.yellow)
+        let processor = MaterialProcessor()
+        processor.highlightNewMaterial(forNode: firstValidNode)
+        processor.highlightNewMaterial(forNode: secondValidNode)
+        processor.highlightNewMaterial(forNode: thirdValidNode)
+        
+        processor.restoreAll()
+        
+        XCTAssertEqual(UIColor.white, firstValidNode.geometry?.firstMaterial?.diffuse.contents as! UIColor)
+        XCTAssertEqual(UIColor.black, secondValidNode.geometry?.firstMaterial?.diffuse.contents as! UIColor)
+        XCTAssertEqual(UIColor.yellow, thirdValidNode.geometry?.firstMaterial?.diffuse.contents as! UIColor)
+        XCTAssertFalse(processor.hasKeyFor("Valid1"))
+        XCTAssertFalse(processor.hasKeyFor("Valid2"))
+        XCTAssertFalse(processor.hasKeyFor("Valid3"))
+    }
+    
+    func test_hasKeyFor_returnsTrueWhenNodeExistsInDictionary() {
+        let node = setupNode(name: "Valid", color: UIColor.white)
+        let processor = MaterialProcessor()
+        processor.highlightNewMaterial(forNode: node)
+        
+        let actual = processor.hasKeyFor("Valid")
+        
+        XCTAssertTrue(actual)
+    }
+    
+    func test_hasKeyFor_returnsFalseWhenNodeDoesNotExistInDictionary() {
+        let processor = MaterialProcessor()
+        
+        let actual = processor.hasKeyFor("AnyKey")
+        
+        XCTAssertFalse(actual)
+    }
+    
+    private func setupNode(name: String?, color: UIColor) -> SCNNode {
+        let node = SCNNode()
+        node.geometry = SCNBox()
+        node.name = name
+        let material = SCNMaterial()
+        material.diffuse.contents = color
+        node.geometry?.firstMaterial = material
+        return node
+    }
 }

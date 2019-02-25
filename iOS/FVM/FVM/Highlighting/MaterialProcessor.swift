@@ -62,4 +62,12 @@ internal class MaterialProcessor {
     internal func hasKeyFor(_ key: String) -> Bool {
         return materialStore.keys.contains(key)
     }
+    
+    private func setHighlightedMaterial(for nodeName: String) {
+        guard let node = materialStore[nodeName]?.node else {
+            print("Node \(nodeName) not found")
+            return
+        }
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+    }
 }

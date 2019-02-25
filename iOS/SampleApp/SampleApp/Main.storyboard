@@ -27,8 +27,8 @@
                             <constraint firstItem="9rb-G7-Qhx" firstAttribute="leading" secondItem="Nhr-ZC-ubh" secondAttribute="leading" id="3Pn-D6-HaO"/>
                             <constraint firstItem="Nhr-ZC-ubh" firstAttribute="trailing" secondItem="9rb-G7-Qhx" secondAttribute="trailing" id="7Wa-lD-Gsk"/>
                             <constraint firstItem="Nhr-ZC-ubh" firstAttribute="bottom" secondItem="9rb-G7-Qhx" secondAttribute="bottom" id="T1y-50-zgo"/>
-                            <constraint firstItem="9rb-G7-Qhx" firstAttribute="top" secondItem="Nhr-ZC-ubh" secondAttribute="top" id="lgB-q6-eoD">
-                                <variation key="heightClass=compact" constant="20"/>
+                            <constraint firstItem="9rb-G7-Qhx" firstAttribute="top" secondItem="Nhr-ZC-ubh" secondAttribute="top" id="lgB-q6-eoD" userLabel="Damage Selector.top = Safe Area.top">
+                                <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nhr-ZC-ubh"/>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRo-9X-vxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="123.68815592203899"/>
+            <point key="canvasLocation" x="129.98500749625188" y="122.40000000000001"/>
         </scene>
     </scenes>
 </document>
