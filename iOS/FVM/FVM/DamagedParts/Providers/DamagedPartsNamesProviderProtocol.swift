@@ -14,6 +14,6 @@
 
 import Foundation
 
-public protocol DamagedPartsNamesProviderProtocol {
+internal protocol DamagedPartsNamesProviderProtocol {
     func getValidNames() -> [String]
 }

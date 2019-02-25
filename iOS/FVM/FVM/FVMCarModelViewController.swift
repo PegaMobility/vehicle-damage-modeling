@@ -49,7 +49,7 @@ public class FVMCarModelViewController : SCNView {
     }
     
     private func setupForInitialHightlight() {
-        damagePartsService = DamagePartsServiceFactory.Create(validPartsNames: findAllNodesNames())
+        damagePartsService = DamagePartsServiceFactory.create(validPartsNames: findAllNodesNames())
         damagePartsService?.createCollectionOfDamagedParts(json: simpleJson)
         
         let initialSelection = damagePartsService?.getCollectionOfDamagedParts()

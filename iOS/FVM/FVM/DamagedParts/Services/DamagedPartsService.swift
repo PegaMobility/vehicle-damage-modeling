@@ -14,8 +14,7 @@
 
 import Foundation
 
-public class DamagedPartsService: DemagedPartsServiceProtocol{
- 
+internal class DamagedPartsService: DemagedPartsServiceProtocol{
     private var parser: JsonParser<SelectionRoot>
     private var validator: DamagedPartsValidator
     private var repository: DamagedPartsRepository
@@ -51,5 +50,4 @@ public class DamagedPartsService: DemagedPartsServiceProtocol{
     public func removePart(partId: String) {
         repository.remove(partId: partId)
     }
-    
 }

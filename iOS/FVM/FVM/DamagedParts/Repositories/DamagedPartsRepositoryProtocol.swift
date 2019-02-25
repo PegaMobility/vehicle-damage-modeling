@@ -14,8 +14,7 @@
 
 import Foundation
 
-public protocol DamagedPartsRepositoryProtocol{
-    
+internal protocol DamagedPartsRepositoryProtocol{
     func clear()
     func add(selection: Selection)
     func remove(selection: Selection)

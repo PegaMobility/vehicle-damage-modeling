@@ -14,8 +14,7 @@
 
 import Foundation
 
-class DamagedPartsValidator : Validable {
-
+internal class DamagedPartsValidator : Validable {
     private var provider: DamagedPartsNamesProviderProtocol
     
     init(provider: DamagedPartsNamesProviderProtocol) {
@@ -42,5 +41,4 @@ class DamagedPartsValidator : Validable {
         }
         return nil
     }
-    
 }

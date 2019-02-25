@@ -14,8 +14,7 @@
 
 import Foundation
 
-class DamagedPartsRepository : DamagedPartsRepositoryProtocol {
-    
+internal class DamagedPartsRepository : DamagedPartsRepositoryProtocol {
     private var selections = [Selection]()
     
     public func clear(){
@@ -45,5 +44,4 @@ class DamagedPartsRepository : DamagedPartsRepositoryProtocol {
     public func getAll() -> [Selection]{
         return selections
     }
-    
 }

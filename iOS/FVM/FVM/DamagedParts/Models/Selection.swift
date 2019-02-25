@@ -15,7 +15,6 @@
 import Foundation
 
 public struct Selection : Codable, Equatable {
-    
     public var id: String
     
     init(newName: String) {

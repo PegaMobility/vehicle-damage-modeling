@@ -37,5 +37,4 @@ class ParserMock : JsonParser <SelectionRoot> {
         
         return SelectionRoot(selectionArray: [Selection](), text: "")
     }
-    
 }

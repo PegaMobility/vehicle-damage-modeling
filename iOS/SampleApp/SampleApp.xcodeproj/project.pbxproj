@@ -14,7 +14,6 @@
 		B52DB81821BA8EEF00C6CC36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52DB81721BA8EEF00C6CC36 /* ViewController.swift */; };
 		B52DB81D21BA8EF100C6CC36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B52DB81C21BA8EF100C6CC36 /* Assets.xcassets */; };
 		BA9E20A921D591450013E388 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9E20A721D591450013E388 /* art.scnassets */; };
-		D74F2B622221AF120055ACC1 /* DemagePartsServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F2B612221AF110055ACC1 /* DemagePartsServiceFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		B52DB81C21BA8EF100C6CC36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B52DB82121BA8EF100C6CC36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9E20A721D591450013E388 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ../FVM/FVM/art.scnassets; sourceTree = "<group>"; };
-		D74F2B612221AF110055ACC1 /* DemagePartsServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemagePartsServiceFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 		B52DB80921BA8EEF00C6CC36 = {
 			isa = PBXGroup;
 			children = (
-				D74F2B612221AF110055ACC1 /* DemagePartsServiceFactory.swift */,
 				BA9E20A721D591450013E388 /* art.scnassets */,
 				056E8BA121C43E8F003EBE53 /* FVM.xcodeproj */,
 				B52DB81421BA8EEF00C6CC36 /* SampleApp */,
@@ -225,7 +222,6 @@
 			files = (
 				B52DB81821BA8EEF00C6CC36 /* ViewController.swift in Sources */,
 				B52DB81621BA8EEF00C6CC36 /* AppDelegate.swift in Sources */,
-				D74F2B622221AF120055ACC1 /* DemagePartsServiceFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,7 @@
 
 import Foundation
 
-public class DamagedPartsNamesProvider : DamagedPartsNamesProviderProtocol {
-    
+internal class DamagedPartsNamesProvider : DamagedPartsNamesProviderProtocol {
     private var validPartsNames: [String]
     
     init(validPartsNames: [String]) {
