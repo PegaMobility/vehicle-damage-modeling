@@ -79,5 +79,13 @@ public class FVMCarModelViewController : SCNView {
         bottomLight.position = SCNVector3(x: 0, y: -50, z: 0)
         bottomLight.eulerAngles = SCNVector3Make(Float(-Double.pi / 2), 0, 0)
         scnScene.rootNode.addChildNode(bottomLight)
+        
+        let centralLight = SCNNode()
+        centralLight.light = SCNLight()
+        centralLight.light?.type = .ambient
+        centralLight.light?.intensity = 500
+        centralLight.position = SCNVector3(x: 0, y: 0, z: 0)
+        centralLight.eulerAngles = SCNVector3Make(Float(-Double.pi / 2), 0, 0)
+        scnScene.rootNode.addChildNode(centralLight)
     }
 }
