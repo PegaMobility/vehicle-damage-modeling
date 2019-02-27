@@ -13,8 +13,19 @@
 // limitations under the License.
 
 import Foundation
+@testable import FVM
 
-internal protocol Validable {
-    func validate(partsNames: [Selection]) -> [Selection]
-    func validate(part: Selection) -> Selection?
+fileprivate let oneElementJson = """
+{
+    "mainScreenText": "text",
+    "selection":[
+        {
+            "id":"simpleId"
+        }
+    ]
 }
+"""
+
+fileprivate let expectedSelection = [Selection(newName: "simpleId")]
+fileprivate let expectedRoot = SelectionRoot(selectionArray: expectedSelection, text: "")
+public let simpleJsonWithOnePart = (oneElementJson, expectedSelection)

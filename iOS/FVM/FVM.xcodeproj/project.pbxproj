@@ -32,18 +32,12 @@
 		D7C8882B222702F600EB3375 /* DamagedPartsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8881F222702F600EB3375 /* DamagedPartsService.swift */; };
 		D7C888462227033200EB3375 /* DemagedParstsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8882F2227033200EB3375 /* DemagedParstsRepositoryTests.swift */; };
 		D7C888472227033200EB3375 /* DemagedPartsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888312227033200EB3375 /* DemagedPartsServiceTests.swift */; };
-		D7C888482227033200EB3375 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888342227033200EB3375 /* JsonParser.swift */; };
-		D7C888492227033200EB3375 /* DamagedPartsNamesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888362227033200EB3375 /* DamagedPartsNamesProviderProtocol.swift */; };
-		D7C8884A2227033200EB3375 /* DamagedPartsNamesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888372227033200EB3375 /* DamagedPartsNamesProvider.swift */; };
-		D7C8884B2227033200EB3375 /* DamagedPartsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888392227033200EB3375 /* DamagedPartsRepositoryProtocol.swift */; };
-		D7C8884C2227033200EB3375 /* DamagedPartsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8883A2227033200EB3375 /* DamagedPartsRepository.swift */; };
-		D7C8884D2227033200EB3375 /* SelectionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8883C2227033200EB3375 /* SelectionRoot.swift */; };
-		D7C8884E2227033200EB3375 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8883D2227033200EB3375 /* Selection.swift */; };
-		D7C8884F2227033200EB3375 /* DamagePartsServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8883F2227033200EB3375 /* DamagePartsServiceFactory.swift */; };
-		D7C888502227033200EB3375 /* Validable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888412227033200EB3375 /* Validable.swift */; };
-		D7C888512227033200EB3375 /* DamagedPartsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888422227033200EB3375 /* DamagedPartsValidator.swift */; };
-		D7C888522227033200EB3375 /* DamagePartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888442227033200EB3375 /* DamagePartService.swift */; };
-		D7C888532227033200EB3375 /* DamagedPartsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888452227033200EB3375 /* DamagedPartsService.swift */; };
+		D7C88863222706B700EB3375 /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88858222706B700EB3375 /* JsonParserTests.swift */; };
+		D7C88864222706B700EB3375 /* DemagePartsNamesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885A222706B700EB3375 /* DemagePartsNamesProviderTests.swift */; };
+		D7C88865222706B700EB3375 /* ProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885D222706B700EB3375 /* ProviderMock.swift */; };
+		D7C88866222706B700EB3375 /* DemagePartsValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885E222706B700EB3375 /* DemagePartsValidatorTests.swift */; };
+		D7C88867222706B700EB3375 /* ParserResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88861222706B700EB3375 /* ParserResources.swift */; };
+		D7C88868222706B700EB3375 /* ParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88862222706B700EB3375 /* ParserMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,18 +79,12 @@
 		D7C8881F222702F600EB3375 /* DamagedPartsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsService.swift; sourceTree = "<group>"; };
 		D7C8882F2227033200EB3375 /* DemagedParstsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedParstsRepositoryTests.swift; sourceTree = "<group>"; };
 		D7C888312227033200EB3375 /* DemagedPartsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsServiceTests.swift; sourceTree = "<group>"; };
-		D7C888342227033200EB3375 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
-		D7C888362227033200EB3375 /* DamagedPartsNamesProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsNamesProviderProtocol.swift; sourceTree = "<group>"; };
-		D7C888372227033200EB3375 /* DamagedPartsNamesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsNamesProvider.swift; sourceTree = "<group>"; };
-		D7C888392227033200EB3375 /* DamagedPartsRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsRepositoryProtocol.swift; sourceTree = "<group>"; };
-		D7C8883A2227033200EB3375 /* DamagedPartsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsRepository.swift; sourceTree = "<group>"; };
-		D7C8883C2227033200EB3375 /* SelectionRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionRoot.swift; sourceTree = "<group>"; };
-		D7C8883D2227033200EB3375 /* Selection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
-		D7C8883F2227033200EB3375 /* DamagePartsServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagePartsServiceFactory.swift; sourceTree = "<group>"; };
-		D7C888412227033200EB3375 /* Validable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validable.swift; sourceTree = "<group>"; };
-		D7C888422227033200EB3375 /* DamagedPartsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsValidator.swift; sourceTree = "<group>"; };
-		D7C888442227033200EB3375 /* DamagePartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagePartService.swift; sourceTree = "<group>"; };
-		D7C888452227033200EB3375 /* DamagedPartsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsService.swift; sourceTree = "<group>"; };
+		D7C88858222706B700EB3375 /* JsonParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
+		D7C8885A222706B700EB3375 /* DemagePartsNamesProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagePartsNamesProviderTests.swift; sourceTree = "<group>"; };
+		D7C8885D222706B700EB3375 /* ProviderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderMock.swift; sourceTree = "<group>"; };
+		D7C8885E222706B700EB3375 /* DemagePartsValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagePartsValidatorTests.swift; sourceTree = "<group>"; };
+		D7C88861222706B700EB3375 /* ParserResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserResources.swift; sourceTree = "<group>"; };
+		D7C88862222706B700EB3375 /* ParserMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +141,7 @@
 		0535F32721C4389F00CD6C44 /* FVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				D7C888322227033200EB3375 /* DamagedParts */,
+				D7C88856222706B700EB3375 /* DamagedParts */,
 				D7C8882C2227033200EB3375 /* Integration */,
 				0535F32A21C4389F00CD6C44 /* Info.plist */,
 				BA1FBE112208CB0800DBFB9E /* MaterialProcessorTests.swift */,
@@ -297,79 +285,65 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		D7C888322227033200EB3375 /* DamagedParts */ = {
+		D7C88856222706B700EB3375 /* DamagedParts */ = {
 			isa = PBXGroup;
 			children = (
-				D7C888332227033200EB3375 /* Parsers */,
-				D7C888352227033200EB3375 /* Providers */,
-				D7C888382227033200EB3375 /* Repositories */,
-				D7C8883B2227033200EB3375 /* Models */,
-				D7C8883E2227033200EB3375 /* Factories */,
-				D7C888402227033200EB3375 /* Validators */,
-				D7C888432227033200EB3375 /* Services */,
+				D7C88857222706B700EB3375 /* Parsers */,
+				D7C88859222706B700EB3375 /* Providers */,
+				D7C8885B222706B700EB3375 /* Validators */,
+				D7C8885F222706B700EB3375 /* Services */,
 			);
 			path = DamagedParts;
 			sourceTree = "<group>";
 		};
-		D7C888332227033200EB3375 /* Parsers */ = {
+		D7C88857222706B700EB3375 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				D7C888342227033200EB3375 /* JsonParser.swift */,
+				D7C88858222706B700EB3375 /* JsonParserTests.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
 		};
-		D7C888352227033200EB3375 /* Providers */ = {
+		D7C88859222706B700EB3375 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				D7C888362227033200EB3375 /* DamagedPartsNamesProviderProtocol.swift */,
-				D7C888372227033200EB3375 /* DamagedPartsNamesProvider.swift */,
+				D7C8885A222706B700EB3375 /* DemagePartsNamesProviderTests.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
 		};
-		D7C888382227033200EB3375 /* Repositories */ = {
+		D7C8885B222706B700EB3375 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				D7C888392227033200EB3375 /* DamagedPartsRepositoryProtocol.swift */,
-				D7C8883A2227033200EB3375 /* DamagedPartsRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		D7C8883B2227033200EB3375 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D7C8883C2227033200EB3375 /* SelectionRoot.swift */,
-				D7C8883D2227033200EB3375 /* Selection.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D7C8883E2227033200EB3375 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				D7C8883F2227033200EB3375 /* DamagePartsServiceFactory.swift */,
-			);
-			path = Factories;
-			sourceTree = "<group>";
-		};
-		D7C888402227033200EB3375 /* Validators */ = {
-			isa = PBXGroup;
-			children = (
-				D7C888412227033200EB3375 /* Validable.swift */,
-				D7C888422227033200EB3375 /* DamagedPartsValidator.swift */,
+				D7C8885C222706B700EB3375 /* Mocks */,
+				D7C8885E222706B700EB3375 /* DemagePartsValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
 		};
-		D7C888432227033200EB3375 /* Services */ = {
+		D7C8885C222706B700EB3375 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				D7C888442227033200EB3375 /* DamagePartService.swift */,
-				D7C888452227033200EB3375 /* DamagedPartsService.swift */,
+				D7C8885D222706B700EB3375 /* ProviderMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D7C8885F222706B700EB3375 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D7C88860222706B700EB3375 /* Mocks */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D7C88860222706B700EB3375 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D7C88861222706B700EB3375 /* ParserResources.swift */,
+				D7C88862222706B700EB3375 /* ParserMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,21 +483,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C8884D2227033200EB3375 /* SelectionRoot.swift in Sources */,
-				D7C8884A2227033200EB3375 /* DamagedPartsNamesProvider.swift in Sources */,
-				D7C8884B2227033200EB3375 /* DamagedPartsRepositoryProtocol.swift in Sources */,
-				D7C888492227033200EB3375 /* DamagedPartsNamesProviderProtocol.swift in Sources */,
+				D7C88867222706B700EB3375 /* ParserResources.swift in Sources */,
+				D7C88868222706B700EB3375 /* ParserMock.swift in Sources */,
+				D7C88865222706B700EB3375 /* ProviderMock.swift in Sources */,
 				D7C888472227033200EB3375 /* DemagedPartsServiceTests.swift in Sources */,
-				D7C888532227033200EB3375 /* DamagedPartsService.swift in Sources */,
-				D7C8884C2227033200EB3375 /* DamagedPartsRepository.swift in Sources */,
-				D7C8884E2227033200EB3375 /* Selection.swift in Sources */,
-				D7C888512227033200EB3375 /* DamagedPartsValidator.swift in Sources */,
-				D7C8884F2227033200EB3375 /* DamagePartsServiceFactory.swift in Sources */,
 				D7C888462227033200EB3375 /* DemagedParstsRepositoryTests.swift in Sources */,
-				D7C888482227033200EB3375 /* JsonParser.swift in Sources */,
-				D7C888502227033200EB3375 /* Validable.swift in Sources */,
+				D7C88864222706B700EB3375 /* DemagePartsNamesProviderTests.swift in Sources */,
+				D7C88863222706B700EB3375 /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
-				D7C888522227033200EB3375 /* DamagePartService.swift in Sources */,
+				D7C88866222706B700EB3375 /* DemagePartsValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

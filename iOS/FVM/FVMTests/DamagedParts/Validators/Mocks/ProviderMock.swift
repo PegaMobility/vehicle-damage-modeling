@@ -1,5 +1,5 @@
 // Copyright 2019 Flying Vehicle Monster team
-///Users/smyks/repos/vehicle-damage-modeling/iOS/FVM/FVM/art.scnassets
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -13,16 +13,17 @@
 // limitations under the License.
 
 import Foundation
+@testable import FVM
 
-public class JsonParser <Element: Decodable>{
-    public func parse(data: Data?) -> Element? {
-        let selectionRoot = try? JSONDecoder().decode(Element.self, from: data!)
-        return selectionRoot
+internal class ProviderMock: DamagedPartsNamesProviderProtocol{
+    
+    private var validNames: [String]
+    
+    init(names: [String]) {
+        self.validNames = names
     }
     
-    public func parse(jsonData: String) -> Element?{
-        let data = jsonData.data(using: .utf8)
-        let selectionRoot = parse(data: data)
-        return selectionRoot
+    func getValidNames() -> [String] {
+        return validNames
     }
 }
