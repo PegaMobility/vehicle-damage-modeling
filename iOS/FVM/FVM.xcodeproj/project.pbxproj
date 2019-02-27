@@ -69,7 +69,7 @@
 		0535F31021C4389F00CD6C44 = {
 			isa = PBXGroup;
 			children = (
-				0535F31C21C4389F00CD6C44 /* Framework */,
+				0535F31C21C4389F00CD6C44 /* FVM */,
 				0535F32721C4389F00CD6C44 /* FVMTests */,
 				0535F31B21C4389F00CD6C44 /* Products */,
 			);
@@ -84,7 +84,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0535F31C21C4389F00CD6C44 /* Framework */ = {
+		0535F31C21C4389F00CD6C44 /* FVM */ = {
 			isa = PBXGroup;
 			children = (
 				051E317421C43E5F0067C7F3 /* FVMCarModelViewController.swift */,
@@ -94,7 +94,7 @@
 				0535F31E21C4389F00CD6C44 /* Info.plist */,
 				BA9E20A521D58B830013E388 /* art.scnassets */,
 			);
-			path = Framework;
+			path = FVM;
 			sourceTree = "<group>";
 		};
 		0535F32721C4389F00CD6C44 /* FVMTests */ = {
@@ -407,7 +407,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = FVM/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -435,7 +435,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = FVM/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
