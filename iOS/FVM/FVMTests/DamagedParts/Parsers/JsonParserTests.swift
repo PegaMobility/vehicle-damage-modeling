@@ -16,7 +16,6 @@ import XCTest
 @testable import FVM
 
 class JsonParserTests: XCTestCase {
-
     private var sut : JsonParser<SelectionRoot>?
     
     override func setUp() {
@@ -56,5 +55,4 @@ class JsonParserTests: XCTestCase {
         //Assert
         XCTAssertEqual(actual?.selection[0].id, expected)
     }
-
 }

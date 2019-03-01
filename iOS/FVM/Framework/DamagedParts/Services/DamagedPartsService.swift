@@ -14,7 +14,7 @@
 
 import Foundation
 
-internal class DamagedPartsService: DemagedPartsServiceProtocol{
+internal class DamagedPartsService: DamagedPartsServiceProtocol{
     private var parser: JsonParser<SelectionRoot>
     private var validator: DamagedPartsValidator
     private var repository: DamagedPartsRepository

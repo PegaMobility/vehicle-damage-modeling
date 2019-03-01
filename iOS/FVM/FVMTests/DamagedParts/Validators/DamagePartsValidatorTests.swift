@@ -15,8 +15,7 @@
 import XCTest
 @testable import FVM
 
-class DemagePartsValidatorTests: XCTestCase {
-
+class DamagePartsValidatorTests: XCTestCase {
     private var namesProviderMock: DamagedPartsNamesProviderProtocol?
     private var sut: DamagedPartsValidator?
     
@@ -41,5 +40,4 @@ class DemagePartsValidatorTests: XCTestCase {
         // Assert
         XCTAssertEqual(expected, actual)
     }
-    
 }

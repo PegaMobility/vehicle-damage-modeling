@@ -30,12 +30,12 @@
 		D7C88829222702F600EB3375 /* DamagedPartsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8881C222702F600EB3375 /* DamagedPartsValidator.swift */; };
 		D7C8882A222702F600EB3375 /* DamagePartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8881E222702F600EB3375 /* DamagePartService.swift */; };
 		D7C8882B222702F600EB3375 /* DamagedPartsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8881F222702F600EB3375 /* DamagedPartsService.swift */; };
-		D7C888462227033200EB3375 /* DemagedParstsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8882F2227033200EB3375 /* DemagedParstsRepositoryTests.swift */; };
-		D7C888472227033200EB3375 /* DemagedPartsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888312227033200EB3375 /* DemagedPartsServiceTests.swift */; };
+		D7C888462227033200EB3375 /* DamagedParstsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8882F2227033200EB3375 /* DamagedParstsRepositoryTests.swift */; };
+		D7C888472227033200EB3375 /* DamagedPartsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C888312227033200EB3375 /* DamagedPartsServiceTests.swift */; };
 		D7C88863222706B700EB3375 /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88858222706B700EB3375 /* JsonParserTests.swift */; };
-		D7C88864222706B700EB3375 /* DemagePartsNamesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885A222706B700EB3375 /* DemagePartsNamesProviderTests.swift */; };
+		D7C88864222706B700EB3375 /* DamagePartsNamesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885A222706B700EB3375 /* DamagePartsNamesProviderTests.swift */; };
 		D7C88865222706B700EB3375 /* ProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885D222706B700EB3375 /* ProviderMock.swift */; };
-		D7C88866222706B700EB3375 /* DemagePartsValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885E222706B700EB3375 /* DemagePartsValidatorTests.swift */; };
+		D7C88866222706B700EB3375 /* DamagePartsValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885E222706B700EB3375 /* DamagePartsValidatorTests.swift */; };
 		D7C88867222706B700EB3375 /* ParserResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88861222706B700EB3375 /* ParserResources.swift */; };
 		D7C88868222706B700EB3375 /* ParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88862222706B700EB3375 /* ParserMock.swift */; };
 /* End PBXBuildFile section */
@@ -77,12 +77,12 @@
 		D7C8881C222702F600EB3375 /* DamagedPartsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsValidator.swift; sourceTree = "<group>"; };
 		D7C8881E222702F600EB3375 /* DamagePartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagePartService.swift; sourceTree = "<group>"; };
 		D7C8881F222702F600EB3375 /* DamagedPartsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsService.swift; sourceTree = "<group>"; };
-		D7C8882F2227033200EB3375 /* DemagedParstsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedParstsRepositoryTests.swift; sourceTree = "<group>"; };
-		D7C888312227033200EB3375 /* DemagedPartsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagedPartsServiceTests.swift; sourceTree = "<group>"; };
+		D7C8882F2227033200EB3375 /* DamagedParstsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedParstsRepositoryTests.swift; sourceTree = "<group>"; };
+		D7C888312227033200EB3375 /* DamagedPartsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsServiceTests.swift; sourceTree = "<group>"; };
 		D7C88858222706B700EB3375 /* JsonParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
-		D7C8885A222706B700EB3375 /* DemagePartsNamesProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagePartsNamesProviderTests.swift; sourceTree = "<group>"; };
+		D7C8885A222706B700EB3375 /* DamagePartsNamesProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagePartsNamesProviderTests.swift; sourceTree = "<group>"; };
 		D7C8885D222706B700EB3375 /* ProviderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderMock.swift; sourceTree = "<group>"; };
-		D7C8885E222706B700EB3375 /* DemagePartsValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemagePartsValidatorTests.swift; sourceTree = "<group>"; };
+		D7C8885E222706B700EB3375 /* DamagePartsValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagePartsValidatorTests.swift; sourceTree = "<group>"; };
 		D7C88861222706B700EB3375 /* ParserResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserResources.swift; sourceTree = "<group>"; };
 		D7C88862222706B700EB3375 /* ParserMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,7 +272,7 @@
 		D7C8882E2227033200EB3375 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				D7C8882F2227033200EB3375 /* DemagedParstsRepositoryTests.swift */,
+				D7C8882F2227033200EB3375 /* DamagedParstsRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -280,7 +280,7 @@
 		D7C888302227033200EB3375 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D7C888312227033200EB3375 /* DemagedPartsServiceTests.swift */,
+				D7C888312227033200EB3375 /* DamagedPartsServiceTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 		D7C88859222706B700EB3375 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				D7C8885A222706B700EB3375 /* DemagePartsNamesProviderTests.swift */,
+				D7C8885A222706B700EB3375 /* DamagePartsNamesProviderTests.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C8885C222706B700EB3375 /* Mocks */,
-				D7C8885E222706B700EB3375 /* DemagePartsValidatorTests.swift */,
+				D7C8885E222706B700EB3375 /* DamagePartsValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -486,12 +486,12 @@
 				D7C88867222706B700EB3375 /* ParserResources.swift in Sources */,
 				D7C88868222706B700EB3375 /* ParserMock.swift in Sources */,
 				D7C88865222706B700EB3375 /* ProviderMock.swift in Sources */,
-				D7C888472227033200EB3375 /* DemagedPartsServiceTests.swift in Sources */,
-				D7C888462227033200EB3375 /* DemagedParstsRepositoryTests.swift in Sources */,
-				D7C88864222706B700EB3375 /* DemagePartsNamesProviderTests.swift in Sources */,
+				D7C888472227033200EB3375 /* DamagedPartsServiceTests.swift in Sources */,
+				D7C888462227033200EB3375 /* DamagedParstsRepositoryTests.swift in Sources */,
+				D7C88864222706B700EB3375 /* DamagePartsNamesProviderTests.swift in Sources */,
 				D7C88863222706B700EB3375 /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
-				D7C88866222706B700EB3375 /* DemagePartsValidatorTests.swift in Sources */,
+				D7C88866222706B700EB3375 /* DamagePartsValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

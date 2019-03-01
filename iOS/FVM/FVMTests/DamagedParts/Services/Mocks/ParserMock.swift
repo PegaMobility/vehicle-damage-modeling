@@ -16,11 +16,9 @@ import Foundation
 @testable import FVM
 
 class ParserMock : JsonParser <SelectionRoot> {
-    
     public var parseCalls = 0
     
     public override func parse(data: Data?) -> SelectionRoot? {
-        
         return SelectionRoot(selectionArray: [Selection](), text: "")
     }
     

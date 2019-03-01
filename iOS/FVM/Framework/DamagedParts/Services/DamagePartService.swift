@@ -14,7 +14,7 @@
 
 import Foundation
 
-public protocol DemagedPartsServiceProtocol {
+public protocol DamagedPartsServiceProtocol {
     func createAndGetCollectionOfDamagedParts(json: String) -> [Selection]
     func getCollectionOfDamagedParts() -> [Selection]
     func createCollectionOfDamagedParts(json: String) -> Void

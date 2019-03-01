@@ -15,8 +15,7 @@
 import XCTest
 @testable import FVM
 
-class DemagePartsNamesProviderTests: XCTestCase {
-    
+class DamagePartsNamesProviderTests: XCTestCase {
     private var sut: DamagedPartsNamesProvider?
     private let validNames = ["Roof", "Mirror", "ValidName"]
     
@@ -34,5 +33,4 @@ class DemagePartsNamesProviderTests: XCTestCase {
         // Assert
         XCTAssertEqual(expected, actual)
     }
-
 }

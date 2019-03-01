@@ -15,8 +15,7 @@
 import XCTest
 @testable import FVM
 
-class DemagedPartsServiceTests: XCTestCase {
-
+class DamagedPartsServiceTests: XCTestCase {
     private var parser: JsonParser<SelectionRoot>?
     private var validator: DamagedPartsValidator?
     private var partsNamesProvider: DamagedPartsNamesProvider?

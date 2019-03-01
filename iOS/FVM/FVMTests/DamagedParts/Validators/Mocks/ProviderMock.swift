@@ -16,7 +16,6 @@ import Foundation
 @testable import FVM
 
 internal class ProviderMock: DamagedPartsNamesProviderProtocol{
-    
     private var validNames: [String]
     
     init(names: [String]) {

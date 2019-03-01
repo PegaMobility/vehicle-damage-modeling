@@ -15,8 +15,7 @@
 import XCTest
 @testable import FVM
 
-class DemagedParstsRepositoryTests: XCTestCase {
-
+class DamagedParstsRepositoryTests: XCTestCase {
     private var sut: DamagedPartsRepository?
     
     override func setUp() {
@@ -60,6 +59,5 @@ class DemagedParstsRepositoryTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(actual, expected)
-        
     }
 }
