@@ -40,6 +40,7 @@
 		D7C88866222706B700EB3375 /* DamagePartsValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8885E222706B700EB3375 /* DamagePartsValidatorTests.swift */; };
 		D7C88867222706B700EB3375 /* ParserResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88861222706B700EB3375 /* ParserResources.swift */; };
 		D7C88868222706B700EB3375 /* ParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88862222706B700EB3375 /* ParserMock.swift */; };
+		D7F03005222EAAAE00D87F6A /* NodeHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03004222EAAAE00D87F6A /* NodeHelperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		D7C8885E222706B700EB3375 /* DamagePartsValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagePartsValidatorTests.swift; sourceTree = "<group>"; };
 		D7C88861222706B700EB3375 /* ParserResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserResources.swift; sourceTree = "<group>"; };
 		D7C88862222706B700EB3375 /* ParserMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
+		D7F03004222EAAAE00D87F6A /* NodeHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeHelperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,14 @@
 				BA1FBE112208CB0800DBFB9E /* MaterialProcessorTests.swift */,
 			);
 			path = FVMTests;
+			sourceTree = "<group>";
+		};
+		687EF96A467D92EF564D78D2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D7F03004222EAAAE00D87F6A /* NodeHelperTests.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BA1FBE0A22077D2800DBFB9E /* GestureHandlers */ = {
@@ -306,6 +316,7 @@
 				D7C88859222706B700EB3375 /* Providers */,
 				D7C8885B222706B700EB3375 /* Validators */,
 				D7C8885F222706B700EB3375 /* Services */,
+				687EF96A467D92EF564D78D2 /* Helpers */,
 			);
 			path = DamagedParts;
 			sourceTree = "<group>";
@@ -500,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C88867222706B700EB3375 /* ParserResources.swift in Sources */,
+				D7F03005222EAAAE00D87F6A /* NodeHelperTests.swift in Sources */,
 				D7C88868222706B700EB3375 /* ParserMock.swift in Sources */,
 				D7C88865222706B700EB3375 /* ProviderMock.swift in Sources */,
 				D7C888472227033200EB3375 /* DamagedPartsServiceTests.swift in Sources */,

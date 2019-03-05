@@ -17,7 +17,6 @@ import SceneKit
 
 internal class NodeHelper : NodeHelperProtocol{
     public func getNodesNames(nodes: [SCNNode]) -> [String]{
-        var result = [String]()
         return nodes.map{$0.name ?? ""};
     }
 

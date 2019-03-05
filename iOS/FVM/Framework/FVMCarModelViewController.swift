@@ -58,7 +58,7 @@ public class FVMCarModelViewController : SCNView {
         
         for partName in damagedPartsNames{
             let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
-            var nodeToHighlight = carModelNode?.childNode(withName: partName, recursively: true)
+            let nodeToHighlight = carModelNode?.childNode(withName: partName, recursively: true)
             highlightHandler.setHighlightOn(node: nodeToHighlight!)
         }
     }
