@@ -16,6 +16,8 @@ import UIKit
 import SceneKit
 
 public class FVMCarModelViewController : SCNView {
+    internal var damagedPartsService: DamagedPartsServiceProtocol?
+    internal var SCNNodeHelper: NodeHelperProtocol?
     internal var scnScene: SCNScene!
     internal var scnCamera: SCNNode!
     internal var scnCameraOrbit: SCNNode!
@@ -24,11 +26,22 @@ public class FVMCarModelViewController : SCNView {
     public func onStartup() {
         self.allowsCameraControl = false
         self.autoenablesDefaultLighting = true
+        SCNNodeHelper = NodeHelper()
     
         setupGestures()
         setupScene()
         setupCamera()
         setupLights()
+        
+        let childNodes = scnScene.rootNode.childNode(withName: "carModel", recursively: false)
+    }
+    
+    private func setupInitialSelection(){
+        let childNodes = scnScene.rootNode.childNodes
+        let validNodesNames = SCNNodeHelper?.getNodesNames(nodes: childNodes)
+        
+        damagedPartsService = DamagePartsServiceFactory.create(validPartsNames: validNodesNames!)
+    
     }
     
     private func setupGestures() {
