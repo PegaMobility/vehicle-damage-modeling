@@ -17,7 +17,7 @@ import SceneKit
 
 public class FVMCarModelViewController : SCNView {
     internal var damagedPartsService: DamagedPartsServiceProtocol?
-    internal var SCNNodeHelper: NodeHelperProtocol?
+    internal var nodeHelper: NodeHelperProtocol?
     internal var scnScene: SCNScene!
     internal var scnCamera: SCNNode!
     internal var scnCameraOrbit: SCNNode!
@@ -28,7 +28,7 @@ public class FVMCarModelViewController : SCNView {
     public func onStartup(jsonConfiguration: String) {
         self.allowsCameraControl = false
         self.autoenablesDefaultLighting = true
-        SCNNodeHelper = NodeHelper()
+        nodeHelper = NodeHelper()
     
         setupGestures()
         setupScene()
@@ -40,25 +40,20 @@ public class FVMCarModelViewController : SCNView {
     }
     
     private func setupInitialSelection(configuration: String){
-        let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
-        let childNodes = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)?.childNodes
-        let validNodesNames = SCNNodeHelper?.getNodesNames(nodes: childNodes!)
-    
-        
+        let validNodesNames = createValidNamesArray()
+
         damagedPartsService = DamagePartsServiceFactory.create(validPartsNames: validNodesNames!)
         let initialDamagedParts = damagedPartsService?.createAndGetCollectionOfDamagedParts(json: configuration)
-        updateDamagedPartsOnUI(damagedPartsNames: getIdsOfSelection(selections: initialDamagedParts))
+        let nodesToHighlight = nodeHelper?.getIdsOfSelection(selections: initialDamagedParts)
+        updateDamagedPartsOnUI(damagedPartsNames: nodesToHighlight!)
     }
-    
-    private func getIdsOfSelection(selections: [Selection]?) -> [String]{
-        var result = [String]()
-        
-        for selection in selections!{
-            result.append(selection.id)
-        }
-        return result
+
+    private func createValidNamesArray() -> [String]? {
+        let childNodes = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)?.childNodes
+        let validNodesNames = nodeHelper?.getNodesNames(nodes: childNodes!)
+        return validNodesNames
     }
-    
+
     private func updateDamagedPartsOnUI(damagedPartsNames: [String]){
         
         for partName in damagedPartsNames{
@@ -66,7 +61,6 @@ public class FVMCarModelViewController : SCNView {
             var nodeToHighlight = carModelNode?.childNode(withName: partName, recursively: true)
             highlightHandler.setHighlightOn(node: nodeToHighlight!)
         }
-        
     }
     
     private func setupGestures() {

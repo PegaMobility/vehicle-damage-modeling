@@ -17,4 +17,5 @@ import SceneKit
 
 internal protocol NodeHelperProtocol {
     func getNodesNames(nodes: [SCNNode]) -> [String]
+    func getIdsOfSelection(selections: [Selection]?) -> [String]
 }

@@ -18,11 +18,10 @@ import SceneKit
 internal class NodeHelper : NodeHelperProtocol{
     public func getNodesNames(nodes: [SCNNode]) -> [String]{
         var result = [String]()
-        for node in nodes{
-            if node.name != nil{
-                result.append(node.name!)
-            }
-        }
-        return result
+        return nodes.map{$0.name ?? ""};
+    }
+
+    func getIdsOfSelection(selections: [Selection]?) -> [String] {
+            return (selections?.map{ $0.id})!
     }
 }
