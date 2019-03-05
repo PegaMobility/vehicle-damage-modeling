@@ -23,7 +23,9 @@ public class FVMCarModelViewController : SCNView {
     internal var scnCameraOrbit: SCNNode!
     internal let highlightHandler = HighlightHandler()
     
-    public func onStartup() {
+    private let CAR_MODEL_NAME = "carModel"
+    
+    public func onStartup(jsonConfiguration: String) {
         self.allowsCameraControl = false
         self.autoenablesDefaultLighting = true
         SCNNodeHelper = NodeHelper()
@@ -33,15 +35,38 @@ public class FVMCarModelViewController : SCNView {
         setupCamera()
         setupLights()
         
-        let childNodes = scnScene.rootNode.childNode(withName: "carModel", recursively: false)
+        setupInitialSelection(configuration: jsonConfiguration)
+        
     }
     
-    private func setupInitialSelection(){
-        let childNodes = scnScene.rootNode.childNodes
-        let validNodesNames = SCNNodeHelper?.getNodesNames(nodes: childNodes)
+    private func setupInitialSelection(configuration: String){
+        let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
+        let childNodes = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)?.childNodes
+        let validNodesNames = SCNNodeHelper?.getNodesNames(nodes: childNodes!)
+    
         
         damagedPartsService = DamagePartsServiceFactory.create(validPartsNames: validNodesNames!)
+        let initialDamagedParts = damagedPartsService?.createAndGetCollectionOfDamagedParts(json: configuration)
+        updateDamagedPartsOnUI(damagedPartsNames: getIdsOfSelection(selections: initialDamagedParts))
+    }
     
+    private func getIdsOfSelection(selections: [Selection]?) -> [String]{
+        var result = [String]()
+        
+        for selection in selections!{
+            result.append(selection.id)
+        }
+        return result
+    }
+    
+    private func updateDamagedPartsOnUI(damagedPartsNames: [String]){
+        
+        for partName in damagedPartsNames{
+            let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
+            var nodeToHighlight = carModelNode?.childNode(withName: partName, recursively: true)
+            highlightHandler.setHighlightOn(node: nodeToHighlight!)
+        }
+        
     }
     
     private func setupGestures() {

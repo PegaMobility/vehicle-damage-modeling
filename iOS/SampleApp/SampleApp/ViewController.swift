@@ -20,7 +20,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var damageSelector: FVMCarModelViewController!
     
     override func viewDidLoad(){
-        damageSelector.onStartup()
+        damageSelector.onStartup(jsonConfiguration: """
+        {
+            "mainScreenText": "text",
+            "selection":[
+
+            {
+                "id":"Roof"
+            }
+
+            ]
+        }
+        """)
         super.viewDidLoad()
     }
 }
