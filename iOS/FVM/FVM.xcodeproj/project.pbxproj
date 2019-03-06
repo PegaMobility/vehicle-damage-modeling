@@ -41,6 +41,10 @@
 		D7C88867222706B700EB3375 /* ParserResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88861222706B700EB3375 /* ParserResources.swift */; };
 		D7C88868222706B700EB3375 /* ParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88862222706B700EB3375 /* ParserMock.swift */; };
 		D7F03005222EAAAE00D87F6A /* NodeHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03004222EAAAE00D87F6A /* NodeHelperTests.swift */; };
+		D7F03007222EAC3900D87F6A /* DamagedPartsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03006222EAC3900D87F6A /* DamagedPartsInitializer.swift */; };
+		D7F03008222EAC3900D87F6A /* DamagedPartsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03006222EAC3900D87F6A /* DamagedPartsInitializer.swift */; };
+		D7F0300A222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03009222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift */; };
+		D7F0300B222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03009222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,8 @@
 		D7C88861222706B700EB3375 /* ParserResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserResources.swift; sourceTree = "<group>"; };
 		D7C88862222706B700EB3375 /* ParserMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
 		D7F03004222EAAAE00D87F6A /* NodeHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeHelperTests.swift; sourceTree = "<group>"; };
+		D7F03006222EAC3900D87F6A /* DamagedPartsInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsInitializer.swift; sourceTree = "<group>"; };
+		D7F03009222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsInitializerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,8 @@
 		D7C8880C222702F600EB3375 /* DamagedParts */ = {
 			isa = PBXGroup;
 			children = (
+				D7F03006222EAC3900D87F6A /* DamagedPartsInitializer.swift */,
+				D7F03009222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift */,
 				D755C5FF222DDC1300EB487E /* Helpers */,
 				D7C8880D222702F600EB3375 /* Parsers */,
 				D7C8880F222702F600EB3375 /* Providers */,
@@ -490,6 +498,7 @@
 				D755C5FE222DDA4E00EB487E /* DamagedPartsServiceProtocol.swift in Sources */,
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
 				D7C8882B222702F600EB3375 /* DamagedPartsService.swift in Sources */,
+				D7F0300A222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift in Sources */,
 				D755C607222DDFEA00EB487E /* SCNNodeHelper.swift in Sources */,
 				D7C88822222702F600EB3375 /* DamagedPartsNamesProvider.swift in Sources */,
 				D7C88820222702F600EB3375 /* JsonParser.swift in Sources */,
@@ -503,6 +512,7 @@
 				BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */,
 				D7C88828222702F600EB3375 /* Validable.swift in Sources */,
 				D7C88825222702F600EB3375 /* SelectionRoot.swift in Sources */,
+				D7F03007222EAC3900D87F6A /* DamagedPartsInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +523,7 @@
 				D7C88867222706B700EB3375 /* ParserResources.swift in Sources */,
 				D7F03005222EAAAE00D87F6A /* NodeHelperTests.swift in Sources */,
 				D7C88868222706B700EB3375 /* ParserMock.swift in Sources */,
+				D7F0300B222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift in Sources */,
 				D7C88865222706B700EB3375 /* ProviderMock.swift in Sources */,
 				D7C888472227033200EB3375 /* DamagedPartsServiceTests.swift in Sources */,
 				D7C888462227033200EB3375 /* DamagedParstsRepositoryTests.swift in Sources */,
@@ -520,6 +531,7 @@
 				D7C88863222706B700EB3375 /* JsonParserTests.swift in Sources */,
 				BA1FBE122208CB0800DBFB9E /* MaterialProcessorTests.swift in Sources */,
 				D7C88866222706B700EB3375 /* DamagePartsValidatorTests.swift in Sources */,
+				D7F03008222EAC3900D87F6A /* DamagedPartsInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

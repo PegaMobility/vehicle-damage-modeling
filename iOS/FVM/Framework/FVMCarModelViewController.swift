@@ -44,8 +44,9 @@ public class FVMCarModelViewController : SCNView {
 
         damagedPartsService = DamagePartsServiceFactory.create(validPartsNames: validNodesNames!)
         let initialDamagedParts = damagedPartsService?.createAndGetCollectionOfDamagedParts(json: configuration)
-        let nodesToHighlight = nodeHelper?.getIdsOfSelection(selections: initialDamagedParts)
-        updateDamagedPartsOnUI(damagedPartsNames: nodesToHighlight!)
+        
+        
+
     }
 
     private func createValidNamesArray() -> [String]? {
