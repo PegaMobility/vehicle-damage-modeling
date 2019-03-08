@@ -28,7 +28,7 @@ public class FVMCarModelViewController : SCNView {
     public func onStartup(jsonConfiguration: String) {
         self.allowsCameraControl = false
         self.autoenablesDefaultLighting = true
-        nodeHelper = NodeHelper()
+        nodeHelper = NodeHelper(highlightHandler: highlightHandler)
     
         setupGestures()
         setupScene()
@@ -40,30 +40,20 @@ public class FVMCarModelViewController : SCNView {
     }
     
     private func setupInitialSelection(configuration: String){
-        let validNodesNames = createValidNamesArray()
-
+        let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
+        let validNodesNames = nodeHelper?.createValidNamesArray(carModel: carModelNode!)
         damagedPartsService = DamagePartsServiceFactory.create(validPartsNames: validNodesNames!)
+
         let initialDamagedParts = damagedPartsService?.createAndGetCollectionOfDamagedParts(json: configuration)
         
         
+        var demagePartsInitializer = DamagedPartsInitializer(nodeHelper: nodeHelper!, damagePartsService: damagedPartsService!,
+                                                             carModel: carModelNode!, initialConfiguration: configuration)
+        demagePartsInitializer.Initialize(damagedPartsNamesToHightlight: validNodesNames!)
 
     }
 
-    private func createValidNamesArray() -> [String]? {
-        let childNodes = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)?.childNodes
-        let validNodesNames = nodeHelper?.getNodesNames(nodes: childNodes!)
-        return validNodesNames
-    }
 
-    private func updateDamagedPartsOnUI(damagedPartsNames: [String]){
-        
-        for partName in damagedPartsNames{
-            let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
-            let nodeToHighlight = carModelNode?.childNode(withName: partName, recursively: true)
-            highlightHandler.setHighlightOn(node: nodeToHighlight!)
-        }
-    }
-    
     private func setupGestures() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))

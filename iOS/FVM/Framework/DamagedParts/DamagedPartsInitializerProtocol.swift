@@ -15,6 +15,8 @@
 import Foundation
 import SceneKit
 
-internal protocol DamagedPartsInitializerProtocol {
-    func initialize(damagedParts: [Selection], carModelNode: SCNNode)
+
+protocol DamagedPartsInitializerProtocol {
+    func Initialize(damagedPartsNamesToHightlight: [String])
 }
+

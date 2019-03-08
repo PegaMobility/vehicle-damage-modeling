@@ -16,6 +16,8 @@ import Foundation
 import SceneKit
 
 internal protocol NodeHelperProtocol {
+    func updateDamagedPartsOnUI(damagedPartsNames: [String], carModel: SCNNode)
     func getNodesNames(nodes: [SCNNode]) -> [String]
     func getIdsOfSelection(selections: [Selection]?) -> [String]
+    func createValidNamesArray(carModel: SCNNode) -> [String]?
 }

@@ -21,6 +21,8 @@
 		D755C5FE222DDA4E00EB487E /* DamagedPartsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755C5FD222DDA4E00EB487E /* DamagedPartsServiceProtocol.swift */; };
 		D755C605222DDFC200EB487E /* NodeHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755C604222DDFC200EB487E /* NodeHelperProtocol.swift */; };
 		D755C607222DDFEA00EB487E /* SCNNodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D755C606222DDFEA00EB487E /* SCNNodeHelper.swift */; };
+		D7BD083A22327F3900D36DD4 /* DamagedPartsInitializerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD083922327F3900D36DD4 /* DamagedPartsInitializerProtocol.swift */; };
+		D7BD083C2232808200D36DD4 /* DamagedPartsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD083B2232808200D36DD4 /* DamagedPartsInitializer.swift */; };
 		D7C88820222702F600EB3375 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8880E222702F600EB3375 /* JsonParser.swift */; };
 		D7C88821222702F600EB3375 /* DamagedPartsNamesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88810222702F600EB3375 /* DamagedPartsNamesProviderProtocol.swift */; };
 		D7C88822222702F600EB3375 /* DamagedPartsNamesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C88811222702F600EB3375 /* DamagedPartsNamesProvider.swift */; };
@@ -75,6 +77,8 @@
 		D755C5FD222DDA4E00EB487E /* DamagedPartsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsServiceProtocol.swift; sourceTree = "<group>"; };
 		D755C604222DDFC200EB487E /* NodeHelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeHelperProtocol.swift; sourceTree = "<group>"; };
 		D755C606222DDFEA00EB487E /* SCNNodeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNNodeHelper.swift; sourceTree = "<group>"; };
+		D7BD083922327F3900D36DD4 /* DamagedPartsInitializerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsInitializerProtocol.swift; sourceTree = "<group>"; };
+		D7BD083B2232808200D36DD4 /* DamagedPartsInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsInitializer.swift; sourceTree = "<group>"; };
 		D7C8880E222702F600EB3375 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		D7C88810222702F600EB3375 /* DamagedPartsNamesProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsNamesProviderProtocol.swift; sourceTree = "<group>"; };
 		D7C88811222702F600EB3375 /* DamagedPartsNamesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamagedPartsNamesProvider.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				D7C88818222702F600EB3375 /* Factories */,
 				D7C8881A222702F600EB3375 /* Validators */,
 				D7C8881D222702F600EB3375 /* Services */,
+				D7BD083922327F3900D36DD4 /* DamagedPartsInitializerProtocol.swift */,
+				D7BD083B2232808200D36DD4 /* DamagedPartsInitializer.swift */,
 			);
 			path = DamagedParts;
 			sourceTree = "<group>";
@@ -497,11 +503,13 @@
 				D7C88829222702F600EB3375 /* DamagedPartsValidator.swift in Sources */,
 				D755C5FE222DDA4E00EB487E /* DamagedPartsServiceProtocol.swift in Sources */,
 				051E317521C43E5F0067C7F3 /* FVMCarModelViewController.swift in Sources */,
+				D7BD083C2232808200D36DD4 /* DamagedPartsInitializer.swift in Sources */,
 				D7C8882B222702F600EB3375 /* DamagedPartsService.swift in Sources */,
 				D7F0300A222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift in Sources */,
 				D755C607222DDFEA00EB487E /* SCNNodeHelper.swift in Sources */,
 				D7C88822222702F600EB3375 /* DamagedPartsNamesProvider.swift in Sources */,
 				D7C88820222702F600EB3375 /* JsonParser.swift in Sources */,
+				D7BD083A22327F3900D36DD4 /* DamagedPartsInitializerProtocol.swift in Sources */,
 				D7C88827222702F600EB3375 /* DamagePartsServiceFactory.swift in Sources */,
 				05CDF820221034F400069640 /* PanGestureHandler.swift in Sources */,
 				BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */,

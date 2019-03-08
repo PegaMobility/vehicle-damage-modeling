@@ -15,29 +15,29 @@
 import Foundation
 import SceneKit
 
-internal class DamagedPartsInitializer: DamagedPartsInitializerProtocol {
-    
+
+internal class DamagedPartsInitializer : DamagedPartsInitializerProtocol{
     
     private var nodeHelper: NodeHelperProtocol
+    private var carModel: SCNNode
+    private var damagePartsService: DamagedPartsServiceProtocol
+    private var initialConfiguration: String
     
-    init() {
-        nodeHelper = NodeHelper()
+    init(nodeHelper: NodeHelperProtocol, damagePartsService: DamagedPartsServiceProtocol, carModel: SCNNode, initialConfiguration: String) {
+        self.nodeHelper = nodeHelper
+        self.carModel = carModel
+        self.damagePartsService = damagePartsService
+        self.initialConfiguration = initialConfiguration
     }
     
-    func initialize(damagedParts: [Selection], carModelNode: SCNNode) {
+    func Initialize(damagedPartsNamesToHightlight: [String]) {
         
+        let initialDamagedParts = damagePartsService.createAndGetCollectionOfDamagedParts(json: initialConfiguration)
         
-        let nodesToHighlight = nodeHelper.getIdsOfSelection(selections: damagedParts)
-        updateDamagedPartsOnUI(damagedPartsNames: nodesToHighlight!)
-    }
-    
-    
-    private func updateDamagedPartsOnUI(damagedPartsNames: [String]){
+        let nodesToHighlight = nodeHelper.getIdsOfSelection(selections: initialDamagedParts)
         
-        for partName in damagedPartsNames{
-            let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
-            let nodeToHighlight = carModelNode?.childNode(withName: partName, recursively: true)
-            highlightHandler.setHighlightOn(node: nodeToHighlight!)
-        }
+        nodeHelper.updateDamagedPartsOnUI(damagedPartsNames: nodesToHighlight, carModel: carModel)
     }
 }
+    
+
