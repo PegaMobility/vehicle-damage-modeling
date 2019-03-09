@@ -16,7 +16,6 @@ import Foundation
 import SceneKit
 
 public class NodeHelper : NodeHelperProtocol{
-    
     private var highlightHandler: HighlightHandler
     
     init(highlightHandler: HighlightHandler) {
@@ -35,7 +34,6 @@ public class NodeHelper : NodeHelperProtocol{
         let validNodesNames = getNodesNames(nodes: childNodes)
         return validNodesNames
     }
-    
     
     public func getNodesNames(nodes: [SCNNode]) -> [String]{
         return nodes.map{$0.name ?? ""};
