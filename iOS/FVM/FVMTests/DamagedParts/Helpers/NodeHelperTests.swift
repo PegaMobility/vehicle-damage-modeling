@@ -21,7 +21,7 @@ class NodeHelperTests: XCTestCase {
     private var sut: NodeHelper?
     
     override func setUp() {
-        sut = NodeHelper(highlightHandler: nil)
+        sut = NodeHelper(highlightHandler: HighlightHandler())
     }
     
     func testIfResultContainsProperNumberOfIds(){
