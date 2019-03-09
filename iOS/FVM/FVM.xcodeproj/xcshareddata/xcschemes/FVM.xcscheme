@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1010"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -37,6 +37,13 @@
             BlueprintName = "FVM"
             ReferencedContainer = "container:FVM.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0535F32221C4389F00CD6C44"
+            BuildableName = "FVMTests.xctest"
+            BlueprintName = "FVMTests"
+            ReferencedContainer = "container:FVM.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
@@ -53,10 +60,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0535F31921C4389F00CD6C44"
-            BuildableName = "FVM.framework"
-            BlueprintName = "FVM"
-            ReferencedContainer = "container:FVM.xcodeproj">
+            BlueprintIdentifier = "B52DB81121BA8EEF00C6CC36"
+            BuildableName = "SampleApp.app"
+            BlueprintName = "SampleApp"
+            ReferencedContainer = "container:../SampleApp/SampleApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -72,7 +79,8 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B52DB81121BA8EEF00C6CC36"
@@ -81,15 +89,6 @@
             ReferencedContainer = "container:../SampleApp/SampleApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0535F31921C4389F00CD6C44"
-            BuildableName = "FVM.framework"
-            BlueprintName = "FVM"
-            ReferencedContainer = "container:FVM.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference

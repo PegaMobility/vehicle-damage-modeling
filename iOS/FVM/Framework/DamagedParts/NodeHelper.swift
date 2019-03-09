@@ -15,7 +15,7 @@
 import Foundation
 import SceneKit
 
-internal class NodeHelper : NodeHelperProtocol{
+public class NodeHelper : NodeHelperProtocol{
     
     private var highlightHandler: HighlightHandler
     

@@ -36,23 +36,16 @@ public class FVMCarModelViewController : SCNView {
         setupLights()
         
         setupInitialSelection(configuration: jsonConfiguration)
-        
     }
     
     private func setupInitialSelection(configuration: String){
         let carModelNode = scnScene.rootNode.childNode(withName: CAR_MODEL_NAME, recursively: false)
         let validNodesNames = nodeHelper?.createValidNamesArray(carModel: carModelNode!)
         damagedPartsService = DamagePartsServiceFactory.create(validPartsNames: validNodesNames!)
-
-        let initialDamagedParts = damagedPartsService?.createAndGetCollectionOfDamagedParts(json: configuration)
-        
-        
-        var demagePartsInitializer = DamagedPartsInitializer(nodeHelper: nodeHelper!, damagePartsService: damagedPartsService!,
+        let demagePartsInitializer = DamagedPartsInitializer(nodeHelper: nodeHelper!, damagePartsService: damagedPartsService!,
                                                              carModel: carModelNode!, initialConfiguration: configuration)
         demagePartsInitializer.Initialize(damagedPartsNamesToHightlight: validNodesNames!)
-
     }
-
 
     private func setupGestures() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))

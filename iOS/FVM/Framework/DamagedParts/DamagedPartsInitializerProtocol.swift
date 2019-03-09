@@ -19,4 +19,3 @@ import SceneKit
 protocol DamagedPartsInitializerProtocol {
     func Initialize(damagedPartsNamesToHightlight: [String])
 }
-

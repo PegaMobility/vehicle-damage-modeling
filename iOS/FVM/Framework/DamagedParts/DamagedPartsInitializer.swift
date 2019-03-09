@@ -15,7 +15,6 @@
 import Foundation
 import SceneKit
 
-
 internal class DamagedPartsInitializer : DamagedPartsInitializerProtocol{
     
     private var nodeHelper: NodeHelperProtocol
