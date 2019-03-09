@@ -18,10 +18,13 @@ import XCTest
 
 class NodeHelperTests: XCTestCase {
     
+    private let ROOT_NODE_NAME = "carModel"
+    private var hightlightHandlerMock: HightlightHandlerMock?
     private var sut: NodeHelper?
     
     override func setUp() {
-        sut = NodeHelper(highlightHandler: HighlightHandler())
+        hightlightHandlerMock = HightlightHandlerMock()
+        sut = NodeHelper(highlightHandler: hightlightHandlerMock!)
     }
     
     func testIfResultContainsProperNumberOfIds(){
@@ -50,5 +53,27 @@ class NodeHelperTests: XCTestCase {
         XCTAssertEqual(actual, expected)
     }
     
+    func testIfRetursChildsNodesNames(){
+        // Arrange
+        let childNames = ["roof", "hood"]
+        let root = setUpRootNode(childNodesNames: childNames)
+        
+        // Act
+        let actual = sut?.createValidNamesArray(carModel: root)
+        
+        // Assert
+        XCTAssertEqual(childNames, actual)
+    }
     
+    fileprivate func setUpRootNode(childNodesNames: [String]) -> SCNNode{
+        let root = SCNNode()
+        root.name = ROOT_NODE_NAME
+        
+        for name in childNodesNames{
+            let newChild = SCNNode()
+            newChild.name = name
+            root.addChildNode(newChild)
+        }
+        return root
+    }
 }
