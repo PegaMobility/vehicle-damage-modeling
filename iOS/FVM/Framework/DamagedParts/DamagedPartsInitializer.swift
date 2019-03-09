@@ -38,5 +38,3 @@ internal class DamagedPartsInitializer : DamagedPartsInitializerProtocol{
         nodeHelper.updateDamagedPartsOnUI(damagedPartsNames: nodesToHighlight, carModel: carModel)
     }
 }
-    
-

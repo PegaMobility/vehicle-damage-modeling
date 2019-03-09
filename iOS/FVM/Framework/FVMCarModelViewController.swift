@@ -28,7 +28,6 @@ public class FVMCarModelViewController : SCNView {
     public func onStartup(jsonConfiguration: String) {
         self.allowsCameraControl = false
         self.autoenablesDefaultLighting = true
-//        nodeHelper = NodeHelper(highlightHandler: highlightHandler)
     
         nodeHelper = NodeHelper(highlightHandler: highlightHandler)
         

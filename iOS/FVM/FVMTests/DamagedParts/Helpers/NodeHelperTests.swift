@@ -17,7 +17,6 @@ import XCTest
 @testable import FVM
 
 class NodeHelperTests: XCTestCase {
-    
     private let ROOT_NODE_NAME = "carModel"
     private var hightlightHandlerMock: HightlightHandlerMock?
     private var sut: NodeHelper?
