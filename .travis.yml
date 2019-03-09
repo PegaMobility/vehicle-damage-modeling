@@ -5,8 +5,8 @@ matrix:
     language: swift
     osx_image: xcode10.1
     before_script: cd iOS/FVM
-    script: xcodebuild -project FVM.xcodeproj -scheme FVM -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.1,name=iPhone X' test -configuration Debug ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES | xcpretty
-    after_script: bash <(curl -s https://codecov.io/bash) -J '^FVM$'
+    script: xcodebuild -project FVM.xcodeproj -scheme FVM -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.1,name=iPhone X' test -configuration Debug ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES
+    after_script:  bash <(curl -s https://codecov.io/bash) -J '^FVM$'
   - name: "Android"
     language: android
     android:
