@@ -46,7 +46,7 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="DamagedCarParts" text="Damaged Car JSON: " textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-nV-ODq" userLabel="Manage Damaged Car Parts Text View">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="DamagedCarParts" text="Damaged Car Parts:" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-nV-ODq" userLabel="Manage Damaged Car Parts Text View">
                                 <rect key="frame" x="0.0" y="112" width="375" height="223"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -67,7 +67,7 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="DisplayReturningJSON" editable="NO" text="JSON Result" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-vO-PwH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="DisplayReturningJSON" editable="NO" text="Result" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-vO-PwH">
                                 <rect key="frame" x="0.0" y="343" width="375" height="266"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -97,7 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lmZ-FS-kuC"/>
                     <connections>
-                        <outlet property="displayReturningJSON" destination="qdS-vO-PwH" id="zzf-Dx-zXi"/>
+                        <outlet property="displayReturningDataTextView" destination="qdS-vO-PwH" id="AGk-P9-SSG"/>
                         <outlet property="goesToFVMButton" destination="Bd1-RJ-rnz" id="Jko-KU-DoD"/>
                         <outlet property="manageDamagedCarPartsTextView" destination="rtF-nV-ODq" id="lSO-Lx-zAF"/>
                         <outlet property="manageDescriptionTextView" destination="egy-tL-5h5" id="EL9-cE-hbE"/>

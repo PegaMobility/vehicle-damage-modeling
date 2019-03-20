@@ -18,8 +18,8 @@ import FVM
 class ViewController: UIViewController {
     @IBOutlet weak var manageDescriptionTextView: UITextView!
     @IBOutlet weak var manageDamagedCarPartsTextView: UITextView!
-    @IBOutlet weak var displayReturningJSON: UITextView!
     @IBOutlet weak var goesToFVMButton: UIButton!
+    @IBOutlet weak var displayReturningDataTextView: UITextView!
     
     override func viewDidLoad() {
         initializeManageDamagedCarPartsTextView()
@@ -41,11 +41,11 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is FVMDamagedCarViewController {
             let fvmController = segue.destination as? FVMDamagedCarViewController
-            fvmController!.jsonConfigurationData = prepareJSONToSend()
+            fvmController!.configurationData = prepareJSONToSend()
             
-            fvmController!.getReturningJSONData = { returningJSON in
-                self.fillDamagedCarPartsTextView(returningJSON)
-                self.displayReturningJSON.text = returningJSON
+            fvmController!.getReturningData = { returningData in
+                self.fillDamagedCarPartsTextView(returningData)
+                self.displayReturningDataTextView.text = returningData
             }
         }
     }

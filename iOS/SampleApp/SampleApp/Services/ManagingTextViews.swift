@@ -62,7 +62,7 @@ extension ViewController : UITextViewDelegate {
     }
     
     internal func initializeDisplayReturningJSONTextView() {
-        displayReturningJSON.text = ViewController.DEFAULT_TEXT
+        displayReturningDataTextView.text = ViewController.DEFAULT_TEXT
     }
     
     fileprivate func getDefaultText(_ textViewId: UITextView) -> String {

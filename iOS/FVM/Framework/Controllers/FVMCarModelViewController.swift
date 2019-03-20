@@ -24,7 +24,7 @@ internal class FVMCarModelViewController : SCNView {
     internal let highlightHandler = HighlightHandler()
     private let CAR_MODEL_NAME = "carModel"
     
-    public func onStartup(jsonConfiguration: String) {
+    public func onStartup(configuration: String) {
         self.autoenablesDefaultLighting = true
         nodeHelper = NodeHelper(highlightHandler: highlightHandler)
         
@@ -32,7 +32,7 @@ internal class FVMCarModelViewController : SCNView {
         setupScene()
         setupCamera()
         setupLights()
-        setupInitialSelection(configuration: jsonConfiguration)
+        setupInitialSelection(configuration: configuration)
     }
     
     public func onAccept() -> String {

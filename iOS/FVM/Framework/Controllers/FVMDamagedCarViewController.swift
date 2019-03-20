@@ -20,8 +20,8 @@ public class FVMDamagedCarViewController: UIViewController {
     @IBOutlet weak var informationForUserTextView: UITextView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
-    public var jsonConfigurationData: String?
-    public var getReturningJSONData: ((String) -> Void)?
+    public var configurationData: String?
+    public var getReturningData: ((String) -> Void)?
     private let ROTATION_PROMPT = "RotationPrompt"
     
     override public func viewDidLoad() {
@@ -32,17 +32,17 @@ public class FVMDamagedCarViewController: UIViewController {
     }
     
     @IBAction internal func closeButtonTapped(_ sender: UIButton) {
-        _ = getReturningJSONData?(damageSelector.onCancel())
+        _ = getReturningData?(damageSelector.onCancel())
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction internal func acceptButtonTapped(_ sender: UIButton) {
-        _ = getReturningJSONData?(damageSelector.onAccept())
+        _ = getReturningData?(damageSelector.onAccept())
         self.dismiss(animated: true, completion: nil)
     }
     
     private func setupDamagedCarScene() {
-        damageSelector.onStartup(jsonConfiguration: jsonConfigurationData!)
+        damageSelector.onStartup(configuration: configurationData!)
         fillFVMDamagedCarScene()
     }
     
