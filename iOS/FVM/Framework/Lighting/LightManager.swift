@@ -26,20 +26,16 @@ internal class LightManager {
         let topLight = SCNNode()
         let bottomLight = SCNNode()
         let centralLight = SCNNode()
-        let topLightIntensity = CGFloat(500)
-        let bottomLightIntensity = CGFloat(750)
-        let centralLightIntensity = CGFloat(1000)
         let topLightVector = SCNVector3(x: 0, y: 50, z: 0)
         let bottomLightVector = SCNVector3(x: 0, y: -50, z: 0)
         let centralLightVector = SCNVector3(x: 0, y: 0, z: 0)
         
-        set(type: SCNLight.LightType.directional, intensity: topLightIntensity, position: topLightVector, target: topLight)
-        set(type: SCNLight.LightType.directional, intensity: bottomLightIntensity, position: bottomLightVector, target: bottomLight)
-        set(type: SCNLight.LightType.ambient, intensity: centralLightIntensity, position: centralLightVector, target: centralLight)
+        set(type: SCNLight.LightType.directional, position: topLightVector, target: topLight)
+        set(type: SCNLight.LightType.directional, position: bottomLightVector, target: bottomLight)
+        set(type: SCNLight.LightType.ambient, position: centralLightVector, target: centralLight)
     }
     
-    private func set(type: SCNLight.LightType, intensity: CGFloat, position: SCNVector3, target: SCNNode){
-        target.light?.intensity = intensity
+    private func set(type: SCNLight.LightType, position: SCNVector3, target: SCNNode){
         target.light = SCNLight()
         target.light?.type = type
         target.position = position
