@@ -39,11 +39,16 @@ internal class LightManager {
     }
     
     private func set(type: SCNLight.LightType, intensity: CGFloat, position: SCNVector3, target: SCNNode){
-        target.light?.intensity = intensity
         target.light = SCNLight()
         target.light?.type = type
         target.position = position
         target.eulerAngles = SCNVector3Make(Float(-Double.pi / 2), 0, 0)
+        if #available(iOS 10.0, *) {
+            target.light?.intensity = intensity
+        } else {
+            target.light?.color = UIColor(white: intensity/1000.0, alpha: 1.0)
+        }
+        
         scnScene.rootNode.addChildNode(target)
     }
 }
