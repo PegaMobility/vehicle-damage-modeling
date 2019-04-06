@@ -48,7 +48,6 @@ internal class LightManager {
         } else {
             target.light?.color = UIColor(white: intensity/1000.0, alpha: 1.0)
         }
-        
         scnScene.rootNode.addChildNode(target)
     }
 }
