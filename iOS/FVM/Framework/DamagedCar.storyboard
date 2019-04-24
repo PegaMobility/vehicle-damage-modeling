@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ios-2y-x77">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController storyboardIdentifier="DamagedCar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ios-2y-x77" customClass="FVMDamagedCarViewController" customModule="FVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hTt-RL-Zd9">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiH-O5-VH5">
-                                <rect key="frame" x="0.0" y="255" width="667" height="120"/>
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kK-jZ-ioB">
-                                        <rect key="frame" x="600" y="50" width="50" height="50"/>
+                                        <rect key="frame" x="308" y="65" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="MGs-r8-DqD"/>
@@ -37,12 +37,12 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rotate model and select damaged parts with a tap on the model. If completed press button." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nWF-SY-VfI">
-                                        <rect key="frame" x="75" y="37" width="511" height="46"/>
+                                        <rect key="frame" x="-5" y="8" width="383" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZk-nF-mGK">
-                                        <rect key="frame" x="17" y="50" width="50" height="50"/>
+                                        <rect key="frame" x="17" y="65" width="50" height="50"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" image="cross"/>
@@ -89,21 +89,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-Qb-n55">
-                                <rect key="frame" x="0.0" y="-20" width="667" height="275"/>
+                                <rect key="frame" x="-4" y="0.0" width="379" height="539"/>
                                 <subviews>
                                     <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyd-mX-0E4" customClass="FVMCarModelViewController" customModule="FVM">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="275"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="379" height="539"/>
                                     </sceneKitView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="RotationPrompt" image="rotationPrompt" translatesAutoresizingMaskIntoConstraints="NO" id="cuq-zT-3vU">
-                                        <rect key="frame" x="233.5" y="45.5" width="200" height="200"/>
+                                        <rect key="frame" x="89.5" y="169.5" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cuq-zT-3vU" secondAttribute="height" multiplier="1:1" id="VKJ-hj-VXB"/>
+                                            <constraint firstAttribute="width" constant="200" id="pPv-9f-oMW"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="cuq-zT-3vU" firstAttribute="centerX" secondItem="DKo-Qb-n55" secondAttribute="centerX" id="0PF-cG-1dg"/>
+                                    <constraint firstItem="cuq-zT-3vU" firstAttribute="centerY" secondItem="DKo-Qb-n55" secondAttribute="centerY" id="3JY-gV-DrZ"/>
                                     <constraint firstItem="Kyd-mX-0E4" firstAttribute="width" secondItem="DKo-Qb-n55" secondAttribute="width" id="G23-RO-qDg"/>
                                     <constraint firstItem="Kyd-mX-0E4" firstAttribute="leading" secondItem="DKo-Qb-n55" secondAttribute="leading" id="ev9-eH-8AI"/>
-                                    <constraint firstItem="cuq-zT-3vU" firstAttribute="centerY" secondItem="Kyd-mX-0E4" secondAttribute="centerY" constant="8" id="q0A-l4-OTr"/>
                                     <constraint firstItem="Kyd-mX-0E4" firstAttribute="top" secondItem="DKo-Qb-n55" secondAttribute="top" id="xWU-6p-rHN"/>
-                                    <constraint firstItem="cuq-zT-3vU" firstAttribute="centerX" secondItem="Kyd-mX-0E4" secondAttribute="centerX" id="xxi-iv-k3y"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -137,6 +141,6 @@
     <resources>
         <image name="check" width="104" height="104"/>
         <image name="cross" width="104" height="104"/>
-        <image name="rotationPrompt" width="200" height="200"/>
+        <image name="rotationPrompt" width="512" height="512"/>
     </resources>
 </document>
