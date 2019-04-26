@@ -1,0 +1,70 @@
+{
+  "title": "JSON Schema for Vehicle Damage Modeling",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://pega.com/vehicle-damage-modeling",
+
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "prompt": {
+      "title": "Text for the end-user prompt ",
+      "$id": "#/properties/prompt",
+      "type": "string",
+      "default": "",
+      "readOnly": true
+    },
+    "selection": {
+      "title": "Selected Vehicle Parts",
+      "$id": "#/properties/selection",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Vehicle Part",
+        "$id": "#/properties/selection/items",
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "title": "Identifier of a Vehicle Part ",
+            "$id": "#/properties/selection/items/properties/id",
+            "type": "string",
+            "enum": [
+              "bumper-front",
+              "bumper-rear",
+              "door-front-left",
+              "door-front-right",
+              "door-rear-left",
+              "door-rear-right",
+              "fender-front-left",
+              "fender-front-right",
+              "fender-rear-left",
+              "fender-rear-right",
+              "hood",
+              "lamp-front-right",
+              "lamp-rear-left",
+              "lamp-rear-right",
+              "lamps-front-left",
+              "roof",
+              "trunk",
+              "wheel-front-left",
+              "wheel-front-right",
+              "wheel-rear-left",
+              "wheel-rear-right",
+              "window-front",
+              "window-front-left",
+              "window-front-right",
+              "window-rear",
+              "window-rear-left",
+              "window-rear-right"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "selection"
+  ]
+}
