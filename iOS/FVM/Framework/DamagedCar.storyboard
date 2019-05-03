@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ios-2y-x77">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController storyboardIdentifier="DamagedCar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ios-2y-x77" customClass="FVMDamagedCarViewController" customModule="FVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hTt-RL-Zd9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiH-O5-VH5">
-                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="294" width="736" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kK-jZ-ioB">
-                                        <rect key="frame" x="308" y="65" width="50" height="50"/>
+                                        <rect key="frame" x="669" y="50" width="50" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="MGs-r8-DqD"/>
@@ -36,13 +36,8 @@
                                             <action selector="acceptButtonTapped:" destination="ios-2y-x77" eventType="touchUpInside" id="YTb-Bj-hlD"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rotate model and select damaged parts with a tap on the model. If completed press button." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nWF-SY-VfI">
-                                        <rect key="frame" x="-5" y="8" width="383" height="46"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZk-nF-mGK">
-                                        <rect key="frame" x="17" y="65" width="50" height="50"/>
+                                        <rect key="frame" x="17" y="50" width="50" height="50"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" image="cross"/>
@@ -50,17 +45,24 @@
                                             <action selector="closeButtonTapped:" destination="ios-2y-x77" eventType="touchUpInside" id="aGK-39-jma"/>
                                         </connections>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rotate model and select damaged parts with a tap on the model. If completed press button." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nWF-SY-VfI">
+                                        <rect key="frame" x="75" y="41" width="586" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3kK-jZ-ioB" firstAttribute="leading" secondItem="nWF-SY-VfI" secondAttribute="trailing" constant="-70" id="32U-cW-7wY">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="14"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="8"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="-61"/>
                                     </constraint>
                                     <constraint firstItem="3kK-jZ-ioB" firstAttribute="top" secondItem="WiH-O5-VH5" secondAttribute="top" constant="50" id="ARS-uq-Wsx">
                                         <variation key="heightClass=regular-widthClass=compact" constant="65"/>
                                     </constraint>
                                     <constraint firstItem="nWF-SY-VfI" firstAttribute="top" secondItem="WiH-O5-VH5" secondAttribute="top" constant="8" id="Cb6-96-nkD">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="37"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="39"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="41"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="52"/>
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="3kK-jZ-ioB" secondAttribute="trailing" constant="17" id="Lk0-Mn-byW"/>
@@ -71,11 +73,13 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                     </constraint>
                                     <constraint firstAttribute="bottom" secondItem="nWF-SY-VfI" secondAttribute="bottom" constant="74" id="RtT-Cw-z4c">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="37"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="8"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="22"/>
                                     </constraint>
                                     <constraint firstItem="nWF-SY-VfI" firstAttribute="centerX" secondItem="WiH-O5-VH5" secondAttribute="centerX" constant="-1" id="cOK-ja-Od8">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="-3"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="-12"/>
                                     </constraint>
                                     <constraint firstItem="3kK-jZ-ioB" firstAttribute="top" secondItem="mZk-nF-mGK" secondAttribute="top" id="dyA-aT-oYh">
@@ -84,21 +88,24 @@
                                     <constraint firstItem="mZk-nF-mGK" firstAttribute="leading" secondItem="WiH-O5-VH5" secondAttribute="leading" constant="17" id="sVN-oI-aTo"/>
                                     <constraint firstItem="nWF-SY-VfI" firstAttribute="leading" secondItem="mZk-nF-mGK" secondAttribute="trailing" constant="-72" id="zWu-1y-rPy">
                                         <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="8"/>
                                         <variation key="heightClass=regular-widthClass=regular" constant="-84"/>
                                     </constraint>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-Qb-n55">
-                                <rect key="frame" x="-4" y="0.0" width="379" height="539"/>
+                                <rect key="frame" x="0.0" y="-20" width="736" height="314"/>
                                 <subviews>
                                     <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyd-mX-0E4" customClass="FVMCarModelViewController" customModule="FVM">
-                                        <rect key="frame" x="0.0" y="0.0" width="379" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="314"/>
                                     </sceneKitView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="RotationPrompt" image="rotationPrompt" translatesAutoresizingMaskIntoConstraints="NO" id="cuq-zT-3vU">
-                                        <rect key="frame" x="89.5" y="169.5" width="200" height="200"/>
+                                        <rect key="frame" x="268" y="57" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="cuq-zT-3vU" secondAttribute="height" multiplier="1:1" id="VKJ-hj-VXB"/>
-                                            <constraint firstAttribute="width" constant="200" id="pPv-9f-oMW"/>
+                                            <constraint firstAttribute="width" constant="200" id="pPv-9f-oMW">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                                            </constraint>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -135,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LA0-O5-eEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="-281.10944527736132"/>
+            <point key="canvasLocation" x="-333.42391304347831" y="-284.05797101449275"/>
         </scene>
     </scenes>
     <resources>

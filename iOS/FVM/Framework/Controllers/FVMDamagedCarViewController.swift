@@ -27,6 +27,8 @@ public class FVMDamagedCarViewController: UIViewController {
     override public func viewDidLoad() {
         setupDamagedCarScene()
         showRotationPrompt()
+        userPromptText.centerTextVertically()
+        
         super.viewDidLoad()
     }
     
