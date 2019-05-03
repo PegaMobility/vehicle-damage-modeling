@@ -27,7 +27,6 @@ public class FVMDamagedCarViewController: UIViewController {
     override public func viewDidLoad() {
         setupDamagedCarScene()
         showRotationPrompt()
-        userPromptText.centerTextVertically()
         
         super.viewDidLoad()
     }
@@ -70,6 +69,7 @@ public class FVMDamagedCarViewController: UIViewController {
     
     private func fillUserPromptTextView() {
         userPromptText.text = damageSelector.userPromptText
+        userPromptText.centerTextVertically()
     }
     
     private func setupButtonShape(_ button: UIButton) {
