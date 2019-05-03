@@ -59,7 +59,7 @@
 		D7F03005222EAAAE00D87F6A /* NodeHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03004222EAAAE00D87F6A /* NodeHelperTests.swift */; };
 		D7F0300A222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03009222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift */; };
 		D7F0300B222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F03009222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift */; };
-		D7F580FD227C70960037DDE7 /* UITextView+centerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F580FC227C70960037DDE7 /* UITextView+centerText.swift */; };
+		D7F580FD227C70960037DDE7 /* UITextView+centerTextVertically.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F580FC227C70960037DDE7 /* UITextView+centerTextVertically.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +126,7 @@
 		D7C88862222706B700EB3375 /* ParserMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserMock.swift; sourceTree = "<group>"; };
 		D7F03004222EAAAE00D87F6A /* NodeHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeHelperTests.swift; sourceTree = "<group>"; };
 		D7F03009222EADCD00D87F6A /* DamagedPartsInitializerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagedPartsInitializerProtocol.swift; sourceTree = "<group>"; };
-		D7F580FC227C70960037DDE7 /* UITextView+centerText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+centerText.swift"; sourceTree = "<group>"; };
+		D7F580FC227C70960037DDE7 /* UITextView+centerTextVertically.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+centerTextVertically.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,7 +268,7 @@
 			children = (
 				BA5B809E2261166B002C2D08 /* SCNCamera+FOVSetter.swift */,
 				BA5250D222662E9C00F47F8D /* SCNVector3+Geometry.swift */,
-				D7F580FC227C70960037DDE7 /* UITextView+centerText.swift */,
+				D7F580FC227C70960037DDE7 /* UITextView+centerTextVertically.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -620,7 +620,7 @@
 				BA1FBE0C220780E400DBFB9E /* MaterialProcessor.swift in Sources */,
 				BAAD17F322063F2100574F2C /* HighlightHandler.swift in Sources */,
 				D7C88823222702F600EB3375 /* DamagedPartsRepositoryProtocol.swift in Sources */,
-				D7F580FD227C70960037DDE7 /* UITextView+centerText.swift in Sources */,
+				D7F580FD227C70960037DDE7 /* UITextView+centerTextVertically.swift in Sources */,
 				D7C88821222702F600EB3375 /* DamagedPartsNamesProviderProtocol.swift in Sources */,
 				BAF81BE22222D36A001768B0 /* ZoomConstraint.swift in Sources */,
 				BAAD17F722064BD600574F2C /* PinchGestureHandler.swift in Sources */,
