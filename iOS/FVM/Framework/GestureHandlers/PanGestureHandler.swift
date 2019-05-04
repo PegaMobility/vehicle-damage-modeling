@@ -23,11 +23,11 @@ fileprivate struct RotateConstraint {
 }
 
 fileprivate struct LastRatio {
-    internal static var width: Float = 1.1
+    internal static var width: Float = 1.2
     internal static var height: Float = 0.0
     
     internal static func reset() {
-        width = 1.1
+        width = 1.2
         height = 0.0
     }
 }

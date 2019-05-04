@@ -81,8 +81,8 @@ internal class FVMCarModelViewController : SCNView {
         scnCamera.position *= modelScale
         
         scnCameraOrbit = SCNNode()
-        scnCameraOrbit.eulerAngles.x = 0.0
-        scnCameraOrbit.eulerAngles.y = -1.1
+        scnCameraOrbit.eulerAngles.x = -Float.pi * 0.0
+        scnCameraOrbit.eulerAngles.y = -2 * Float.pi * 1.2
         
         scnCamera.camera!.setFOV(ZoomConstraint.maxFOV)
         
