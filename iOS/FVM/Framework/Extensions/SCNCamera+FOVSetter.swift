@@ -20,7 +20,7 @@ extension SCNCamera {
         if #available(iOS 11.0, *) {
             fieldOfView = value
         } else {
-            yFov *= Double(value)
+            yFov = Double(value)
         }
     }
     
