@@ -27,8 +27,7 @@ public class FVMDamagedCarViewController: UIViewController {
 
     override public func viewDidLoad() {
         setupDamagedCarScene()
-        showRotationPrompt()
-        addBordersForView(userInteractionElemsView)
+
         super.viewDidLoad()
     }
     
@@ -54,9 +53,11 @@ public class FVMDamagedCarViewController: UIViewController {
     private func setupDamagedCarScene() {
         damageSelector.onStartup(configuration: configuration)
         
+        showRotationPrompt()
         fillUserPromptTextView()
         disableAcceptButton()
         addAcceptButtonObservers()
+        addBordersForView(userInteractionElemsView)
     }
     
     private func showRotationPrompt() {
