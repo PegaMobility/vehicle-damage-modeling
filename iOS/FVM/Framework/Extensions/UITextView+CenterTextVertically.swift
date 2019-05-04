@@ -17,7 +17,7 @@ import Foundation
 extension UITextView {
     internal func centerTextVertically() {
         var topCorrect = (self.bounds.size.height - self.contentSize.height * self.zoomScale) / 2
-        topCorrect = topCorrect < 0.0 ? 0.0 : topCorrect;
+        topCorrect = max(topCorrect, 0.0)
         self.contentInset.top = topCorrect
     }
 }
