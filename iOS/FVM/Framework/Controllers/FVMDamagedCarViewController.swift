@@ -22,10 +22,12 @@ public class FVMDamagedCarViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var userInteractionElemsView: UIView!
+    private var userInteractionElemsViewWidth: CGFloat?
     public var configuration: String!
     public var completionAction: ((String) -> Void)?
 
     override public func viewDidLoad() {
+        userInteractionElemsViewWidth = userInteractionElemsView.frame.size.width
         setupDamagedCarScene()
 
         super.viewDidLoad()
@@ -38,6 +40,7 @@ public class FVMDamagedCarViewController: UIViewController {
     
     override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         damageSelector.scnCamera.camera!.multiplyFOV(by: size.height / self.view.bounds.height)
+        userInteractionElemsViewWidth = userInteractionElemsView.frame.size.width
     }
     
     @IBAction internal func closeButtonTapped(_ sender: UIButton) {
@@ -57,16 +60,17 @@ public class FVMDamagedCarViewController: UIViewController {
         fillUserPromptTextView()
         disableAcceptButton()
         addAcceptButtonObservers()
-        addBordersForView(userInteractionElemsView)
+        addTopBorderForUserInteractionView()
     }
     
     private func showRotationPrompt() {
         NotificationCenter.default.addObserver(self, selector: #selector(hideRotationPrompt), name: .hideRotationPrompt, object: nil)
     }
     
-    private func addBordersForView(_ view: UIView) {
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.lightGray.cgColor
+    private func addTopBorderForUserInteractionView() {
+        let line = UIView(frame: CGRect(x: 0, y: 0, width: userInteractionElemsViewWidth!, height: 1))
+        line.backgroundColor = UIColor.lightGray
+        userInteractionElemsView.addSubview(line)
     }
     
     private func addAcceptButtonObservers() {
