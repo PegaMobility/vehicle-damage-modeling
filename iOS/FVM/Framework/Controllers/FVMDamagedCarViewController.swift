@@ -27,7 +27,6 @@ public class FVMDamagedCarViewController: UIViewController {
     public var completionAction: ((String) -> Void)?
 
     override public func viewDidLoad() {
-        userInteractionElemsViewWidth = userInteractionElemsView.frame.size.width
         setupDamagedCarScene()
 
         super.viewDidLoad()
@@ -40,7 +39,7 @@ public class FVMDamagedCarViewController: UIViewController {
     
     override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         damageSelector.scnCamera.camera!.multiplyFOV(by: size.height / self.view.bounds.height)
-        userInteractionElemsViewWidth = userInteractionElemsView.frame.size.width
+        adjustUserInteractionElemsViewWidth()
     }
     
     @IBAction internal func closeButtonTapped(_ sender: UIButton) {
@@ -55,19 +54,19 @@ public class FVMDamagedCarViewController: UIViewController {
     
     private func setupDamagedCarScene() {
         damageSelector.onStartup(configuration: configuration)
-        
+        adjustUserInteractionElemsViewWidth()
         showRotationPrompt()
         fillUserPromptTextView()
         disableAcceptButton()
         addAcceptButtonObservers()
-        addTopBorderForUserInteractionView()
+        addTopBorderForUserInteractionElemsView()
     }
     
     private func showRotationPrompt() {
         NotificationCenter.default.addObserver(self, selector: #selector(hideRotationPrompt), name: .hideRotationPrompt, object: nil)
     }
     
-    private func addTopBorderForUserInteractionView() {
+    private func addTopBorderForUserInteractionElemsView() {
         let line = UIView(frame: CGRect(x: 0, y: 0, width: userInteractionElemsViewWidth!, height: 1))
         line.backgroundColor = UIColor.lightGray
         userInteractionElemsView.addSubview(line)
@@ -81,6 +80,10 @@ public class FVMDamagedCarViewController: UIViewController {
     private func fillUserPromptTextView() {
         userPromptText.text = damageSelector.userPromptText
         userPromptText.centerTextVertically()
+    }
+    
+    private func adjustUserInteractionElemsViewWidth() {
+        userInteractionElemsViewWidth = userInteractionElemsView.frame.size.width
     }
     
     private func setupButtonShape(_ button: UIButton) {
