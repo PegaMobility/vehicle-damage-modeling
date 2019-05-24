@@ -52,7 +52,7 @@ public class VehicleDamageModeling extends ApplicationAdapter {
     private boolean loading;
     private final VehicleDamageReportCallback callback;
     private final UIUpdateCallback uiUpdateCallback;
-    private static final String MODEL_FILE_NAME = "model.2.1.obj";
+    private static final String MODEL_FILE_NAME = "model.obj";
 
     public VehicleDamageModeling(VehicleDamageReportCallback callback, UIUpdateCallback uiUpdateCallback) {
         this.callback = callback;
