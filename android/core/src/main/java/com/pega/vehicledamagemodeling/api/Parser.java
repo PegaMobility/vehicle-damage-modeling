@@ -20,7 +20,7 @@ import com.google.gson.JsonObject;
 import java.util.HashSet;
 
 public class Parser {
-    private static final String MAIN_SCREEN_TEXT = "mainScreenText";
+    private static final String MAIN_SCREEN_TEXT = "prompt";
     private static final String SELECTION = "selection";
     private static final String ID = "id";
 

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(main_activity);
         textView = findViewById(R.id.result_text_view);
         textView.setText("{\n" +
-                "      \"mainScreenText\": \"" +
+                "      \"prompt\": \"" +
                 MAIN_SCREEN_TEXT +
                 "\",\n" +
                 "      \"selection\": []\n" +
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showEmptyModel(View view){
         textView.setText("{\n" +
-                "      \"mainScreenText\": \"" +
+                "      \"prompt\": \"" +
                 MAIN_SCREEN_TEXT +
                 "\",\n" +
                 "      \"selection\": []\n" +

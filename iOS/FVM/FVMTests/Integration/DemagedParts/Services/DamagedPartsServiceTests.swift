@@ -35,7 +35,7 @@ class DamagedPartsServiceTests: XCTestCase {
         // Arrange
         let jsonWithOnePart = """
         {
-            "mainScreenText": "text",
+            "prompt": "text",
             "selection":[
             {
                 "id":"hood"
@@ -57,7 +57,7 @@ class DamagedPartsServiceTests: XCTestCase {
         // Arrange
         let jsonWithInvalidParts = """
         {
-            "mainScreenText": "text",
+            "prompt": "text",
             "selection":[
             {
                 "id":"hood"
@@ -112,7 +112,7 @@ class DamagedPartsServiceTests: XCTestCase {
         let partToRemove = "hood"
         let jsonWithInvalidParts = """
         {
-            "mainScreenText": "text",
+            "prompt": "text",
             "selection":[
             {
                 "id":"hood"
@@ -155,7 +155,7 @@ class DamagedPartsServiceTests: XCTestCase {
         // Arrange
         let jsonWithOnePart = """
         {
-            "mainScreenText": "text",
+            "prompt": "text",
             "selection":[
             {
                 "id":"trunk"
@@ -166,7 +166,7 @@ class DamagedPartsServiceTests: XCTestCase {
         sut?.createCollectionOfDamagedParts(json: jsonWithOnePart)
         let newJson = """
         {
-            "mainScreenText": "text",
+            "prompt": "text",
             "selection":[
 
             {
@@ -187,7 +187,7 @@ class DamagedPartsServiceTests: XCTestCase {
     
     func testIfReturnsSelectionProperly() {
         //Arrange
-        let expected = "{\"mainScreenText\":\"\",\"selection\":[{\"id\":\"hood\"},{\"id\":\"trunk\"},{\"id\":\"roof\"}]}"
+        let expected = "{\"prompt\":\"\",\"selection\":[{\"id\":\"hood\"},{\"id\":\"trunk\"},{\"id\":\"roof\"}]}"
         sut?.createCollectionOfDamagedParts(json: expected)
         
         //Act
@@ -199,8 +199,8 @@ class DamagedPartsServiceTests: XCTestCase {
     
     func testIfReturnsSelectionProperlyAfterAddingNewElement() {
         //Arrange
-        let json = "{\"mainScreenText\":\"\",\"selection\":[{\"id\":\"roof\"},{\"id\":\"trunk\"}]}"
-        let expected = "{\"mainScreenText\":\"\",\"selection\":[{\"id\":\"roof\"},{\"id\":\"trunk\"},{\"id\":\"hood\"}]}"
+        let json = "{\"prompt\":\"\",\"selection\":[{\"id\":\"roof\"},{\"id\":\"trunk\"}]}"
+        let expected = "{\"prompt\":\"\",\"selection\":[{\"id\":\"roof\"},{\"id\":\"trunk\"},{\"id\":\"hood\"}]}"
         sut?.createCollectionOfDamagedParts(json: json)
         sut?.addPart(part: Selection(newName: "hood"))
         

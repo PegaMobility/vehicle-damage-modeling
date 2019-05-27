@@ -34,7 +34,7 @@ public class SelectionServiceTest {
     private SelectedPartsRepository selectedPartsRepository;
     private static final String SELECTION = "selection";
     private static final String ID = "id";
-    private static final String MAIN_SCREEN_TEXT = "mainScreenText";
+    private static final String MAIN_SCREEN_TEXT = "prompt";
     private static final String NOTHING = "nothing";
     private static final String ROOF = "roof";
     private static final String FRONT_BUMPER = "front bumper";

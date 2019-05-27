@@ -38,7 +38,7 @@ extension ViewController {
         let damagedParts = selectionFormatter.format(ResultContainer.damagedCarParts)
         return """
         {
-        "mainScreenText": "\(ResultContainer.description)",
+        "prompt": "\(ResultContainer.description)",
         "selection": [\(damagedParts)]
         }
         """

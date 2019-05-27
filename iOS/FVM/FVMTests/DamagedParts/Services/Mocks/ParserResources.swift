@@ -17,7 +17,7 @@ import Foundation
 
 fileprivate let oneElementJson = """
 {
-    "mainScreenText": "text",
+    "prompt": "text",
     "selection":[
         {
             "id":"simpleId"
